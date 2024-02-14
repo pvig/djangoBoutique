@@ -4,10 +4,11 @@ from django.db import models
 
 class Client(models.Model):
     nom = models.CharField(max_length=100, blank=False, null=False)
+    password = models.CharField(max_length=100)
+    email = models.CharField(max_length=100,blank=True,null=False)
     prenom = models.CharField(max_length=100, blank=True, null=True)
-    email = models.CharField(max_length=100,blank=True,null=True)
-    dateCommande1 = models.DateField()
-    dateLastCommande = models.DateField()
+    dateCommande1 = models.DateField(null=True)
+    dateLastCommande = models.DateField(null=True)
 
 class Vente(models.Model):
     client = models.ForeignKey(Client, on_delete=models.CASCADE)

@@ -1,0 +1,4 @@
+.fade:not(.show) {
+    background: #ff000054;
+    opacity: 1;
+  }

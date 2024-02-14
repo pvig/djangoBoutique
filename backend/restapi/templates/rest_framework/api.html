@@ -2,4 +2,12 @@
 
 {% block bootstrap_theme %}
     <link rel="stylesheet" href="https://bootswatch.com/4/darkly/bootstrap.css" type="text/css">
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'style.css' %}" type="text/css">
+    <style>
+        .fade:not(.show) {
+            background: #00000054;
+            opacity: 1;
+          }
+    </style>
 {% endblock %}
