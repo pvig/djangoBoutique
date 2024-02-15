@@ -3,12 +3,11 @@ from django.db import models
 # Create your models here.
 
 class Client(models.Model):
-    nom = models.CharField(max_length=100, blank=False, null=False)
-    password = models.CharField(max_length=100)
-    email = models.CharField(max_length=100,blank=True,null=False)
+    username = models.CharField(max_length=100, blank=False, null=False)
+    password = models.CharField(max_length=100, blank=False, null=False)
+    email = models.CharField(max_length=100,blank=False,null=False)
+    nom = models.CharField(max_length=100, blank=True, null=True)
     prenom = models.CharField(max_length=100, blank=True, null=True)
-    dateCommande1 = models.DateField(null=True)
-    dateLastCommande = models.DateField(null=True)
 
 class Vente(models.Model):
     client = models.ForeignKey(Client, on_delete=models.CASCADE)

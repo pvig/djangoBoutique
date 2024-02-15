@@ -11,13 +11,17 @@
             <transition name="fade" mode="out-in">
 
               <v-form ref="form" @submit.prevent="validate">
+                <v-text-field label="Nom d'utilisateur" prepend-icon="mdi-account" v-model="username" :rules="rules.required">
+                </v-text-field>
                 <v-text-field label="Nom" prepend-icon="mdi-account" v-model="nom" :rules="rules.required">
+                </v-text-field>
+                <v-text-field label="Prenom" prepend-icon="mdi-account" v-model="prenom" :rules="rules.required">
                 </v-text-field>
                 <v-text-field label="Email" prepend-icon="mdi-account" v-model="email" :rules="rules.email">
                 </v-text-field>
                 <v-text-field label="Mot de passe" prepend-icon="mdi-lock" type="password" v-model="password"
                   :rules="rules.password"></v-text-field>
-                <v-text-field label="Mot de passe" prepend-icon="mdi-lock" type="password" v-model="password_repeat"
+                <v-text-field label="Confirmation mot de passe" prepend-icon="mdi-lock" type="password" v-model="password_repeat"
                   :rules="rules.password"></v-text-field>
 
                 <div class="text-center">
@@ -43,6 +47,8 @@ export default {
     return {
       username: '',
       email: '',
+      nom: '',
+      prenom: '',
       password: '',
       password_repeat: '',
       msg: '',
@@ -54,8 +60,10 @@ export default {
     validate() {
       this.rules = {
         required: [v => !!v || 'Required'],
+        username: [v => !!v || 'Required'],
         email: [v => !!v || 'Required'],
-        password: [v => !!v || 'Required']
+        password: [v => !!v || 'Required'],
+        password_repeat: [v => !!v || 'Required']
       }
       this.$nextTick(() => {
         if (this.$refs.form.validate()) {
@@ -67,18 +75,28 @@ export default {
     async signUp() {
       try {
         const credentials = {
-          nom: this.nom,
-          email: this.email,
-          password: this.password,
-          password_repeat: this.password_repeat
+          username: this.username,
+            email: this.email,
+            password: this.password,
+            password2: this.password_repeat,
+            first_name: this.nom,
+            last_name: this.prenom,
         };
         AuthService.signUp(credentials).then((signupDone) => {
+          
           console.log("signupDone", signupDone);
+
           const credentials = {
+            username: this.username,
             email: this.email,
-            password: this.password
+            password: this.password,
+            password2: this.password_repeat,
+            first_name: this.nom,
+            last_name: this.prenom,
           };
+
           console.log("credentials", credentials);
+
           AuthService.login(credentials).then((reponse) => {
             this.loading = false;
             const token = reponse.token;

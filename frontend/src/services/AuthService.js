@@ -1,11 +1,11 @@
 // src/services/AuthService.js
 import axios from 'axios';
-const url = 'http://localhost:8000/api/';
+const url = 'http://localhost:8000/';
 
 export default {
     login(credentials) {
         return axios
-            .post(url + 'login_check', credentials)
+            .post(url + 'auth/login/', credentials)
             .then((response) => {
                 let resp = Object.assign(credentials, response.data);
                 return resp;
@@ -13,7 +13,7 @@ export default {
     },
     signUp(credentials) {
         return axios
-            .post(url + 'client/', credentials)
+            .post(url + 'auth/register/', credentials)
             .then(response => response.data);
     }
 };

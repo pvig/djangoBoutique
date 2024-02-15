@@ -1,6 +1,5 @@
 // src/views/Login.vue
 <template>
-
   <v-container fluid fill-height id="login-page">
     <v-layout align-center justify-center>
       <v-flex :style="{ 'max-width': '500px' }">
@@ -12,11 +11,15 @@
             <transition name="fade" mode="out-in">
 
               <v-form ref="form" @submit.prevent="validate">
+                <v-text-field id="username" label="Username" prepend-icon="mdi-username" v-model="form.username"
+                  :rules="rules.username">
+                </v-text-field>
+
                 <v-text-field id="login" label="Email" prepend-icon="mdi-email" v-model="form.email" :rules="rules.email">
                 </v-text-field>
 
-                <v-text-field id="password" label="Mot de passe" prepend-icon="mdi-lock" type="password" v-model="form.password"
-                  :rules="rules.password"></v-text-field>
+                <v-text-field id="password" label="Mot de passe" prepend-icon="mdi-lock" type="password"
+                  v-model="form.password" :rules="rules.password"></v-text-field>
 
                 <div class="text-center">
                   <v-btn :loading="loading" color="primary" large type="submit" text rounded>Se connecter</v-btn>
@@ -29,7 +32,6 @@
       </v-flex>
     </v-layout>
   </v-container>
-
 </template>
 
 <script>
@@ -42,6 +44,7 @@ export default {
       password: '',
       message: "Connection",
       form: {
+        username: null,
         email: null,
         password: null,
       },
@@ -52,6 +55,7 @@ export default {
   methods: {
     validate() {
       this.rules = {
+        username: [v => !!v || 'Required'],
         email: [v => !!v || 'Required'],
         password: [v => !!v || 'Required']
       }
@@ -65,6 +69,7 @@ export default {
     async login(form) {
       try {
         const credentials = {
+          username: form.username,
           email: form.email,
           password: form.password
         };
@@ -79,8 +84,10 @@ export default {
         };
         this.$store.dispatch('login', { token, user });
         this.$router.push('/');
+        
       } catch (error) {
         this.loading = false;
+        console.log("error", error);
         if (error.response.status == 401) {
           this.message = "Mauvais login/mot de passe";
         } else {
