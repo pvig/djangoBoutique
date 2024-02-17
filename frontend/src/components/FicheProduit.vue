@@ -5,15 +5,17 @@
 
       <div class="card">
         <span>id : {{ this.localProduit.id || 'Nouveau produit' }}</span>
-        <v-form ref="form" @submit.prevent="validate" id="produit-form">
+        <v-form ref="form" @submit.prevent="validate" @submit="saveProduit" id="produit-form">
 
-          <v-text-field :model-value="localProduit.nom" @input="update('nom', $event.target.value)" label="Nom"
-            :rules="rules.required"></v-text-field>
-          <v-text-field :model-value="localProduit.prixHT" @input="update('prixHT', $event.target.value, 'number')" label="prixHT"
-            type="number" step="0.01" :rules="rules.prix"></v-text-field>
-          <v-text-field :model-value="localProduit.poids" @input="update('poids', $event.target.value, 'number')" label="Poids">
+          <v-text-field :model-value="localProduit.nom" @input="update('nom', $event.target.value)"
+            label="Nom"></v-text-field>
+          <v-text-field :model-value="localProduit.prixHT" @input="update('prixHT', $event.target.value, 'number')"
+            label="prixHT" type="number" step="0.01"></v-text-field>
+          <v-text-field :model-value="localProduit.poids" @input="update('poids', $event.target.value, 'number')"
+            label="Poids">
           </v-text-field>
-          <v-text-field :model-value="localProduit.reference" @input="update('reference', $event.target.value)" label="Reference">
+          <v-text-field :model-value="localProduit.reference" @input="update('reference', $event.target.value)"
+            label="Reference">
           </v-text-field>
 
         </v-form>
@@ -33,16 +35,34 @@
 
 <script>
 import { useProduitStore } from '../stores/produits.store.js';
+import useVuelidate from '@vuelidate/core'
+import {
+  required,
+  decimal
+} from '@vuelidate/validators'
 
 export default {
   name: "ficheProduit",
   props: ['editProduitId', 'editNewProduit'],
+  setup() {
+    return { v$: useVuelidate() }
+  },
   data: () => ({
     editing: true,
     saving: false,
     localProduit: useProduitStore().getNewProduit(),
-    rules: {},
   }),
+  validations() {
+    console.log("validations");
+    return {
+      localProduit: {
+        nom: { required },
+        reference: { required },
+        prixHT: { required, decimal },
+        poids: { required, decimal },
+      }
+    }
+  },
   watch: {
     'editProduitId': function () {
       if (this.editProduitId) {
@@ -57,21 +77,14 @@ export default {
   },
   methods: {
     validate() {
-      this.rules = {
-        prix: [v => (v && (parseFloat(v) == v)) || 'Le prix doit être un chiffre'],
-        required: [v => !!v || 'Required']
-      }
-      this.$nextTick(() => {
-        if (this.$refs.form.validate()) {
-          this.saveProduit();
-        }
-      });
+      this.v$.$validate() // checks all inputs
+      return !this.v$.$error;
     },
     update(key, value, type) {
       if (type == "number") {
         value = parseFloat(value);
       }
-      this.updateProduitAtribute({key: key, value: value });
+      this.updateProduitAtribute({ key: key, value: value });
     },
     editProduit: function (id) {
       if (id && typeof useProduitStore().products != 'undefined') {
@@ -81,19 +94,24 @@ export default {
           nom: ""
         }
       }
-      this.rules = {};
+      console.log("this.localProduit", this.localProduit)
       this.editing = true;
     },
     updateProduitAtribute(val) {
       this.localProduit[val.key] = val.value;
     },
     saveProduit() {
-      this.saving = true;
-      this.$nextTick(() => {
-        useProduitStore().saveProduit(this.localProduit).then(() => {
-          this.editDone();
-        })
-      });
+      if (this.validate()) {
+        console.log("saving")
+        this.saving = true;
+        this.$nextTick(() => {
+          useProduitStore().saveProduit(this.localProduit).then(() => {
+            this.editDone();
+          })
+        });
+      } else {
+        console.log("pas valide")
+      }
     },
     editDone() {
       this.editing = false;

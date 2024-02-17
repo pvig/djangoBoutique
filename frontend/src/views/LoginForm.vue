@@ -39,7 +39,7 @@
       <v-col :style="{ 'max-width': '500px' }">
 
           <div class="text-center">
-            <v-btn color="secondary" type="button" text rounded href="/signUp">Créer un compte</v-btn>
+            <v-btn color="secondary" type="button" text rounded @click="$router.push('/signUp')" >Créer un compte</v-btn>
           </div>
 
       </v-col>

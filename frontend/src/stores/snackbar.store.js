@@ -12,7 +12,7 @@ export const useSnackBarStore = defineStore('SnackBar', {
             return this.snackbarShow;
         },
         setSnackBarState(state) {
-            this.snackbarShow = state;
+            this.state = state;
         }
     }
   })

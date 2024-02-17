@@ -107,8 +107,11 @@ export default {
       this.ProduitToDelete = produit;
       this.confirmDeleteProduit = true;
     },
-    deleteProduit: function () {
-      useProduitStore().deleteProduit(this.ProduitToDelete.id);
+    async deleteProduit() {
+      let produitToDelete = {...this.ProduitToDelete};
+
+      await useProduitStore().deleteProduit(produitToDelete);
+
       this.confirmDeleteProduit = false;
       this.refreshList();
     },
