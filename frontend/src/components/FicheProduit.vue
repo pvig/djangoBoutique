@@ -1,44 +1,46 @@
 <template>
   <div justify="center">
 
-      <v-card class="editBox" fixed>
+    <v-card class="editBox" fixed>
 
-        <div class="card">
-          <span>id : {{ this.localProduit.id || 'Nouveau produit'}}</span>
-          <v-form ref="form" @submit.prevent="validate" id="produit-form">
+      <div class="card">
+        <span>id : {{ this.localProduit.id || 'Nouveau produit' }}</span>
+        <v-form ref="form" @submit.prevent="validate" id="produit-form">
 
-                  <v-text-field :value="localProduit.nom" @input="update('nom', $event)" label="Nom"
-                    :rules="rules.required"></v-text-field>
-                  <v-text-field :value="localProduit.prixHT" @input="update('prixHT', $event, 'number')" label="prixHT"
-                    type="number" step="0.01" :rules="rules.prix"></v-text-field>
-                  <v-text-field :value="localProduit.poids" @input="update('poids', $event, 'number')" label="Poids">
-                  </v-text-field>
-                  <v-text-field :value="localProduit.reference" @input="update('reference', $event)" label="Reference">
-                  </v-text-field>
+          <v-text-field :model-value="localProduit.nom" @input="update('nom', $event.target.value)" label="Nom"
+            :rules="rules.required"></v-text-field>
+          <v-text-field :model-value="localProduit.prixHT" @input="update('prixHT', $event.target.value, 'number')" label="prixHT"
+            type="number" step="0.01" :rules="rules.prix"></v-text-field>
+          <v-text-field :model-value="localProduit.poids" @input="update('poids', $event.target.value, 'number')" label="Poids">
+          </v-text-field>
+          <v-text-field :model-value="localProduit.reference" @input="update('reference', $event.target.value)" label="Reference">
+          </v-text-field>
 
-          </v-form>
-        </div>
+        </v-form>
+      </div>
 
-        <v-card-actions>
-          <v-spacer></v-spacer>
-          <v-btn depressed type="submit" form="produit-form" :loading="saving" :disabled="!editing">
-            Sauvegarder
-          </v-btn>
-        </v-card-actions>
-      </v-card>
+      <v-card-actions>
+        <v-spacer></v-spacer>
+        <v-btn depressed type="submit" form="produit-form" :loading="saving" :disabled="!editing">
+          Sauvegarder
+        </v-btn>
+      </v-card-actions>
+    </v-card>
 
 
   </div>
 </template>
 
 <script>
+import { useProduitStore } from '../stores/produits.store.js';
+
 export default {
   name: "ficheProduit",
   props: ['editProduitId', 'editNewProduit'],
   data: () => ({
-    editing: false,
+    editing: true,
     saving: false,
-    localProduit: {},
+    localProduit: useProduitStore().getNewProduit(),
     rules: {},
   }),
   watch: {
@@ -69,11 +71,11 @@ export default {
       if (type == "number") {
         value = parseFloat(value);
       }
-      this.updateProduitAtribute({ ...this.value, key: key, value: value });
+      this.updateProduitAtribute({key: key, value: value });
     },
     editProduit: function (id) {
-      if (id && typeof this.$store.state.produits.all != 'undefined') {
-        this.localProduit = { ...this.$store.state.produits.all.find(element => element.id == id) };
+      if (id && typeof useProduitStore().products != 'undefined') {
+        this.localProduit = useProduitStore().getProduit(id);
       } else {
         this.localProduit = {
           nom: ""
@@ -85,10 +87,10 @@ export default {
     updateProduitAtribute(val) {
       this.localProduit[val.key] = val.value;
     },
-    saveProduit(e) {
+    saveProduit() {
       this.saving = true;
       this.$nextTick(() => {
-        this.$store.dispatch('produits/saveProduit', this.localProduit).then(() => {
+        useProduitStore().saveProduit(this.localProduit).then(() => {
           this.editDone();
         })
       });

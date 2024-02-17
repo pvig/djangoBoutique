@@ -20,11 +20,13 @@
         <v-data-table :headers="headers" :items="listeProduits" :items-per-page="10" class="elevation-1">
           <template v-slot:item="row">
             <tr>
+              <td>{{ row.item.id }}</td>
               <td>{{ row.item.nom }}</td>
+              <td>{{ row.item.reference }}</td>
               <td>
+                <v-icon small class="mr-2" @click="editProduit(row.item.id)">mdi-pencil</v-icon>
+                <v-icon small @click="dialogDeleteProduit(row.item)">mdi-delete</v-icon>
                 <v-layout justify-center>
-                  <v-icon small class="mr-2" @click="editProduit(row.item.id)">mdi-pencil</v-icon>
-                  <v-icon small @click="dialogDeleteProduit(row.item.id)">mdi-delete</v-icon>
                 </v-layout>
               </td>
             </tr>
@@ -35,7 +37,8 @@
         <FicheProduit :editProduitId="this.editProduitId" :editNewProduit="this.editNewProduit" @editDone="editDone">
         </FicheProduit>
       </v-col>
-  </v-row>
+    </v-row>
+
 
     <v-dialog v-model="confirmDeleteProduit" max-width="800">
       <v-card class="editBox">
@@ -52,28 +55,27 @@
       </v-card>
     </v-dialog>
 
+
     <SnackBar />
     <Progress></Progress>
   </div>
 </template>
 
 <script>
-import FicheProduit from './components/FicheProduit.vue'
+import FicheProduit from '../components/FicheProduit.vue'
 import SnackBar from '../components/SnackBar.vue'
-import Progress from '../components/Progress.vue'
+import Progress from '../components/ProgressBar.vue'
+import { useProduitStore } from '../stores/produits.store.js';
 
 export default {
-  name: 'Produits',
+  name: 'ProduitList',
   components: {
     FicheProduit,
     SnackBar,
     Progress
   },
   mounted() {
-    this.$store.dispatch('produits/getProducts').then(() => {
-      this.listeProduits = this.$store.state.produits.all;
-      this.isLoading = false;
-    });
+    this.refreshList();
   },
   data: () => ({
     isLoading: true,
@@ -81,13 +83,19 @@ export default {
     editProduitId: null,
     editNewProduit: false,
     confirmDeleteProduit: false,
-    ProduitToDeleteId: false,
+    ProduitToDelete: false,
     headers: [
       { text: 'Produit', value: 'nom', sortable: false, align: 'start' },
       { text: 'Actions', value: 'actions', sortable: false, align: 'center' },
     ],
   }),
   methods: {
+    refreshList: function() {
+      useProduitStore().getProducts().then(() => {
+        this.listeProduits = useProduitStore().products;
+        this.isLoading = false;
+      });
+    },
     editProduit: function (id) {
       this.editProduitId = id;
       this.editNewProduit = false;
@@ -95,15 +103,16 @@ export default {
     newProduit: function () {
       this.editNewProduit = true;
     },
-    dialogDeleteProduit: function (id) {
-      this.ProduitToDeleteId = id;
+    dialogDeleteProduit: function (produit) {
+      this.ProduitToDelete = produit;
       this.confirmDeleteProduit = true;
     },
     deleteProduit: function () {
-      this.$store.dispatch('produits/deleteProduit', this.ProduitToDeleteId);
+      useProduitStore().deleteProduit(this.ProduitToDelete.id);
       this.confirmDeleteProduit = false;
+      this.refreshList();
     },
-    editDone: function (Produit) {
+    editDone: function () {
       this.editProduitId = null;
       this.editNewProduit = false;
     }

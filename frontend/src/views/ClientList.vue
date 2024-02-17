@@ -56,12 +56,12 @@
 </template>
 
 <script>
-import FicheClient from './components/FicheClient.vue'
+import FicheClient from '../components/FicheClient.vue'
 import SnackBar from '../components/SnackBar.vue'
-import Progress from '../components/Progress.vue'
+import Progress from '../components/ProgressBar.vue'
 
 export default {
-  name: 'Clients',
+  name: 'ClientList',
   components: {
     FicheClient,
     SnackBar,

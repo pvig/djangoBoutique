@@ -10,7 +10,7 @@
 
               <v-row>
                 <v-col cols="11" md="11">
-                  <v-text-field :value="localVente.numeroVente" @input="update('numeroVente', $event)"
+                  <v-text-field :model-value="localVente.numeroVente" @input="update('numeroVente', $event)"
                     label="Numero de vente" type="string" class="mx-4" :rules="rules.required"></v-text-field>
                 </v-col>
               </v-row>
@@ -25,14 +25,14 @@
 
               <v-row>
                 <v-col cols="11" md="11">
-                  <v-text-field :value="localVente.dateVente | formatDate" @input="update('dateVente', $event)"
+                  <v-text-field :model-value="localVente.dateVente | formatDate" @input="update('dateVente', $event)"
                     label="Date" type="datetime-local" class="mx-4" :rules="rules.required"></v-text-field>
                 </v-col>
               </v-row>
 
               <v-row>
                 <v-col cols="11" md="11">
-                  <v-text-field :value="prixProduitsHT" label="Total HT" type="number" step="0.01" readonly class="mx-4"
+                  <v-text-field :model-value="prixProduitsHT" label="Total HT" type="number" step="0.01" readonly class="mx-4"
                     :rules="rules.required"></v-text-field>
                 </v-col>
               </v-row>
@@ -74,7 +74,7 @@
                         <tr v-for="item in venteProduits" :key="item.id">
                           <td style="width: 50%">{{ item.nom }}</td>
                           <td>
-                            <input type="number" :value="item.quantite" min="1" style="width: 7em"
+                            <input type="number" :model-value="item.quantite" min="1" style="width: 7em"
                               @change="updateQuantite(item.idProduit, $event)" />
                             &nbsp;&nbsp;&nbsp;&nbsp;
                             <v-btn plain @click="supprimeLigneVente(item)">
@@ -202,8 +202,8 @@ export default {
         } else {
           let newLigneVente = {
             idProduit: this.produit.id,
-            produit: "/api/produits/" + this.produit.id,
-            vente: this.editVenteId ? "/api/ventes/" + this.editVenteId : "",
+            produit: "/api/produit/" + this.produit.id,
+            vente: this.editVenteId ? "/api/vente/" + this.editVenteId : "",
             prixHT: this.produit.prixHT,
             nom: this.produit.nom,
             quantite: 1

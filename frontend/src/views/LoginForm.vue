@@ -1,8 +1,9 @@
 // src/views/Login.vue
 <template>
   <v-container fluid fill-height id="login-page">
-    <v-layout align-center justify-center>
-      <v-flex :style="{ 'max-width': '500px' }">
+    <v-row>
+      <v-col></v-col>
+      <v-col>
         <v-card>
           <v-card-text>
             <div class="text-center mb-4">
@@ -29,13 +30,27 @@
             </transition>
           </v-card-text>
         </v-card>
-      </v-flex>
-    </v-layout>
+      </v-col>
+      <v-col></v-col>
+    </v-row>
+
+    <v-row>
+      <v-col></v-col>
+      <v-col :style="{ 'max-width': '500px' }">
+
+          <div class="text-center">
+            <v-btn color="secondary" type="button" text rounded href="/signUp">Créer un compte</v-btn>
+          </div>
+
+      </v-col>
+      <v-col></v-col>
+    </v-row>
+
   </v-container>
 </template>
 
-<script>
-import AuthService from '../services/AuthService.js';
+<script >
+import { useAuthStore } from '../stores/auth.store.js';
 
 export default {
   data() {
@@ -54,6 +69,7 @@ export default {
   },
   methods: {
     validate() {
+
       this.rules = {
         username: [v => !!v || 'Required'],
         email: [v => !!v || 'Required'],
@@ -73,18 +89,9 @@ export default {
           email: form.email,
           password: form.password
         };
-        const response = await AuthService.login(credentials);
-        this.loading = false;
-        this.message = response.msg;
-        const token = response.token;
-        const user = {
-          id: response.userId,
-          email: response.userEmail,
-          username: response.userName
-        };
-        this.$store.dispatch('login', { token, user });
-        this.$router.push('/');
-        
+
+        useAuthStore().login(credentials);
+
       } catch (error) {
         this.loading = false;
         console.log("error", error);

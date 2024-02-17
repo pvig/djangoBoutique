@@ -17,7 +17,7 @@
 
 <script>
 export default {
-  name: 'Home',
+  name: 'HomePage',
   props: {},
   data: () => ({
     isLoading: true,

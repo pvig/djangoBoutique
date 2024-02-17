@@ -1,8 +1,9 @@
 // src/views/SignUp.vue
 <template>
   <v-container fluid fill-height id="login-page">
-    <v-layout align-center justify-center>
-      <v-flex :style="{ 'max-width': '350px' }">
+    <v-row>
+      <v-col></v-col>
+      <v-col >
         <v-card>
           <v-card-text>
             <div class="text-center mb-4">
@@ -11,7 +12,8 @@
             <transition name="fade" mode="out-in">
 
               <v-form ref="form" @submit.prevent="validate">
-                <v-text-field label="Nom d'utilisateur" prepend-icon="mdi-account" v-model="username" :rules="rules.required">
+                <v-text-field label="Nom d'utilisateur" prepend-icon="mdi-account" v-model="username"
+                  :rules="rules.required">
                 </v-text-field>
                 <v-text-field label="Nom" prepend-icon="mdi-account" v-model="nom" :rules="rules.required">
                 </v-text-field>
@@ -21,8 +23,8 @@
                 </v-text-field>
                 <v-text-field label="Mot de passe" prepend-icon="mdi-lock" type="password" v-model="password"
                   :rules="rules.password"></v-text-field>
-                <v-text-field label="Confirmation mot de passe" prepend-icon="mdi-lock" type="password" v-model="password_repeat"
-                  :rules="rules.password"></v-text-field>
+                <v-text-field label="Confirmation mot de passe" prepend-icon="mdi-lock" type="password"
+                  v-model="password_repeat" :rules="rules.password"></v-text-field>
 
                 <div class="text-center">
                   <v-btn :loading="loading" color="primary" large type="submit" text rounded>Créer le compte</v-btn>
@@ -35,10 +37,10 @@
             </transition>
           </v-card-text>
         </v-card>
-      </v-flex>
-    </v-layout>
+      </v-col>
+      <v-col></v-col>
+    </v-row>
   </v-container>
-
 </template>
 <script>
 import AuthService from '../services/AuthService.js';
@@ -76,14 +78,14 @@ export default {
       try {
         const credentials = {
           username: this.username,
-            email: this.email,
-            password: this.password,
-            password2: this.password_repeat,
-            first_name: this.nom,
-            last_name: this.prenom,
+          email: this.email,
+          password: this.password,
+          password2: this.password_repeat,
+          first_name: this.nom,
+          last_name: this.prenom,
         };
         AuthService.signUp(credentials).then((signupDone) => {
-          
+
           console.log("signupDone", signupDone);
 
           const credentials = {

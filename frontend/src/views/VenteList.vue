@@ -52,12 +52,12 @@
 </template>
  
  <script>
- import FicheVente from './components/FicheVente.vue'
+ import FicheVente from '../components/FicheVente.vue'
  import SnackBar from '../components/SnackBar.vue'
- import Progress from '../components/Progress.vue'
+ import Progress from '../components/ProgressBar.vue'
  
  export default {
-   name: 'Ventes',
+   name: 'VenteList',
    data: () => ({}),
    components: {
      FicheVente,

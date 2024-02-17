@@ -54,7 +54,7 @@ body {
 }
 
 #logo {
-  background-image:url("/assets/images/logo.png");
+  background-image:url("../images/logo.png");
   background-repeat: no-repeat;
   background-size: contain;
   color:#ffffff;

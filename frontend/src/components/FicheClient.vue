@@ -9,15 +9,15 @@
             <v-container>
               <v-row>
                 <v-col cols="12" md="12">
-                  <v-text-field :value="localClient.nom" @input="update('nom', $event)" label="Nom"
+                  <v-text-field :model-value="localClient.nom" @input="update('nom', $event)" label="Nom"
                     :rules="rules.required"></v-text-field>
-                  <v-text-field :value="localClient.prenom" @input="update('prenom', $event)" label="Prenom"
+                  <v-text-field :model-value="localClient.prenom" @input="update('prenom', $event)" label="Prenom"
                     :rules="rules.required"></v-text-field>
-                  <v-text-field :value="localClient.email" @input="update('email', $event)" label="Email"
+                  <v-text-field :model-value="localClient.email" @input="update('email', $event)" label="Email"
                     :rules="rules.email"></v-text-field>
-                  <v-text-field :value="localClient.dateCommande1 | formatDate" @input="update('dateCommande1', $event)"
+                  <v-text-field :model-value="localClient.dateCommande1 | formatDate" @input="update('dateCommande1', $event)"
                     label="Date de première commande" type="datetime-local"></v-text-field>
-                  <v-text-field :value="localClient.dateLastCommande | formatDate"
+                  <v-text-field :model-value="localClient.dateLastCommande | formatDate"
                     @input="update('dateLastCommande', $event)" label="Date de la dernière commande"
                     type="datetime-local"></v-text-field>
                 </v-col>
