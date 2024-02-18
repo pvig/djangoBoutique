@@ -3,31 +3,27 @@
     <v-dialog v-model="editing" persistent max-width="800">
       <v-card class="editBox">
 
-        <div class="card">
+        <div>
           <span>id : {{ this.localClient.id }}</span>
-          <v-form ref="form" @submit.prevent="validate" id="client-form">
+          <v-form ref="form" @submit.prevent="validate" @submit="saveClient" id="client-form">
             <v-container>
               <v-row>
                 <v-col cols="12" md="12">
-                  <v-text-field :model-value="localClient.nom" @input="update('nom', $event)" label="Nom"
-                    :rules="rules.required"></v-text-field>
-                  <v-text-field :model-value="localClient.prenom" @input="update('prenom', $event)" label="Prenom"
-                    :rules="rules.required"></v-text-field>
-                  <v-text-field :model-value="localClient.email" @input="update('email', $event)" label="Email"
-                    :rules="rules.email"></v-text-field>
-                  <v-text-field :model-value="localClient.dateCommande1 | formatDate" @input="update('dateCommande1', $event)"
-                    label="Date de première commande" type="datetime-local"></v-text-field>
-                  <v-text-field :model-value="localClient.dateLastCommande | formatDate"
-                    @input="update('dateLastCommande', $event)" label="Date de la dernière commande"
-                    type="datetime-local"></v-text-field>
+                  <v-text-field :model-value="localClient.username" @input="update('username', $event.target.value)" label="Username"></v-text-field>
+                  <v-text-field :model-value="localClient.nom" @input="update('nom', $event.target.value)" label="Nom"></v-text-field>
+                  <v-text-field :model-value="localClient.prenom" @input="update('prenom', $event.target.value)" label="Prenom"></v-text-field>
+                  <v-text-field :model-value="localClient.email" @input="update('email', $event.target.value)" label="Email"></v-text-field>
+                  <v-text-field :model-value="localClient.password" @input="update('password', $event.target.value)" label="password"></v-text-field>
+                  <v-text-field :model-value="localClient.password2" @input="update('password2', $event.target.value)" label="password2"></v-text-field>
                 </v-col>
               </v-row>
             </v-container>
           </v-form>
         </div>
+
         <v-card-actions>
           <v-spacer></v-spacer>
-          <v-btn depressed @click="closeMe()" :disabled="saving">
+          <v-btn depressed @click="editDone()" :disabled="saving">
             Annuler
           </v-btn>
           <v-btn depressed type="submit" form="client-form" :loading="saving">
@@ -43,16 +39,32 @@
 </template>
 
 <script>
+import { useClientStore } from '../stores/clients.store.js';
+import useVuelidate from '@vuelidate/core'
+import {
+  required
+} from '@vuelidate/validators'
 
 export default {
   name: "ficheClient",
   props: ['editClientId', 'editNewClient'],
+  setup() {
+    return { v$: useVuelidate() }
+  },
   data: () => ({
     editing: false,
     saving: false,
     localClient: {},
     rules: {},
   }),
+  validations() {
+    return {
+      localClient: {
+        nom: { required },
+        username: { required },
+      }
+    }
+  },
   watch: {
     'editClientId': function () {
       if (this.editClientId) {
@@ -67,48 +79,45 @@ export default {
   },
   methods: {
     validate() {
-      this.rules = {
-        email: [v => !!v || 'Required'],
-        required: [v => !!v || 'Required']
-      }
-      this.$nextTick(() => {
-        if (this.$refs.form.validate()) {
-          this.saveClient();
-        }
-      });
+      this.v$.$validate()
+      return !this.v$.$error;
     },
     update(key, value, type) {
       if (type == "number") {
         value = parseFloat(value);
       }
-      this.updateClientAtribute({ ...this.value, key: key, value: value });
+      this.updateClientAtribute({ key: key, value: value });
     },
     editClient: function (id) {
-      if (id && typeof this.$store.state.clients.all != 'undefined') {
-        this.localClient = { ...this.$store.state.clients.all.find(element => element.id == id) };
+      if (id && typeof useClientStore().clients != 'undefined') {
+        this.localClient = useClientStore().getClient(id);
       } else {
         this.localClient = {
-          nom: ""
+          username: ""
         }
       }
-      this.rules = {};
       this.editing = true;
     },
     updateClientAtribute(val) {
       this.localClient[val.key] = val.value;
     },
-    saveClient(e) {
-      this.saving = true;
-      this.$nextTick(() => {
-        this.$store.dispatch('clients/saveClient', this.localClient).then(() => {
-          this.closeMe();
+    saveClient() {
+      if (this.validate()) {
+        console.log("saving")
+        this.saving = true;
+        this.$nextTick(() => {
+          useClientStore().saveClient(this.localClient).then(() => {
+            this.editDone();
+          })
         });
-      });
+      } else {
+        console.log("pas valide")
+      }
     },
-    closeMe() {
+    editDone() {
       this.editing = false;
       this.saving = false;
-      this.$emit('editDone', this.localClient)
+      this.$emit('editDone', this.localProduit)
     }
   },
 };

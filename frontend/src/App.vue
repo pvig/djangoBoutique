@@ -3,7 +3,8 @@
     <div id="nav" v-if="authenticated">
       <router-link to="/">Home</router-link> |
       <router-link to="/logout">logout</router-link> | 
-      <router-link to="/produits">Produits</router-link>
+      <router-link to="/produits">Produits</router-link> |
+      <router-link to="/clients">Clients</router-link>
     </div>
     <router-view />
     <SnackBar></SnackBar>

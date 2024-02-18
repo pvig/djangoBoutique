@@ -59,6 +59,7 @@
 import FicheClient from '../components/FicheClient.vue'
 import SnackBar from '../components/SnackBar.vue'
 import Progress from '../components/ProgressBar.vue'
+import { useClientStore } from '../stores/clients.store.js';
 
 export default {
   name: 'ClientList',
@@ -68,12 +69,7 @@ export default {
     Progress
   },
   mounted() {
-    this.$store.dispatch('clients/getClients').then(() => {
-      this.listeClients = this.$store.state.clients.all;
-      this.isLoading = false;
-    });
-  },
-  computed: {
+    this.refreshList();
   },
   data: () => ({
     isLoading: true,
@@ -81,31 +77,43 @@ export default {
     editClientId: null,
     editNewClient: false,
     confirmDeleteClient: false,
-    clientToDeleteId: false,
+    ClientToDelete: false,
     headers: [
       { text: 'Client', value: 'nom', sortable: false, align: 'start' },
       { text: 'Actions', value: 'actions', sortable: false, align: 'center' },
     ],
   }),
   methods: {
+    refreshList: function() {
+      useClientStore().getClients().then(() => {
+        this.listeClients = useClientStore().clients;
+        this.isLoading = false;
+      });
+    },
     editClient: function (id) {
       this.editClientId = id;
+      this.editNewClient = false;
     },
     newClient: function () {
       this.editNewClient = true;
     },
-    dialogDeleteClient: function (id) {
-      this.clientToDeleteId = id;
+    dialogDeleteClient: function (client) {
+      this.ClientToDelete = client;
       this.confirmDeleteClient = true;
     },
-    deleteClient: function () {
-      this.$store.dispatch('clients/deleteClient', this.clientToDeleteId);
+    async deleteClient() {
+      let clientToDelete = {...this.ClientToDelete};
+
+      await useClientStore().deleteClient(clientToDelete);
+
       this.confirmDeleteClient = false;
+      this.refreshList();
     },
-    editDone: function (client) {
+    editDone: function () {
       this.editClientId = null;
       this.editNewClient = false;
     }
   }
 }
+
 </script>

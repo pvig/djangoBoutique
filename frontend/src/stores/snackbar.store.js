@@ -13,7 +13,7 @@ export const useSnackBarStore = defineStore('SnackBar', {
         },
         setSnackBarState(state) {
             console.log("setSnackBarState", state)
-            this.show = state.show;
+            this.show = true;
             this.text = state.text;
             this.color = state.color;
             this.timeout = state.timeout;

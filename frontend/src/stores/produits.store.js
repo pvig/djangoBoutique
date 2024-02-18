@@ -23,18 +23,18 @@ const actions = {
     async saveProduit(produit) {
         if (produit.id != undefined) {
             await axios.put(apiUrl + produit.id + "/", produit).then(() => {
-                useSnackBarStore().setSnackBarState({ message: "Produit " + produit.nom + " sauvegardé", snackbarShow: true });
+                useSnackBarStore().setSnackBarState({ text: "Produit " + produit.nom + " sauvegardé" });
             });
         } else {
             await axios.post(apiUrl, produit).then((response) => {
                 this.products.push(response.data);
-                useSnackBarStore().setSnackBarState({ message: "Produit " + produit.nom + " créé", snackbarShow: true });
+                useSnackBarStore().setSnackBarState({ text: "Produit " + produit.nom + " créé" });
             });
         }
     },
     async deleteProduit(produit) {
         await axios.delete(apiUrl + produit.id + "/").then(() => {
-            useSnackBarStore().setSnackBarState({ message: "Produit " + produit.nom + " supprimé", snackbarShow: true });
+            useSnackBarStore().setSnackBarState({ text: "Produit " + produit.nom + " supprimé" });
         });
     },
 };
