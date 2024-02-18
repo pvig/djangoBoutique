@@ -2,9 +2,12 @@
   <v-container fluid fill-height id="login-page">
     <div id="nav" v-if="authenticated">
       <router-link to="/">Home</router-link> |
-      <router-link to="/logout">logout</router-link> | 
+      <router-link to="/logout">logout</router-link> |
       <router-link to="/produits">Produits</router-link> |
       <router-link to="/clients">Clients</router-link>
+    </div>
+    <div id="nav" v-if="!authenticated">
+      <router-link to="/login">login</router-link>
     </div>
     <router-view />
     <SnackBar></SnackBar>
@@ -16,7 +19,7 @@ import { useAuthStore } from './stores/auth.store.js';
 
 export default {
   name: 'App',
-components: {},
+  components: { },
   data() {
     return {
       loading: false,

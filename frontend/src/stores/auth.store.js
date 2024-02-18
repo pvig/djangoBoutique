@@ -28,10 +28,15 @@ export const useAuthStore = defineStore('auth', {
             return axios
                 .post(url + 'auth/logout/')
                 .then(() => {
-                    this.user = null;
-                    localStorage.removeItem('user');
+                    this.clearSession();
+                    //router.push('/login');
+                    //location.reload();
                     useSnackBarStore().setSnackBarState({ text: "Vous avez été déconnecté" });
                 });
+        },
+        clearSession() {
+            this.user = null;
+            localStorage.removeItem('user');
         },
         remoteLogin(credentials) {
             return axios
@@ -48,7 +53,6 @@ export const useAuthStore = defineStore('auth', {
         },
         isLogged() {
             if(!this.user) {
-                router.push('/login');
                 return false;
             } else {
                 return true;

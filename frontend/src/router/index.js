@@ -17,7 +17,7 @@ const routes = [
   { path: '/login', component: Login, name: 'login' },
   { path: '/logout', component: Login, name: 'logout' },
   //{ path: '/compte', component: Compte, name: 'compte'},
-  { path: '/clients', component: Clients, name: 'clients'},
+  { path: '/clients', component: Clients, name: 'clients' },
   //{ path: '/ventes', component: Ventes, name: 'ventes'},
   { path: '/produits', component: Produits, name: 'produits' }
 ]
@@ -28,7 +28,7 @@ const router = createRouter({
 });
 
 router.beforeEach((to) => {
-  if(to.name == "logout") {
+  if (to.name == "logout") {
     useAuthStore().logout();
   }
 })
@@ -37,9 +37,10 @@ axios.interceptors.response.use(response => {
   return response;
 }, error => {
   if (error.response.status === 401) {
-      router
+    useAuthStore().clearSession();
+    router
       .push({ path: '/login' })
-      .then(() => { 
+      .then(() => {
         location.reload();
         useSnackBarStore().setSnackBarState({ text: "Vous avez été déconnecté" });
       })
