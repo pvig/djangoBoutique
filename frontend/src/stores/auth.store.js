@@ -6,7 +6,6 @@ const url = 'http://localhost:8000/';
 
 export const useAuthStore = defineStore('auth', {
     state: () => ({
-        // initialize state from local storage to enable user to stay logged in
         user: JSON.parse(localStorage.getItem('user')),
         returnUrl: null
     }),
@@ -15,15 +14,25 @@ export const useAuthStore = defineStore('auth', {
             const user = await this.remoteLogin(credentials);
             this.user = user;
             localStorage.setItem('user', JSON.stringify(user));
+
+            // bearer token on every header :
+            axios.defaults.headers.common = {
+                'Authorization': `Bearer ${user.access}`
+            };
+
+            // homepage
             router.push(this.returnUrl || '/');
         },
         logout() {
-            this.user = null;
-            localStorage.removeItem('user');
-            router.push('/login');
+            return axios
+                .post(url + 'auth/logout/')
+                .then(() => {
+                    this.user = null;
+                    localStorage.removeItem('user');
+                    router.push('/login');
+                });
         },
         remoteLogin(credentials) {
-            console.log("remoteLogin", credentials);
             return axios
                 .post(url + 'auth/login/', credentials)
                 .then((response) => {
@@ -35,7 +44,24 @@ export const useAuthStore = defineStore('auth', {
             return axios
                 .post(url + 'auth/register/', credentials)
                 .then(response => response.data);
+        },
+        isLogged() {
+            console.log("this.user", this.user);
+            if(!this.user) {
+                router.push('/login');
+                return false;
+            } else {
+                return true;
+            }
+        },
+        authHeader() {
+            let user = JSON.parse(localStorage.getItem('user'));
+
+            if (user && user.accessToken) {
+                return { Authorization: 'Bearer ' + user.accessToken };
+            } else {
+                return {};
+            }
         }
     }
-  })
-  
+})

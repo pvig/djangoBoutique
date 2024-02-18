@@ -12,19 +12,12 @@
             <transition name="fade" mode="out-in">
 
               <v-form ref="form" @submit.prevent="validate">
-                <v-text-field label="Nom d'utilisateur" prepend-icon="mdi-account" v-model="username"
-                  :rules="rules.required">
-                </v-text-field>
-                <v-text-field label="Nom" prepend-icon="mdi-account" v-model="nom" :rules="rules.required">
-                </v-text-field>
-                <v-text-field label="Prenom" prepend-icon="mdi-account" v-model="prenom" :rules="rules.required">
-                </v-text-field>
-                <v-text-field label="Email" prepend-icon="mdi-account" v-model="email" :rules="rules.email">
-                </v-text-field>
-                <v-text-field label="Mot de passe" prepend-icon="mdi-lock" type="password" v-model="password"
-                  :rules="rules.password"></v-text-field>
-                <v-text-field label="Confirmation mot de passe" prepend-icon="mdi-lock" type="password"
-                  v-model="password_repeat" :rules="rules.password"></v-text-field>
+                <v-text-field label="Nom d'utilisateur" prepend-icon="mdi-account" v-model="username"> </v-text-field>
+                <v-text-field label="Nom" prepend-icon="mdi-account" v-model="nom"></v-text-field>
+                <v-text-field label="Prenom" prepend-icon="mdi-account" v-model="prenom"> </v-text-field>
+                <v-text-field label="Email" prepend-icon="mdi-account" v-model="email"> </v-text-field>
+                <v-text-field label="Mot de passe" prepend-icon="mdi-lock" type="password" v-model="password"></v-text-field>
+                <v-text-field label="Confirmation mot de passe" prepend-icon="mdi-lock" type="password" v-model="password_repeat"></v-text-field>
 
                 <div class="text-center">
                   <v-btn :loading="loading" color="primary" large type="submit" text rounded>Créer le compte</v-btn>
@@ -43,8 +36,24 @@
   </v-container>
 </template>
 <script>
-import AuthService from '../services/AuthService.js';
+import { useAuthStore } from '../stores/auth.store.js';
+import useVuelidate from '@vuelidate/core'
+import { required, email, minLength, sameAs} from '@vuelidate/validators'
+
 export default {
+  setup() {
+    return { v$: useVuelidate() }
+  },
+  validations() {
+    return {
+      username: { required },
+      email: { required, email },
+      nom: { required },
+      prenom: { required },
+      password: { required, minLength: minLength(8) },
+      password_repeat:  { required, sameAsPassword: sameAs('password') }
+    }
+  },
   data() {
     return {
       username: '',
@@ -54,21 +63,15 @@ export default {
       password: '',
       password_repeat: '',
       msg: '',
-      rules: {},
       loading: false,
     };
   },
   methods: {
+
     validate() {
-      this.rules = {
-        required: [v => !!v || 'Required'],
-        username: [v => !!v || 'Required'],
-        email: [v => !!v || 'Required'],
-        password: [v => !!v || 'Required'],
-        password_repeat: [v => !!v || 'Required']
-      }
+      this.v$.$validate()
       this.$nextTick(() => {
-        if (this.$refs.form.validate()) {
+        if (!this.v$.$error) {
           this.loading = true;
           this.signUp(this.form);
         }
@@ -84,9 +87,7 @@ export default {
           first_name: this.nom,
           last_name: this.prenom,
         };
-        AuthService.signUp(credentials).then((signupDone) => {
-
-          console.log("signupDone", signupDone);
+        useAuthStore().signUp(credentials).then((signupDone) => {
 
           const credentials = {
             username: this.username,
@@ -97,17 +98,8 @@ export default {
             last_name: this.prenom,
           };
 
-          console.log("credentials", credentials);
-
-          AuthService.login(credentials).then((reponse) => {
+          useAuthStore().login(credentials).then((reponse) => {
             this.loading = false;
-            const token = reponse.token;
-            const user = {
-              email: reponse.email,
-              nom: reponse.nom
-            };
-            this.$store.dispatch('login', { token, user });
-            this.$router.push('/');
             this.msg = signupDone.msg;
             console.log("login done", reponse);
           });

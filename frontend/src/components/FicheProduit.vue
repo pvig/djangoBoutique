@@ -53,7 +53,6 @@ export default {
     localProduit: useProduitStore().getNewProduit(),
   }),
   validations() {
-    console.log("validations");
     return {
       localProduit: {
         nom: { required },
@@ -77,7 +76,7 @@ export default {
   },
   methods: {
     validate() {
-      this.v$.$validate() // checks all inputs
+      this.v$.$validate()
       return !this.v$.$error;
     },
     update(key, value, type) {

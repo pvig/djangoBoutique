@@ -2,17 +2,24 @@ import { defineStore } from 'pinia'
 
 export const useSnackBarStore = defineStore('SnackBar', {
     state: () => ({
-        snackbarShow: false,
-        snackbarText: "",
-        snackbarColor: "",
-        snackbarTimeout: 2000,
+        show: false,
+        text: "message",
+        color: "#fff",
+        timeout: 2000,
     }),
     actions: {
         getSnackBarState() {
-            return this.snackbarShow;
+            return this.show;
         },
         setSnackBarState(state) {
-            this.state = state;
+            console.log("setSnackBarState", state)
+            this.show = state.show;
+            this.text = state.text;
+            this.color = state.color;
+            this.timeout = state.timeout;
+        },
+        setShow(state) {
+            this.show = state;
         }
     }
   })

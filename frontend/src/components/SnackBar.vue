@@ -6,14 +6,13 @@
     >
       {{ snackbarText }}
 
-      <template v-slot:action="{ attrs }">
+      <template v-slot:actions>
         <v-btn
-          color="black"
-          text
-          v-bind="attrs"
+          color="white"
+          variant="text"
           @click="snackbarShow = false"
         >
-          <b>X</b>
+          Ok
         </v-btn>
       </template>
     </v-snackbar>
@@ -26,20 +25,20 @@ export default {
   computed: {
     snackbarShow: {
       get: function () {
-        return useSnackBarStore().snackbarShow;
+        return useSnackBarStore().show;
       },
       set: function (newValue) {
-        useSnackBarStore().setSnackBarState(newValue);
+        useSnackBarStore().setShow(newValue);
       }
     },
     snackbarTimeout () {
-      return useSnackBarStore().snackbarTimeout
+      return useSnackBarStore().timeout
     },
     snackbarText () {
-      return useSnackBarStore().snackbarText
+      return useSnackBarStore().text
     },
     snackbarColor () {
-      return useSnackBarStore().snackbarColor
+      return useSnackBarStore().color
     },
   },
   methods: {
