@@ -1,4 +1,4 @@
 Django Rest Framework project
 
-a vuejs3 frontend consume the Django API
+a simple vuejs3 frontend to consume the Django Rest API
 

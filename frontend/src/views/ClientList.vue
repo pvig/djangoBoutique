@@ -15,22 +15,34 @@
       </v-col>
     </v-row>
 
-
-    <v-data-table :headers="headers" :items="listeClients" :items-per-page="10" class="elevation-1">
-      <template v-slot:item="row">
-        <tr>
-          <td>
-            {{ row.item.nom }}
-          </td>
-          <td>
-            <v-layout justify-center>
-              <v-icon small class="mr-2" @click="editClient(row.item.id)">mdi-pencil</v-icon>
-              <v-icon small @click="dialogDeleteClient(row.item.id)">mdi-delete</v-icon>
-            </v-layout>
-          </td>
-        </tr>
-      </template>
-    </v-data-table>
+    <v-row>
+      <v-col cols="12">        
+        <v-data-table :headers="headers" :items="listeClients" :items-per-page="10" class="elevation-1">
+          <template v-slot:item="row">
+            <tr>
+              <td>
+                {{ row.item.username }}
+              </td>
+              <td>
+                {{ row.item.nom }}
+              </td>
+              <td>
+                {{ row.item.prenom }}
+              </td>
+              <td>
+                {{ row.item.email }}
+              </td>
+              <td>
+                <v-layout justify-center>
+                  <v-icon small class="mr-2" @click="editClient(row.item.id)">mdi-pencil</v-icon>
+                  <v-icon small @click="dialogDeleteClient(row.item)">mdi-delete</v-icon>
+                </v-layout>
+              </td>
+            </tr>
+          </template>
+        </v-data-table>
+      </v-col>
+    </v-row>
 
     <FicheClient :editClientId="this.editClientId" :editNewClient="this.editNewClient" @editDone="editDone">
     </FicheClient>
