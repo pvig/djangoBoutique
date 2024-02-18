@@ -4,6 +4,8 @@ from rest_framework_simplejwt.views import TokenObtainPairView
 from rest_framework.views import APIView
 from rest_framework.permissions import IsAuthenticated
 from rest_framework_simplejwt.token_blacklist.models import OutstandingToken, BlacklistedToken
+from rest_framework_simplejwt.tokens import RefreshToken
+from rest_framework.response import Response
 from django.contrib.auth.models import User
 from .serializers import RegisterSerializer
 from rest_framework import generics
@@ -30,5 +32,4 @@ class LogoutView(APIView):
             return Response({"status": "OK, goodbye, all refresh tokens blacklisted"})
         refresh_token = self.request.data.get('refresh_token')
         token = RefreshToken(token=refresh_token)
-        token.blacklist()
         return Response({"status": "OK, goodbye"})

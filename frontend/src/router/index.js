@@ -1,5 +1,6 @@
 import { createWebHistory, createRouter } from "vue-router";
 import { useSnackBarStore } from '../stores/snackbar.store.js';
+import { useAuthStore } from '../stores/auth.store.js';
 import axios from 'axios';
 //import Home from '../views/HomePage'
 import Login from '../views/LoginForm'
@@ -25,6 +26,12 @@ const router = createRouter({
   history: createWebHistory(),
   routes,
 });
+
+router.beforeEach((to) => {
+  if(to.name == "logout") {
+    useAuthStore().logout();
+  }
+})
 
 axios.interceptors.response.use(response => {
   return response;

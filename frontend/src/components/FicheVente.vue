@@ -25,7 +25,7 @@
 
               <v-row>
                 <v-col cols="11" md="11">
-                  <v-text-field :model-value="localVente.dateVente | formatDate" @input="update('dateVente', $event)"
+                  <v-text-field :model-value="localVente.dateVente" @input="update('dateVente', $event)"
                     label="Date" type="datetime-local" class="mx-4" :rules="rules.required"></v-text-field>
                 </v-col>
               </v-row>
