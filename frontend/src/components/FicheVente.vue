@@ -3,45 +3,45 @@
     <v-dialog v-model="editing" persistent max-width="800">
       <v-card class="editBox text-lg-right">
 
-        <div class="card">
+        <div>
           <span>id : {{ this.localVente.id }}</span>
           <v-form ref="formVente" @submit.prevent="validate" id="vente-form">
             <v-container>
 
               <v-row>
                 <v-col cols="11" md="11">
-                  <v-text-field :model-value="localVente.numeroVente" @input="update('numeroVente', $event)"
+                  <v-text-field :model-value="localVente.numeroVente" @input="update('numeroVente', $event.target.value)"
                     label="Numero de vente" type="string" class="mx-4" :rules="rules.required"></v-text-field>
                 </v-col>
               </v-row>
 
               <v-row>
                 <v-col cols="11" md="11">
-                  <v-autocomplete v-model="client" item-text="nom" item-value="@id" :loading="loading"
-                    :items="listeClients" :search-input.sync="searchClient" cache-items class="mx-4" flat hide-no-data
-                    hide-details label="Client" :rules="rules.required"></v-autocomplete>
+                  <v-autocomplete v-model="client" item-title="username" item-value="@id" :loading="loading"
+                    :items="listeClients" :search-input="searchClient" class="mx-4" flat hide-no-data hide-details
+                    label="Client"></v-autocomplete>
                 </v-col>
               </v-row>
 
               <v-row>
                 <v-col cols="11" md="11">
-                  <v-text-field :model-value="localVente.dateVente" @input="update('dateVente', $event)"
-                    label="Date" type="datetime-local" class="mx-4" :rules="rules.required"></v-text-field>
+                  <v-text-field :model-value="localVente.dateVente" @input="update('dateVente', $event.target.value)"
+                    label="Date" type="datetime-local" class="mx-4"></v-text-field>
                 </v-col>
               </v-row>
 
               <v-row>
                 <v-col cols="11" md="11">
-                  <v-text-field :model-value="prixProduitsHT" label="Total HT" type="number" step="0.01" readonly class="mx-4"
-                    :rules="rules.required"></v-text-field>
+                  <v-text-field :model-value="prixProduitsHT" label="Total HT" type="number" step="0.01" readonly
+                    class="mx-4" @input="update('prixProduitsHT', $event.target.value)"></v-text-field>
                 </v-col>
               </v-row>
 
               <v-row>
                 <v-col cols="11" md="11">
-                  <v-autocomplete v-model="produit" item-text="nom" :loading="loading" :items="listeProduits"
-                    :search-input.sync="searchProduit" cache-items class="mx-4" flat hide-no-data hide-details
-                    :label="labelProduit" return-object>
+                  <v-autocomplete v-model="produit" item-title="nom" item-value="@id" :loading="loading" return-object
+                    :items="listeProduits" :search-input="searchProduit" class="mx-4" flat hide-no-data hide-details
+                    :label="labelProduit">
                   </v-autocomplete>
                 </v-col>
 
@@ -58,7 +58,8 @@
                   <v-toolbar dense color="grey lighten-5" flat>
                     <v-toolbar-title>Produits</v-toolbar-title>
                   </v-toolbar>
-                  <v-simple-table dense>
+
+                  <v-table dense>
                     <template v-slot:default>
                       <thead>
                         <tr>
@@ -75,7 +76,7 @@
                           <td style="width: 50%">{{ item.nom }}</td>
                           <td>
                             <input type="number" :model-value="item.quantite" min="1" style="width: 7em"
-                              @change="updateQuantite(item.idProduit, $event)" />
+                              @change="updateQuantite(item.idProduit, $event.target.value)" />
                             &nbsp;&nbsp;&nbsp;&nbsp;
                             <v-btn plain @click="supprimeLigneVente(item)">
                               <v-icon>mdi-delete</v-icon>
@@ -84,7 +85,8 @@
                         </tr>
                       </tbody>
                     </template>
-                  </v-simple-table>
+                  </v-table>
+
                 </v-col>
               </v-row>
 
@@ -108,6 +110,10 @@
 </template>
 
 <script>
+import { useVenteStore } from '../stores/ventes.store.js';
+import { useProduitStore } from '../stores/produits.store.js';
+import { useClientStore } from '../stores/clients.store.js';
+
 
 export default {
   name: "ficheVente",
@@ -116,7 +122,7 @@ export default {
     loading: false,
     editing: false,
     saving: false,
-    localVente: { prixProduitsHT: 0 },
+    localVente: { prixProduitsHT: 0, lignesVente: [] },
     prixProduitsHT: 0,
     rules: {},
     client: {},
@@ -130,24 +136,18 @@ export default {
     labelProduit: "Ajouter un produit"
   }),
   mounted() {
-    this.$store.dispatch('clients/getClients').then(() => {
-      this.listeClients = this.$store.state.clients.all;
-      this.isLoading = false;
-    });
-    this.$store.dispatch('produits/getProducts').then(() => {
-      this.listeProduits = this.$store.state.produits.all;
-      this.isLoading = false;
-    });
+    this.listeClients = useClientStore().clients;
+    this.listeProduits = useProduitStore().products;
   },
   watch: {
-    client(val, oldval) {
+    client(val) {
       if (!val) {
         this.labelClient = "Choisissez un client";
       } else {
         this.labelClient = "";
       }
     },
-    produit(val, oldval) {
+    produit(val) {
       if (!val) {
         this.labelProduit = "Ajouter un produit";
       } else {
@@ -248,7 +248,7 @@ export default {
     },
     editVente(id) {
       if (id && typeof this.$store.state.ventes.all != 'undefined') {
-        this.localVente = { ...this.$store.state.ventes.all.find(element => element.id == id) };
+        this.localVente = { ...useVenteStore().getVentes().find(element => element.id == id) };
         this.venteProduits = JSON.parse(JSON.stringify(this.localVente.lignesVente));
       } else {
         this.localVente = {
@@ -264,8 +264,8 @@ export default {
     updateVenteAtribute(val) {
       this.localVente[val.key] = val.value;
     },
-    saveVente(e) {
-      this.localVente.prixProduitsHT = this.prixProduitsHT;
+    saveVente() {
+      /*this.localVente.prixProduitsHT = this.prixProduitsHT;
       this.localVente.prixProduitsTTC = this.prixProduitsHT * 1.2;
       this.localVente.client = this.client;
       this.localVente.lignesVente = this.venteProduits;
@@ -274,7 +274,7 @@ export default {
         this.$store.dispatch('ventes/saveVente', this.localVente).then(() => {
           this.closeMe();
         })
-      });
+      });*/
     },
     closeMe() {
       this.editing = false;

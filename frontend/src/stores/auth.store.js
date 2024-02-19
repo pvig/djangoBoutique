@@ -1,7 +1,6 @@
 import { defineStore } from 'pinia'
 import axios from 'axios';
 import router from "../router";
-import { useSnackBarStore } from '../stores/snackbar.store.js';
 
 const url = 'http://localhost:8000/';
 
@@ -31,7 +30,6 @@ export const useAuthStore = defineStore('auth', {
                     this.clearSession();
                     //router.push('/login');
                     //location.reload();
-                    useSnackBarStore().setSnackBarState({ text: "Vous avez été déconnecté" });
                 });
         },
         clearSession() {

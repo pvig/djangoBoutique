@@ -55,20 +55,18 @@
  import FicheVente from '../components/FicheVente.vue'
  import SnackBar from '../components/SnackBar.vue'
  import Progress from '../components/ProgressBar.vue'
- 
+import { useVenteStore } from '../stores/ventes.store.js';
+
+
  export default {
    name: 'VenteList',
-   data: () => ({}),
    components: {
      FicheVente,
      SnackBar,
      Progress
    },
    mounted() {
-     this.$store.dispatch('ventes/getVentes').then(() => {
-       this.listeVentes = this.$store.state.ventes.all;
-       this.isLoading = false;
-     });
+    this.refreshList();
    },
    computed: {
    },
@@ -85,6 +83,13 @@
      ],
    }),
    methods: {
+    refreshList: function() {
+      useVenteStore().getVentes().then(() => {
+        this.listeVentes = useVenteStore().ventes;
+        this.isLoading = false;
+        console.log("this.listeVentes", this.listeVentes);
+      });
+    },
      editVente: function (id) {
        this.editVenteId = id;
      },
@@ -95,11 +100,12 @@
        this.venteToDeleteId = id;
        this.confirmDeleteVente = true;
      },
-     deleteVente: function () {
-       this.$store.dispatch('ventes/deleteVente', this.venteToDeleteId);
-       this.confirmDeleteVente = false;
-     },
-     editDone: function (vente) {
+     async deleteVente() {
+      await useVenteStore().deleteVente(this.venteToDeleteId);
+      this.confirmDeleteProduit = false;
+      this.refreshList();
+    },
+     editDone: function () {
        this.editVenteId = null;
        this.editNewVente = false;
      }

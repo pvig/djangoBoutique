@@ -4,7 +4,8 @@
       <router-link to="/">Home</router-link> |
       <router-link to="/logout">logout</router-link> |
       <router-link to="/produits">Produits</router-link> |
-      <router-link to="/clients">Clients</router-link>
+      <router-link to="/clients">Clients</router-link> |
+      <router-link to="/ventes">Ventes</router-link>
     </div>
     <div id="nav" v-if="!authenticated">
       <router-link to="/login">login</router-link>
