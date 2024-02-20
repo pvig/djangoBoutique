@@ -17,7 +17,7 @@
 
               <v-row>
                 <v-col cols="11" md="11">
-                  <v-autocomplete v-model="client" item-title="username" item-value="@id" :loading="loading"
+                  <v-autocomplete v-model="client" item-title="username" item-value="id" :loading="loading"
                     :items="listeClients" :search-input="searchClient" class="mx-4" flat hide-no-data hide-details
                     label="Client"></v-autocomplete>
                 </v-col>
@@ -26,7 +26,7 @@
               <v-row>
                 <v-col cols="11" md="11">
                   <v-text-field :model-value="localVente.dateVente" @input="update('dateVente', $event.target.value)"
-                    label="Date" type="datetime-local" class="mx-4"></v-text-field>
+                    label="Date" type="date" class="mx-4"></v-text-field>
                 </v-col>
               </v-row>
 
@@ -54,9 +54,9 @@
               </v-row>
 
               <v-row>
-                <v-col cols="12" md="12">
+                <v-col cols="11" md="11" >
                   <v-toolbar dense color="grey lighten-5" flat>
-                    <v-toolbar-title>Produits</v-toolbar-title>
+                    <v-toolbar-title class="text-left">Produits</v-toolbar-title>
                   </v-toolbar>
 
                   <v-table dense>
@@ -69,14 +69,16 @@
                           <th class="text-left">
                             Quantité
                           </th>
+                          <th>
+                          </th>
                         </tr>
                       </thead>
                       <tbody>
                         <tr v-for="item in venteProduits" :key="item.id">
-                          <td style="width: 50%">{{ item.nom }}</td>
-                          <td>
-                            <input type="number" :model-value="item.quantite" min="1" style="width: 7em"
-                              @change="updateQuantite(item.idProduit, $event.target.value)" />
+                          <td class="text-left">{{ item.nom }}</td>
+                          <td class="text-left">
+                            <input type="number" :model-value="item.quantite" min="1" style="width: 7em;border: 1px solid;"
+                              @change="updateQuantite(item.idProduit, $event)" />
                             &nbsp;&nbsp;&nbsp;&nbsp;
                             <v-btn plain @click="supprimeLigneVente(item)">
                               <v-icon>mdi-delete</v-icon>
@@ -130,14 +132,18 @@ export default {
     rechercheClient: '',
     listeClients: [],
     labelClient: "Choisissez un client",
-    produit: {},
+    produit: {nom:""},
     rechercheProduit: '',
     listeProduits: [],
     labelProduit: "Ajouter un produit"
   }),
   mounted() {
-    this.listeClients = useClientStore().clients;
-    this.listeProduits = useProduitStore().products;
+    useClientStore().getClients().then(() => {
+      this.listeClients = useClientStore().clients;
+    })
+    useProduitStore().getProducts().then(() => {
+      this.listeProduits = useProduitStore().products;
+    })
   },
   watch: {
     client(val) {
@@ -247,9 +253,9 @@ export default {
       this.updateVenteAtribute({ ...this.value, key: key, value: value });
     },
     editVente(id) {
-      if (id && typeof this.$store.state.ventes.all != 'undefined') {
-        this.localVente = { ...useVenteStore().getVentes().find(element => element.id == id) };
-        this.venteProduits = JSON.parse(JSON.stringify(this.localVente.lignesVente));
+      if (id) {
+        this.localVente = useVenteStore().ventes.find(element => element.id == id);
+        this.venteProduits = this.localVente.lignesVente;
       } else {
         this.localVente = {
           nom: ""
@@ -265,16 +271,17 @@ export default {
       this.localVente[val.key] = val.value;
     },
     saveVente() {
-      /*this.localVente.prixProduitsHT = this.prixProduitsHT;
+      console.log("client", this.client)
+      this.localVente.prixProduitsHT = this.prixProduitsHT;
       this.localVente.prixProduitsTTC = this.prixProduitsHT * 1.2;
       this.localVente.client = this.client;
       this.localVente.lignesVente = this.venteProduits;
       this.saving = true;
       this.$nextTick(() => {
-        this.$store.dispatch('ventes/saveVente', this.localVente).then(() => {
+        useVenteStore().saveVente(this.localVente).then(() => {
           this.closeMe();
         })
-      });*/
+      });
     },
     closeMe() {
       this.editing = false;

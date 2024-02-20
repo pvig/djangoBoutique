@@ -1,5 +1,5 @@
 <template>
-  <v-container fluid fill-height id="login-page">
+  <v-container fluid id="login-page">
     <div id="nav" v-if="authenticated">
       <router-link to="/">Home</router-link> |
       <router-link to="/logout">logout</router-link> |
@@ -10,6 +10,7 @@
     <div id="nav" v-if="!authenticated">
       <router-link to="/login">login</router-link>
     </div>
+    <br/>
     <router-view />
     <SnackBar></SnackBar>
   </v-container>

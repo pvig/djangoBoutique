@@ -7,7 +7,6 @@ const actions = {
     async getVentes() {
         await axios.get(apiUrl).then((response) => {
             this.ventes = response.data;
-            console.log("this.ventes", this.ventes)
         });
     },
     getVente(id) {
@@ -26,9 +25,9 @@ const actions = {
         }
 
     },
-    async deleteVente(vente) {
-        await axios.delete(apiUrl + vente.id + "/").then(() => {
-            useSnackBarStore().setSnackBarState({ text: "vente " + vente.nom + " supprimé" });
+    async deleteVente(venteId) {
+        await axios.delete(apiUrl + venteId + "/").then(() => {
+            useSnackBarStore().setSnackBarState({ text: "vente " + venteId + " supprimé" });
         });
     },
 };
