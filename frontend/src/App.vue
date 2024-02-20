@@ -1,8 +1,8 @@
 <template>
   <v-container fluid id="login-page">
     <div id="nav" v-if="authenticated">
+      <router-link to="/Logout">logout</router-link> |
       <router-link to="/">Home</router-link> |
-      <router-link to="/logout">logout</router-link> |
       <router-link to="/produits">Produits</router-link> |
       <router-link to="/clients">Clients</router-link> |
       <router-link to="/ventes">Ventes</router-link>

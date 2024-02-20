@@ -16,6 +16,8 @@
 </template>
 
 <script>
+import { useVenteStore } from '../stores/ventes.store.js';
+
 export default {
   name: 'HomePage',
   props: {},
@@ -188,7 +190,7 @@ export default {
     graph2series: [],
   }),
   async created() {
-    this.$store.dispatch('ventes/getVentes').then(() => {
+    useVenteStore().getVentes().then(() => {
       //-------------------       charts preparation        -------------------
       let totalVentesAn = {};
       let graph1Values1 = [];
@@ -197,10 +199,10 @@ export default {
       let graph2Values = [];
       let ventesMensuelles = [];
       //-------------------       ventes list processing        -------------------
-      for (let nn in this.$store.state.ventes.all) {
-        let vente = this.$store.state.ventes.all[nn];
+      for (let nn in useVenteStore().ventes) {
+        let vente = useVenteStore().ventes[nn];
         let dateVente = vente.dateVente;
-        let numProduits = vente.lignesVente.length;
+        let numProduits = 10;//vente.LigneVente.length;
         //-------------------
         let d = new Date(dateVente);
         let year = d.getFullYear().toString();
