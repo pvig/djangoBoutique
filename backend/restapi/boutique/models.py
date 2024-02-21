@@ -9,6 +9,12 @@ class Client(models.Model):
     nom = models.CharField(max_length=100, blank=True, null=True)
     prenom = models.CharField(max_length=100, blank=True, null=True)
 
+class Produit(models.Model):
+    nom = models.CharField(max_length=100,blank=True,null=True)
+    prixHT = models.FloatField()
+    poids = models.FloatField()
+    reference = models.CharField(max_length=100,blank=True,null=True)
+
 class Vente(models.Model):
     client = models.ForeignKey(Client, on_delete=models.CASCADE)
     dateVente = models.DateField()
@@ -16,15 +22,9 @@ class Vente(models.Model):
     prixProduitsHT = models.FloatField()
     prixProduitsTTC = models.FloatField()
 
-class Produit(models.Model):
-    nom = models.CharField(max_length=100,blank=True,null=True)
-    prixHT = models.FloatField()
-    poids = models.FloatField()
-    reference = models.CharField(max_length=100,blank=True,null=True)
-
 class LigneVente(models.Model):
-    vente = models.ForeignKey(Vente, on_delete=models.CASCADE)
-    produit = models.ForeignKey(Produit, on_delete=models.CASCADE)
+    vente = models.ForeignKey(Vente, on_delete=models.CASCADE, related_name="lignesVente")
     quantite = models.IntegerField()
     prixHT = models.FloatField()
+    produit = models.OneToOneField(Produit, on_delete=models.CASCADE)
 

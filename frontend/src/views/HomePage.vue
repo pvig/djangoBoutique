@@ -201,6 +201,7 @@ export default {
       //-------------------       ventes list processing        -------------------
       for (let nn in useVenteStore().ventes) {
         let vente = useVenteStore().ventes[nn];
+ 
         let dateVente = vente.dateVente;
         let numProduits = 10;//vente.LigneVente.length;
         //-------------------
