@@ -24,7 +24,6 @@ class Vente(models.Model):
 
 class LigneVente(models.Model):
     vente = models.ForeignKey(Vente, on_delete=models.CASCADE, related_name="lignesVente")
-    quantite = models.IntegerField()
+    quantite = models.PositiveIntegerField()
     prixHT = models.FloatField()
-    produit = models.OneToOneField(Produit, on_delete=models.CASCADE)
-
+    produit = models.ForeignKey(Produit, on_delete=models.CASCADE)

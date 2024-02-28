@@ -106,7 +106,7 @@ export default {
     },
     async deleteVente() {
       await useVenteStore().deleteVente(this.venteToDeleteId);
-      this.confirmDeleteProduit = false;
+      this.confirmDeleteVente = false;
       this.refreshList();
     },
     editDone: function () {

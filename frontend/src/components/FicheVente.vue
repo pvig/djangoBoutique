@@ -54,7 +54,7 @@
               </v-row>
 
               <v-row>
-                <v-col cols="11" md="11" >
+                <v-col cols="11" md="11">
                   <v-toolbar dense color="grey lighten-5" flat>
                     <v-toolbar-title class="text-left">Produits</v-toolbar-title>
                   </v-toolbar>
@@ -75,11 +75,12 @@
                       </thead>
                       <tbody>
                         <tr v-for="item in venteProduits" :key="item.id">
-                          <td class="text-left">{{ item.nom }}</td>
+                          <td class="text-left">{{ item.produit.nom }}</td>
                           <td class="text-left">
-                            <input type="number" :model-value="item.quantite" min="1" style="width: 7em;border: 1px solid;"
-                              @change="updateQuantite(item.idProduit, $event)" />
-                            &nbsp;&nbsp;&nbsp;&nbsp;
+                            <v-text-field :model-value="item.quantite" @change="updateQuantite(item.produit.id, $event)"
+                              type="number" min="1" class="mx-4" :rules="rules.required"></v-text-field>
+                          </td>
+                          <td class="text-left">
                             <v-btn plain @click="supprimeLigneVente(item)">
                               <v-icon>mdi-delete</v-icon>
                             </v-btn>
@@ -124,7 +125,7 @@ export default {
     loading: false,
     editing: false,
     saving: false,
-    localVente: { prixProduitsHT: 0, lignesVente: [] },
+    localVente: {},
     prixProduitsHT: 0,
     rules: {},
     client: {},
@@ -132,7 +133,7 @@ export default {
     rechercheClient: '',
     listeClients: [],
     labelClient: "Choisissez un client",
-    produit: {nom:""},
+    produit: { nom: "" },
     rechercheProduit: '',
     listeProduits: [],
     labelProduit: "Ajouter un produit"
@@ -168,6 +169,7 @@ export default {
     'editNewVente': function () {
       if (this.editNewVente) {
         this.editVente();
+        console.log("localVente", this.localVente);
       }
     },
   },
@@ -207,11 +209,8 @@ export default {
           this.venteProduits[existingIndex].quantite += 1;
         } else {
           let newLigneVente = {
-            idProduit: this.produit.id,
-            produit: "/api/produit/" + this.produit.id,
-            vente: this.editVenteId ? "/api/vente/" + this.editVenteId : "",
+            produit: this.produit,
             prixHT: this.produit.prixHT,
-            nom: this.produit.nom,
             quantite: 1
           }
           if (this.editVenteId) {
@@ -242,7 +241,7 @@ export default {
       });
     },
     updateQuantite(idProduit, $event) {
-      let existingIndex = this.venteProduits.findIndex(ligne => ligne.idProduit == idProduit);
+      let existingIndex = this.venteProduits.findIndex(ligne => ligne.produit.id == idProduit);
       this.venteProduits[existingIndex].quantite = parseInt($event.target.value);
       this.calcTotal();
     },
@@ -257,9 +256,13 @@ export default {
         this.localVente = useVenteStore().ventes.find(element => element.id == id);
         this.venteProduits = this.localVente.lignesVente;
       } else {
+        var now = new Date();
         this.localVente = {
-          nom: ""
+          prixProduitsHT: 0,
+          lignesVente: [],
+          dateVente: now.toISOString().substring(0, 10)
         }
+        console.log("localVente", this.localVente);
         this.venteProduits = [];
       }
       this.client = this.localVente.client;
@@ -276,6 +279,9 @@ export default {
       this.localVente.prixProduitsTTC = this.prixProduitsHT * 1.2;
       this.localVente.client = this.client;
       this.localVente.lignesVente = this.venteProduits;
+      for (var rr in this.localVente.lignesVente) {
+        this.localVente.lignesVente[rr]["produit"] = this.localVente.lignesVente[rr]["produit"].id
+      }
       this.saving = true;
       this.$nextTick(() => {
         useVenteStore().saveVente(this.localVente).then(() => {

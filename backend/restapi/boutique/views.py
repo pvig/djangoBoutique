@@ -31,7 +31,7 @@ class VenteList(APIView):
         return Response(serializer.data)
 
     @swagger_auto_schema(
-        description="Method to post a new building",
+        description="Method to post a new vente",
         request_body=VenteSerializer,
         responses={200: VenteSerializer(many=False),
                    401: 'Unauthorized',
