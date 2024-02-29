@@ -51,6 +51,18 @@ class VenteSerializer(serializers.ModelSerializer):
 
         return vente_instance
     
-    def update(self, instance, validated_data):
-        super().update(instance, validated_data)
-        return instance
+    def update(self, vente_instance, validated_data):
+        lignes_vente_data = validated_data.pop('lignesVente')
+        
+        # delete existing lignesVente before adding new set
+        lignesVente = vente_instance.lignesVente.all()
+        for ligne_vente_previous in lignesVente:
+            ligne_vente_previous.delete()
+
+        for ligne_vente_data in lignes_vente_data:
+            LigneVente.objects.create(
+                vente=vente_instance,
+                **ligne_vente_data
+            )
+
+        return vente_instance
