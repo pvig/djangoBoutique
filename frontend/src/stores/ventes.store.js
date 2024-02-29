@@ -12,7 +12,14 @@ const actions = {
     getVente(id) {
         return this.ventes.find((element) => element.id == id);
     },
-    async saveVente(vente) {
+    async saveVente(_vente) {
+        var vente = structuredClone(_vente);
+
+        // post id only
+        for (var rr in vente.lignesVente) {
+            vente.lignesVente[rr]["produit"] = vente.lignesVente[rr]["produit"].id
+        }
+
         if (vente.id != undefined) {
             await axios.put(apiUrl + vente.id + "/", vente).then(() => {
                 useSnackBarStore().setSnackBarState({ text: "vente " + vente.nom + " sauvegardé" });

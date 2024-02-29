@@ -77,7 +77,7 @@
                         <tr v-for="item in venteProduits" :key="item.id">
                           <td class="text-left">{{ item.produit.nom }}</td>
                           <td class="text-left">
-                            <v-text-field :model-value="item.quantite" @change="updateQuantite(item.produit.id, $event)"
+                            <v-text-field :model-value="item.quantite" @change="updateQuantite(item, $event)"
                               type="number" min="1" class="mx-4" :rules="rules.required"></v-text-field>
                           </td>
                           <td class="text-left">
@@ -189,7 +189,6 @@ export default {
       get() {
         return this.rechercheProduit
       },
-
       set(searchInput) {
         if (this.rechercheProduit !== searchInput) {
           this.rechercheProduit = searchInput;
@@ -240,9 +239,8 @@ export default {
         }
       });
     },
-    updateQuantite(idProduit, $event) {
-      let existingIndex = this.venteProduits.findIndex(ligne => ligne.produit.id == idProduit);
-      this.venteProduits[existingIndex].quantite = parseInt($event.target.value);
+    updateQuantite(item, $event) {
+      item.quantite = parseInt($event.target.value);
       this.calcTotal();
     },
     update(key, value, type) {
@@ -274,14 +272,10 @@ export default {
       this.localVente[val.key] = val.value;
     },
     saveVente() {
-      console.log("client", this.client)
       this.localVente.prixProduitsHT = this.prixProduitsHT;
       this.localVente.prixProduitsTTC = this.prixProduitsHT * 1.2;
       this.localVente.client = this.client;
       this.localVente.lignesVente = this.venteProduits;
-      for (var rr in this.localVente.lignesVente) {
-        this.localVente.lignesVente[rr]["produit"] = this.localVente.lignesVente[rr]["produit"].id
-      }
       this.saving = true;
       this.$nextTick(() => {
         useVenteStore().saveVente(this.localVente).then(() => {
