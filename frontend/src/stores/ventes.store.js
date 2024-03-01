@@ -16,6 +16,8 @@ const actions = {
         var vente = structuredClone(_vente);
 
         // post id only
+        vente.client = vente.client.id;
+
         for (var rr in vente.lignesVente) {
             vente.lignesVente[rr]["produit"] = vente.lignesVente[rr]["produit"].id
         }

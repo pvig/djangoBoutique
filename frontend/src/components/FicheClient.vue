@@ -13,8 +13,6 @@
                   <v-text-field :model-value="localClient.nom" @input="update('nom', $event.target.value)" label="Nom"></v-text-field>
                   <v-text-field :model-value="localClient.prenom" @input="update('prenom', $event.target.value)" label="Prenom"></v-text-field>
                   <v-text-field :model-value="localClient.email" @input="update('email', $event.target.value)" label="Email"></v-text-field>
-                  <v-text-field :model-value="localClient.password" @input="update('password', $event.target.value)" label="password"></v-text-field>
-                  <v-text-field :model-value="localClient.password2" @input="update('password2', $event.target.value)" label="password2"></v-text-field>
                 </v-col>
               </v-row>
             </v-container>

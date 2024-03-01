@@ -85,8 +85,10 @@ export default {
     confirmDeleteProduit: false,
     ProduitToDelete: false,
     headers: [
-      { text: 'Produit', value: 'nom', sortable: false, align: 'start' },
-      { text: 'Actions', value: 'actions', sortable: false, align: 'center' },
+      { title: 'id', value: 'id', sortable: false, align: 'center' },
+      { title: 'Nom', value: 'nom', sortable: false, align: 'center' },
+      { title: 'Reference', value: 'reference', sortable: false, align: 'center' },
+      { title: 'Actions', value: 'actions', sortable: false, align: 'center' },
     ],
   }),
   methods: {

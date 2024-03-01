@@ -7,7 +7,12 @@ from rest_framework import serializers
 class ClientSerializer(serializers.ModelSerializer):
     class Meta:
         model = Client
-        fields = '__all__'
+        fields = ['id','nom','prenom','username','email']
+
+class ClientVenteSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = Client
+        fields = ['id','nom','prenom']
 
 class ProduitSerializer(serializers.ModelSerializer):
     class Meta:
@@ -39,6 +44,11 @@ class VenteSerializer(serializers.ModelSerializer):
         model = Vente
         fields = ('id', 'client', 'dateVente', 'numeroVente', 'prixProduitsHT', 'prixProduitsTTC', 'lignesVente')
 
+    def to_representation(self, instance):
+        data = super().to_representation(instance)
+        data["client"] = ClientVenteSerializer(instance.client).data
+        return data
+    
     def create(self, validated_data):
         lignes_vente_data = validated_data.pop('lignesVente')
         vente_instance = Vente.objects.create(**validated_data)

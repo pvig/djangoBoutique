@@ -17,7 +17,7 @@
 
               <v-row>
                 <v-col cols="11" md="11">
-                  <v-autocomplete v-model="client" item-title="username" item-value="id" :loading="loading"
+                  <v-autocomplete v-model="client.nom" item-title="username" item-value="id" :loading="loading"
                     :items="listeClients" :search-input="searchClient" class="mx-4" flat hide-no-data hide-details
                     label="Client"></v-autocomplete>
                 </v-col>
@@ -203,7 +203,7 @@ export default {
     },
     addProduit() {
       if (this.produit && this.produit.id) {
-        let existingIndex = this.venteProduits.findIndex(ligne => ligne.idProduit == this.produit.id);
+        let existingIndex = this.venteProduits.findIndex(ligne => ligne.produit.id == this.produit.id);
         if (existingIndex >= 0) {
           this.venteProduits[existingIndex].quantite += 1;
         } else {

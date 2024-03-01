@@ -19,7 +19,11 @@
         <v-data-table :headers="headers" :items="listeVentes" :items-per-page="10" class="elevation-1">
           <template v-slot:item="row">
             <tr>
+              <td>{{ row.item.client.nom }}</td>
+              <td>{{ row.item.dateVente }}</td>
               <td>{{ row.item.numeroVente }}</td>
+              <td>{{ formatPrice(row.item.prixProduitsHT) }}</td>
+              <td>{{ formatPrice(row.item.prixProduitsTTC) }}</td>
               <td>
                 <v-layout justify-center>
                   <v-icon small class="mr-2" @click="editVente(row.item.id)">mdi-pencil</v-icon>
@@ -82,8 +86,12 @@ export default {
     confirmDeleteVente: false,
     venteToDeleteId: false,
     headers: [
-      { text: 'Vente', value: 'id', sortable: false, align: 'start' },
-      { text: 'Actions', value: 'actions', sortable: false, align: 'center' },
+      { title: 'Nom', value: 'client.nom', sortable: false, align: 'center' },
+      { title: 'Date', value: 'date', sortable: false, align: 'center' },
+      { title: 'Numero Vente', value: 'numeroVente', sortable: false, align: 'center' },
+      { title: 'prixProduitsHT', value: 'prixProduitsHT', sortable: false, align: 'center' },
+      { title: 'prixProduitsTTC', value: 'prixProduitsTTC', sortable: false, align: 'center' },
+      { title: 'Actions', value: 'actions', sortable: false, align: 'center' },
     ],
   }),
   methods: {
@@ -112,6 +120,9 @@ export default {
     editDone: function () {
       this.editVenteId = null;
       this.editNewVente = false;
+    },
+    formatPrice: function(val) {
+      return val.toFixed(2) + " €";
     }
   }
 }

@@ -91,8 +91,11 @@ export default {
     confirmDeleteClient: false,
     ClientToDelete: false,
     headers: [
-      { text: 'Client', value: 'nom', sortable: false, align: 'start' },
-      { text: 'Actions', value: 'actions', sortable: false, align: 'center' },
+      { title: 'Username', value: 'username', sortable: false, align: 'center' },
+      { title: 'Nom', value: 'nom', sortable: false, align: 'center' },
+      { title: 'Prenom', value: 'prenom', sortable: false, align: 'center' },
+      { title: 'Email', value: 'email', sortable: false, align: 'center' },
+      { title: 'Actions', value: 'actions', sortable: false, align: 'center' },
     ],
   }),
   methods: {
