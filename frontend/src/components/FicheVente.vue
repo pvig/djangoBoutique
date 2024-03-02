@@ -228,16 +228,15 @@ export default {
       }
       this.prixProduitsHT = total;
     },
-    validate() {
+    async validate() {
       this.rules = {
         prix: [v => (v && (parseFloat(v) == v)) || 'Le prix doit être un chiffre'],
         required: [v => !!v || 'Required']
       }
-      this.$nextTick(() => {
-        if (this.$refs.formVente.validate()) {
-          this.saveVente();
-        }
-      });
+      const { valid } = await this.$refs.form.validate()
+      if (valid) {
+        this.saveVente();
+      }
     },
     updateQuantite(item, $event) {
       item.quantite = parseInt($event.target.value);

@@ -11,7 +11,7 @@
             </div>
             <transition name="fade" mode="out-in">
 
-              <v-form ref="form" @submit.prevent="validate">
+              <v-form ref="form" fast-fail @submit.prevent="validate">
                 <v-text-field id="username" label="Username" prepend-icon="mdi-username" v-model="form.username"
                   :rules="rules.username">
                 </v-text-field>
@@ -35,9 +35,9 @@
       <v-col></v-col>
       <v-col :style="{ 'max-width': '500px' }">
 
-          <div class="text-center">
-            <v-btn color="secondary" type="button" text rounded @click="$router.push('/signUp')" >Créer un compte</v-btn>
-          </div>
+        <div class="text-center">
+          <v-btn color="secondary" type="button" text rounded @click="$router.push('/signUp')">Créer un compte</v-btn>
+        </div>
 
       </v-col>
       <v-col></v-col>
@@ -64,19 +64,19 @@ export default {
     };
   },
   methods: {
-    validate() {
 
+    async validate() {
       this.rules = {
         username: [v => !!v || 'Required'],
         email: [v => !!v || 'Required'],
         password: [v => !!v || 'Required']
       }
-      this.$nextTick(() => {
-        if (this.$refs.form.validate()) {
-          this.loading = true;
-          this.login(this.form);
-        }
-      });
+      const { valid } = await this.$refs.form.validate()
+
+      if (valid) {
+        this.loading = true;
+        this.login(this.form);
+      }
     },
     async login(form) {
       try {

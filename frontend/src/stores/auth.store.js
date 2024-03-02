@@ -6,7 +6,7 @@ const url = 'http://localhost:8000/';
 
 export const useAuthStore = defineStore('auth', {
     state: () => ({
-        user: JSON.parse(localStorage.getItem('user')),
+        user: {},
         returnUrl: null
     }),
     actions: {
@@ -40,17 +40,22 @@ export const useAuthStore = defineStore('auth', {
             return axios
                 .post(url + 'auth/login/', credentials)
                 .then((response) => {
-                    let resp = Object.assign(credentials, response.data);
-                    return resp;
+                    return Object.assign(credentials, response.data);
+                })
+                .catch((error) => { 
+                    console.log("auth/login error", error); 
+                    router.push('/login');
+                    location.reload();
                 });
         },
         signUp(credentials) {
             return axios
                 .post(url + 'auth/register/', credentials)
-                .then(response => response.data);
+                .then(response => response.data)
+                .catch((error) => { console.log("auth/register error", error); });
         },
         isLogged() {
-            if(!this.user) {
+            if (!this.user) {
                 return false;
             } else {
                 return true;
