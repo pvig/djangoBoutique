@@ -25,10 +25,8 @@
               <td>{{ formatPrice(row.item.prixProduitsHT) }}</td>
               <td>{{ formatPrice(row.item.prixProduitsTTC) }}</td>
               <td>
-                <v-layout justify-center>
-                  <v-icon small class="mr-2" @click="editVente(row.item.id)">mdi-pencil</v-icon>
-                  <v-icon small @click="dialogDeleteVente(row.item.id)">mdi-delete</v-icon>
-                </v-layout>
+                <v-icon small class="mr-2" @click="editVente(row.item.id)">mdi-pencil</v-icon>
+                <v-icon small @click="dialogDeleteVente(row.item.id)">mdi-delete</v-icon>
               </td>
             </tr>
           </template>

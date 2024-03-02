@@ -16,7 +16,7 @@
     </v-row>
 
     <v-row>
-      <v-col cols="12">        
+      <v-col cols="12">
         <v-data-table :headers="headers" :items="listeClients" :items-per-page="10" class="elevation-1">
           <template v-slot:item="row">
             <tr>
@@ -33,10 +33,8 @@
                 {{ row.item.email }}
               </td>
               <td>
-                <v-layout justify-center>
-                  <v-icon small class="mr-2" @click="editClient(row.item.id)">mdi-pencil</v-icon>
-                  <v-icon small @click="dialogDeleteClient(row.item)">mdi-delete</v-icon>
-                </v-layout>
+                <v-icon small class="mr-2" @click="editClient(row.item.id)">mdi-pencil</v-icon>
+                <v-icon small @click="dialogDeleteClient(row.item)">mdi-delete</v-icon>
               </td>
             </tr>
           </template>
@@ -99,7 +97,7 @@ export default {
     ],
   }),
   methods: {
-    refreshList: function() {
+    refreshList: function () {
       useClientStore().getClients().then(() => {
         this.listeClients = useClientStore().clients;
         this.isLoading = false;
@@ -117,7 +115,7 @@ export default {
       this.confirmDeleteClient = true;
     },
     async deleteClient() {
-      let clientToDelete = {...this.ClientToDelete};
+      let clientToDelete = { ...this.ClientToDelete };
 
       await useClientStore().deleteClient(clientToDelete);
 
