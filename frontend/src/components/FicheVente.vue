@@ -5,19 +5,20 @@
 
         <div>
           <span>id : {{ this.localVente.id }}</span>
-          <v-form ref="formVente" @submit.prevent="validate" id="vente-form">
+          <v-form ref="formVente" @submit.prevent="saveVente" id="vente-form">
             <v-container>
 
               <v-row>
                 <v-col cols="11" md="11">
-                  <v-text-field :model-value="localVente.numeroVente" @input="update('numeroVente', $event.target.value)"
-                    label="Numero de vente" type="string" class="mx-4" :rules="rules.required"></v-text-field>
+                  <v-text-field :model-value="localVente.numeroVente"
+                    @input="update('numeroVente', $event.target.value)" label="Numero de vente" type="string"
+                    class="mx-4" :rules="rules.required"></v-text-field>
                 </v-col>
               </v-row>
 
               <v-row>
                 <v-col cols="11" md="11">
-                  <v-autocomplete v-model="client.nom" item-title="username" item-value="id" :loading="loading"
+                  <v-autocomplete v-model="client" item-title="nom" item-value="id" :loading="loading" return-object 
                     :items="listeClients" :search-input="searchClient" class="mx-4" flat hide-no-data hide-details
                     label="Client"></v-autocomplete>
                 </v-col>
@@ -116,11 +117,17 @@
 import { useVenteStore } from '../stores/ventes.store.js';
 import { useProduitStore } from '../stores/produits.store.js';
 import { useClientStore } from '../stores/clients.store.js';
-
+import useVuelidate from '@vuelidate/core'
+import {
+  required
+} from '@vuelidate/validators'
 
 export default {
   name: "ficheVente",
   props: ['editVenteId', 'editNewVente'],
+  setup() {
+    return { v$: useVuelidate() }
+  },
   data: () => ({
     loading: false,
     editing: false,
@@ -128,7 +135,7 @@ export default {
     localVente: {},
     prixProduitsHT: 0,
     rules: {},
-    client: {},
+    client: { nom: "" },
     venteProduits: [],
     rechercheClient: '',
     listeClients: [],
@@ -145,6 +152,15 @@ export default {
     useProduitStore().getProducts().then(() => {
       this.listeProduits = useProduitStore().products;
     })
+  },
+  validations() {
+    return {
+      localVente: {
+        numeroVente: { required },
+        dateVente: { required },
+      },
+      client: { required },
+    }
   },
   watch: {
     client(val) {
@@ -228,15 +244,9 @@ export default {
       }
       this.prixProduitsHT = total;
     },
-    async validate() {
-      this.rules = {
-        prix: [v => (v && (parseFloat(v) == v)) || 'Le prix doit être un chiffre'],
-        required: [v => !!v || 'Required']
-      }
-      const { valid } = await this.$refs.form.validate()
-      if (valid) {
-        this.saveVente();
-      }
+    validate() {
+      this.v$.$validate()
+      return !this.v$.$error;
     },
     updateQuantite(item, $event) {
       item.quantite = parseInt($event.target.value);
@@ -257,7 +267,7 @@ export default {
         this.localVente = {
           prixProduitsHT: 0,
           lignesVente: [],
-          dateVente: now.toISOString().substring(0, 10)
+          dateVente: now.toISOString().substring(0, 10),
         }
         console.log("localVente", this.localVente);
         this.venteProduits = [];
@@ -271,16 +281,21 @@ export default {
       this.localVente[val.key] = val.value;
     },
     saveVente() {
-      this.localVente.prixProduitsHT = this.prixProduitsHT;
-      this.localVente.prixProduitsTTC = this.prixProduitsHT * 1.2;
-      this.localVente.client = this.client;
-      this.localVente.lignesVente = this.venteProduits;
-      this.saving = true;
-      this.$nextTick(() => {
-        useVenteStore().saveVente(this.localVente).then(() => {
-          this.closeMe();
-        })
-      });
+      if (this.validate()) {
+        this.localVente.prixProduitsHT = this.prixProduitsHT;
+        this.localVente.prixProduitsTTC = this.prixProduitsHT * 1.2;
+        this.localVente.client = this.client;
+        this.localVente.lignesVente = this.venteProduits;
+        this.saving = true;
+        console.log("saveVente", this.localVente, this.client)
+        this.$nextTick(() => {
+          useVenteStore().saveVente(this.localVente).then(() => {
+            this.closeMe();
+          })
+        });
+      } else {
+        console.log("pas valide")
+      }
     },
     closeMe() {
       this.editing = false;

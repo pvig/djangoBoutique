@@ -31,23 +31,24 @@ router.beforeEach((to) => {
 
 axios.interceptors.response.use(response => {
   return response;
-}, error => {
+}, async error => {
   if (error.response.status === 401) {
 
-    if (!useAuthStore().isLocalLoggedIn()) {
-      useAuthStore().clearSession()
-      router.push({ path: '/login' })
-    } else {
-      return Promise.resolve(error).finally(()=> {
+    await useAuthStore().refreshAccessToken().then((authentified) => {
+      if (!authentified) {
+        router.push({ path: '/login' })
+        useAuthStore().clearSession()
+      } else {
         // not really an error, resolve to homepage with a step to soft refresh
         router.push({ path: '/blank'}).then(() => {
-          router.push({ path: '/'})
+          router.push({ path: '/' })
         })
-      })
-    }
+      }
+    });
 
   }
-  return Promise.reject(error);
+
+  return Promise.resolve(error);
 });
 
 export default router;

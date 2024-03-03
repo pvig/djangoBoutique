@@ -21,14 +21,20 @@ export const useAuthStore = defineStore('auth', {
                 router.push('/');
             }
         },
-        isLocalLoggedIn() {
+        async refreshAccessToken() {
             var localUser = localStorage.getItem('user');
 
             if (localUser) {
                 localUser = JSON.parse(localUser);
                 if (localUser.access) {
-                    this.user = localUser;
-                    this.setBearer(localUser.access);
+                    console.log("localUser", localUser);
+                    const user = await this.remoteRefresh({ refresh: localUser.refresh });
+                    if(!user.access) {
+                        return false;
+                    }
+                    this.user = user;
+                    localStorage.setItem('user', JSON.stringify(user));
+                    this.setBearer(user.access);
 
                     return true;
                 }
@@ -43,8 +49,8 @@ export const useAuthStore = defineStore('auth', {
         },
         logout() {
             return axios
-            .post(url + 'auth/logout/')
-            .then(() => {
+                .post(url + 'auth/logout/')
+                .then(() => {
                     this.clearSession();
                     router.push('/login');
                 });
@@ -59,6 +65,18 @@ export const useAuthStore = defineStore('auth', {
                 .post(url + 'auth/login/', credentials)
                 .then((response) => {
                     return Object.assign(credentials, response.data);
+                })
+                .catch((error) => {
+                    if (error.response) {
+                        useSnackBarStore().setSnackBarState({ text: error.response.data.detail });
+                    }
+                });
+        },
+        remoteRefresh(refresh) {
+            return axios
+                .post(url + 'auth/login/refresh/', refresh)
+                .then((response) => {
+                    return Object.assign(refresh, response.data);
                 })
                 .catch((error) => {
                     if (error.response) {
