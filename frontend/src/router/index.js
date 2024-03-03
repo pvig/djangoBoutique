@@ -39,8 +39,10 @@ axios.interceptors.response.use(response => {
       router.push({ path: '/login' })
     } else {
       return Promise.resolve(error).finally(()=> {
-        router.push({ path: '/refresh' })
-        router.push({ path: '/' })
+        // not really an error, resolve to homepage with a step to soft refresh
+        router.push({ path: '/blank'}).then(() => {
+          router.push({ path: '/'})
+        })
       })
     }
 
