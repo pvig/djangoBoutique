@@ -70,6 +70,9 @@
                           <th class="text-left">
                             Quantité
                           </th>
+                          <th class="text-left">
+                            Prix
+                          </th>
                           <th>
                           </th>
                         </tr>
@@ -79,6 +82,10 @@
                           <td class="text-left">{{ item.produit.nom }}</td>
                           <td class="text-left">
                             <v-text-field :model-value="item.quantite" @change="updateQuantite(item, $event)"
+                              type="number" min="1" class="mx-4" :rules="rules.required"></v-text-field>
+                          </td>
+                          <td class="text-left">
+                            <v-text-field :model-value="item.prixHT" @change="updatePrix(item, $event)"
                               type="number" min="1" class="mx-4" :rules="rules.required"></v-text-field>
                           </td>
                           <td class="text-left">
@@ -247,6 +254,10 @@ export default {
     validate() {
       this.v$.$validate()
       return !this.v$.$error;
+    },
+    updatePrix(item, $event) {
+      item.prixHT = parseInt($event.target.value);
+      this.calcTotal();
     },
     updateQuantite(item, $event) {
       item.quantite = parseInt($event.target.value);

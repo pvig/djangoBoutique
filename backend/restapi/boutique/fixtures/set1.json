@@ -1,8 +1,0 @@
-- model: models.Client
-  pk: 1
-  fields:
-    username = user1
-    password = pwd1
-    email = user1@test.ff
-    nom = user1
-    prenom = user1

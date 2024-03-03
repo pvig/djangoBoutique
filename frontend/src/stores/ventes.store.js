@@ -24,12 +24,12 @@ const actions = {
 
         if (vente.id != undefined) {
             await axios.put(apiUrl + vente.id + "/", vente).then(() => {
-                useSnackBarStore().setSnackBarState({ text: "vente " + vente.nom + " sauvegardé" });
+                useSnackBarStore().setSnackBarState({ text: "vente " + vente.numeroVente + " sauvegardé" });
             });
         } else {
             await axios.post(apiUrl, vente).then((response) => {
                 this.ventes.push(response.data);
-                useSnackBarStore().setSnackBarState({ text: "vente " + vente.nom + " créé" });
+                useSnackBarStore().setSnackBarState({ text: "vente " + vente.numeroVente + " créé" });
             });
         }
 

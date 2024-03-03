@@ -1,2 +1,12 @@
+Start app :
+----------
+
 source venv/bin/activate
 python  manage.py runserver
+
+Fixtures :
+---------
+
+python manage.py dumpdata  --indent 4 > boutique/fixtures/dump1.json
+python manage.py loaddata boutique/fixtures/dump1.json
+
