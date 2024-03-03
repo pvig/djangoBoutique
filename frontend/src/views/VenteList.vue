@@ -97,7 +97,6 @@ export default {
       useVenteStore().getVentes().then(() => {
         this.listeVentes = useVenteStore().ventes;
         this.isLoading = false;
-        console.log("this.listeVentes", this.listeVentes);
       });
     },
     editVente: function (id) {

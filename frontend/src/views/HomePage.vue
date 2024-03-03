@@ -12,15 +12,21 @@
         </v-card>
       </v-col>
     </v-row>
+
+    <SnackBar />
   </div>
 </template>
 
 <script>
 import { useVenteStore } from '../stores/ventes.store.js';
+import SnackBar from '../components/SnackBar.vue'
 
 export default {
   name: 'HomePage',
   props: {},
+  components: {
+    SnackBar
+  },
   data: () => ({
     isLoading: true,
     graph1Options: {

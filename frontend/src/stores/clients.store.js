@@ -7,7 +7,6 @@ const actions = {
     async getClients() {
         await axios.get(apiUrl).then((response) => {
             this.clients = response.data;
-            console.log("this.clients", this.clients)
         });
     },
     getClient(id) {

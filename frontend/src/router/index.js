@@ -14,7 +14,7 @@ const routes = [
   { path: '/login', component: Login, name: 'login' },
   { path: '/logout', component: Login, name: 'logout' },
   { path: '/clients', component: Clients, name: 'clients' },
-  { path: '/ventes', component: Ventes, name: 'ventes'},
+  { path: '/ventes', component: Ventes, name: 'ventes' },
   { path: '/produits', component: Produits, name: 'produits' }
 ]
 
@@ -33,12 +33,17 @@ axios.interceptors.response.use(response => {
   return response;
 }, error => {
   if (error.response.status === 401) {
-    useAuthStore().clearSession();
-    router
-      .push({ path: '/login' })
-      .then(() => {
-        location.reload();
+
+    if (!useAuthStore().isLocalLoggedIn()) {
+      useAuthStore().clearSession()
+      router.push({ path: '/login' })
+    } else {
+      return Promise.resolve(error).finally(()=> {
+        router.push({ path: '/refresh' })
+        router.push({ path: '/' })
       })
+    }
+
   }
   return Promise.reject(error);
 });

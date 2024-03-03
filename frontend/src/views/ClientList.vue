@@ -97,28 +97,25 @@ export default {
     ],
   }),
   methods: {
-    refreshList: function () {
-      useClientStore().getClients().then(() => {
-        this.listeClients = useClientStore().clients;
-        this.isLoading = false;
-      });
+    async refreshList() {
+      await useClientStore().getClients();
+      this.listeClients = useClientStore().clients;
+      this.isLoading = false;
     },
-    editClient: function (id) {
+    editClient(id) {
       this.editClientId = id;
       this.editNewClient = false;
     },
-    newClient: function () {
+    newClient() {
       this.editNewClient = true;
     },
-    dialogDeleteClient: function (client) {
+    dialogDeleteClient(client) {
       this.ClientToDelete = client;
       this.confirmDeleteClient = true;
     },
     async deleteClient() {
       let clientToDelete = { ...this.ClientToDelete };
-
       await useClientStore().deleteClient(clientToDelete);
-
       this.confirmDeleteClient = false;
       this.refreshList();
     },

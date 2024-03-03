@@ -98,10 +98,9 @@ export default {
             last_name: this.prenom,
           };
 
-          useAuthStore().login(credentials).then((reponse) => {
+          useAuthStore().login(credentials).then(() => {
             this.loading = false;
             this.msg = signupDone.msg;
-            console.log("login done", reponse);
           });
 
         });
