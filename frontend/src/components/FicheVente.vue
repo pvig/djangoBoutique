@@ -280,7 +280,6 @@ export default {
           lignesVente: [],
           dateVente: now.toISOString().substring(0, 10),
         }
-        console.log("localVente", this.localVente);
         this.venteProduits = [];
       }
       this.client = this.localVente.client;
@@ -298,14 +297,11 @@ export default {
         this.localVente.client = this.client;
         this.localVente.lignesVente = this.venteProduits;
         this.saving = true;
-        console.log("saveVente", this.localVente, this.client)
         this.$nextTick(() => {
           useVenteStore().saveVente(this.localVente).then(() => {
             this.closeMe();
           })
         });
-      } else {
-        console.log("pas valide")
       }
     },
     closeMe() {

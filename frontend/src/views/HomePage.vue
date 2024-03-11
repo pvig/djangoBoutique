@@ -93,8 +93,8 @@ export default {
       }
     },
     graph2Optionsb: {
+      id: "chart2area",
       chart: {
-        id: "chart2area",
         type: "area",
         height: 230,
         foreColor: "#ccc",
@@ -157,10 +157,6 @@ export default {
       chart: {
         height: 350,
         type: 'bar',
-        brush: {
-          target: "chart2area",
-          enabled: true
-        },
         selection: {
           enabled: true,
           fill: {
@@ -168,17 +164,20 @@ export default {
             opacity: 0.4
           },
           xaxis: {
-            min: new Date('01 Jan 2022').getTime(),
-            max: new Date('01 Jun 2022').getTime()
+            min: new Date('01 Jan 2024').getTime(),
+            max: new Date('01 Jun 2024').getTime(),
           }
         },
+      },
+      brush: {
+        target: "chart2area",
+        enabled: true
       },
       dataLabels: {
         enabled: false,
       },
       xaxis: {
         type: 'datetime',
-
       },
       yaxis: {
         axisBorder: {
@@ -207,9 +206,9 @@ export default {
       //-------------------       ventes list processing        -------------------
       for (let nn in useVenteStore().ventes) {
         let vente = useVenteStore().ventes[nn];
- 
+
         let dateVente = vente.dateVente;
-        let numProduits = 10;//vente.LigneVente.length;
+        let numProduits = vente.lignesVente.length;
         //-------------------
         let d = new Date(dateVente);
         let year = d.getFullYear().toString();

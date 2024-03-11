@@ -75,4 +75,6 @@ class VenteSerializer(serializers.ModelSerializer):
                 **ligne_vente_data
             )
 
+        super().update(vente_instance, validated_data)
+
         return vente_instance

@@ -13,10 +13,8 @@ export const useAuthStore = defineStore('auth', {
         async login(credentials) {
             const user = await this.remoteLogin(credentials);
 
-            if (user) {
-                this.user = user;
-                localStorage.setItem('user', JSON.stringify(user));
-                this.setBearer(user.access);
+            if (user && user.access) {
+                this.setSession(user);
                 // homepage
                 router.push('/');
             }
@@ -27,19 +25,20 @@ export const useAuthStore = defineStore('auth', {
             if (localUser) {
                 localUser = JSON.parse(localUser);
                 if (localUser.access) {
-                    console.log("localUser", localUser);
                     const user = await this.remoteRefresh({ refresh: localUser.refresh });
-                    if(!user.access) {
-                        return false;
+                    if(user && user.access) {
+                        this.setSession(user);
+                        return true;
                     }
-                    this.user = user;
-                    localStorage.setItem('user', JSON.stringify(user));
-                    this.setBearer(user.access);
-
-                    return true;
                 }
+                this.clearSession();
             }
             return false;
+        },
+        setSession(user) {
+            this.user = user;
+            localStorage.setItem('user', JSON.stringify(user));
+            this.setBearer(user.access);
         },
         setBearer(bearer) {
             // bearer token on every header :
