@@ -15,7 +15,9 @@ const routes = [
   { path: '/logout', component: Login, name: 'logout' },
   { path: '/clients', component: Clients, name: 'clients' },
   { path: '/ventes', component: Ventes, name: 'ventes' },
-  { path: '/produits', component: Produits, name: 'produits' }
+  { path: '/produits', component: Produits, name: 'produits' },
+  // default redirect
+  { path: '/:pathMatch(.*)*', redirect: '/login' }
 ]
 
 const router = createRouter({
@@ -40,8 +42,9 @@ axios.interceptors.response.use(response => {
         useAuthStore().clearSession()
       } else {
         // not really an error, resolve to homepage with a step to soft refresh
-        router.push({ path: '/blank'}).then(() => {
-          router.push({ path: '/' })
+        var currentPage = router.path || "/";
+        router.push({ path: '/login'}).then(() => {
+          router.push({ path: currentPage})
         })
       }
     });

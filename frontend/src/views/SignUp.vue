@@ -12,11 +12,17 @@
             <transition name="fade" mode="out-in">
 
               <v-form ref="form" @submit.prevent="validate">
+                <div v-if="v$.username.$error">Username obligatoire.</div>
                 <v-text-field label="Nom d'utilisateur" prepend-icon="mdi-account" v-model="username"> </v-text-field>
+                <div v-if="v$.nom.$error">Nom obligatoire.</div>
                 <v-text-field label="Nom" prepend-icon="mdi-account" v-model="nom"></v-text-field>
+                <div v-if="v$.prenom.$error">Prenom obligatoire.</div>
                 <v-text-field label="Prenom" prepend-icon="mdi-account" v-model="prenom"> </v-text-field>
+                <div v-if="v$.email.$error">Email obligatoire.</div>
                 <v-text-field label="Email" prepend-icon="mdi-account" v-model="email"> </v-text-field>
+                <div v-if="v$.password.$error">Mot de passe obligatoire.</div>
                 <v-text-field label="Mot de passe" prepend-icon="mdi-lock" type="password" v-model="password"></v-text-field>
+                <div v-if="v$.password_repeat.$error">Mot de passe non correctement répété.</div>
                 <v-text-field label="Confirmation mot de passe" prepend-icon="mdi-lock" type="password" v-model="password_repeat"></v-text-field>
 
                 <div class="text-center">
@@ -51,7 +57,7 @@ export default {
       nom: { required },
       prenom: { required },
       password: { required, minLength: minLength(8) },
-      password_repeat:  { required, sameAsPassword: sameAs('password') }
+      password_repeat:  { required, sameAsPassword: sameAs(this.password) }
     }
   },
   data() {
@@ -68,7 +74,7 @@ export default {
   },
   methods: {
 
-    validate() {
+    async validate() {
       this.v$.$validate()
       this.$nextTick(() => {
         if (!this.v$.$error) {
