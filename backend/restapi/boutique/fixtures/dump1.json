@@ -1,3 +1,4 @@
+[{'BACKEND': 'django.template.backends.django.DjangoTemplates', 'DIRS': [PosixPath('/Volumes/data/work/djangoapp/backend/restapi'), '/Volumes/data/work/djangoapp/backend/restapi/templates'], 'APP_DIRS': True, 'OPTIONS': {'context_processors': ['django.template.context_processors.debug', 'django.template.context_processors.request', 'django.contrib.auth.context_processors.auth', 'django.contrib.messages.context_processors.messages']}}]
 [
 {
     "model": "admin.logentry",
@@ -452,7 +453,7 @@
     "pk": 1,
     "fields": {
         "password": "pbkdf2_sha256$720000$Eu9md0WdQZvUIJyyotC4ne$BihA933+mvqt5hfAoKsiG2gbtBrLdnEGsYJJ+uUJ2Ic=",
-        "last_login": "2024-02-12T17:48:38.313Z",
+        "last_login": "2024-03-11T18:31:41.384Z",
         "is_superuser": true,
         "username": "admin",
         "first_name": "",
@@ -517,6 +518,24 @@
         "is_staff": false,
         "is_active": true,
         "date_joined": "2024-02-17T21:32:13.522Z",
+        "groups": [],
+        "user_permissions": []
+    }
+},
+{
+    "model": "auth.user",
+    "pk": 5,
+    "fields": {
+        "password": "pbkdf2_sha256$720000$gV97S4j3Yso7pVJhtOUGDc$WfG6gVR5xJZDRmoMjxA7gTaqwXF8cb61PKJVjACXVmY=",
+        "last_login": null,
+        "is_superuser": false,
+        "username": "user1",
+        "first_name": "user",
+        "last_name": "user",
+        "email": "user@user.co",
+        "is_staff": false,
+        "is_active": true,
+        "date_joined": "2024-03-11T18:30:56.730Z",
         "groups": [],
         "user_permissions": []
     }
@@ -607,6 +626,14 @@
     "fields": {
         "app_label": "boutique",
         "model": "vente"
+    }
+},
+{
+    "model": "sessions.session",
+    "pk": "gvdslg4mfvt27ji1exp1lwuz5zn015xf",
+    "fields": {
+        "session_data": ".eJxVjEEOwiAQRe_C2pAOLTC4dO8ZyDCAVA0kpV0Z765NutDtf-_9l_C0rcVvPS1-juIsQJx-t0D8SHUH8U711iS3ui5zkLsiD9rltcX0vBzu30GhXr41gkk5ZHDKYqYpOG0n1jDoqBTyEBCI0CaLI4GxxpAjMwKj4ZgZkhbvD9bTN7A:1rjkR3:hqrL-rzlpQoWEI3ivXjOLHqsH6SJaR9AxnirCx4VKWM",
+        "expire_date": "2024-03-25T18:31:41.386Z"
     }
 },
 {
@@ -733,6 +760,46 @@
     }
 },
 {
+    "model": "boutique.produit",
+    "pk": 30,
+    "fields": {
+        "nom": "produit7",
+        "prixHT": 10.0,
+        "poids": 1.0,
+        "reference": "prod7"
+    }
+},
+{
+    "model": "boutique.produit",
+    "pk": 31,
+    "fields": {
+        "nom": "produit8",
+        "prixHT": 2.0,
+        "poids": 2.0,
+        "reference": "prod8"
+    }
+},
+{
+    "model": "boutique.produit",
+    "pk": 32,
+    "fields": {
+        "nom": "produit9",
+        "prixHT": 5.0,
+        "poids": 8.0,
+        "reference": "prod9"
+    }
+},
+{
+    "model": "boutique.produit",
+    "pk": 33,
+    "fields": {
+        "nom": "produit10",
+        "prixHT": 3.0,
+        "poids": 2.0,
+        "reference": "prod10"
+    }
+},
+{
     "model": "boutique.vente",
     "pk": 82,
     "fields": {
@@ -759,10 +826,10 @@
     "pk": 84,
     "fields": {
         "client": 5,
-        "dateVente": "2024-02-29",
+        "dateVente": "2023-08-14",
         "numeroVente": "123",
-        "prixProduitsHT": 1927.0,
-        "prixProduitsTTC": 2312.4
+        "prixProduitsHT": 1959.0,
+        "prixProduitsTTC": 2350.7999999999997
     }
 },
 {
@@ -770,10 +837,10 @@
     "pk": 85,
     "fields": {
         "client": 5,
-        "dateVente": "2024-03-03",
+        "dateVente": "2023-08-24",
         "numeroVente": "sbsb",
-        "prixProduitsHT": 444.0,
-        "prixProduitsTTC": 532.8
+        "prixProduitsHT": 446.0,
+        "prixProduitsTTC": 535.1999999999999
     }
 },
 {
@@ -783,8 +850,8 @@
         "client": 5,
         "dateVente": "2024-03-03",
         "numeroVente": "iiii",
-        "prixProduitsHT": 77.0,
-        "prixProduitsTTC": 92.39999999999999
+        "prixProduitsHT": 9360.0,
+        "prixProduitsTTC": 11232.0
     }
 },
 {
@@ -794,8 +861,8 @@
         "client": 5,
         "dateVente": "2023-07-01",
         "numeroVente": "zert",
-        "prixProduitsHT": 1.0,
-        "prixProduitsTTC": 1.2
+        "prixProduitsHT": 9536.0,
+        "prixProduitsTTC": 11443.199999999999
     }
 },
 {
@@ -825,7 +892,7 @@
     "pk": 90,
     "fields": {
         "client": 2,
-        "dateVente": "2024-03-03",
+        "dateVente": "2023-12-21",
         "numeroVente": "1321",
         "prixProduitsHT": 292.0,
         "prixProduitsTTC": 350.4
@@ -843,13 +910,47 @@
     }
 },
 {
-    "model": "boutique.lignevente",
-    "pk": 140,
+    "model": "boutique.vente",
+    "pk": 92,
     "fields": {
-        "vente": 86,
-        "quantite": 1,
-        "prixHT": 77.0,
-        "produit": 27
+        "client": 5,
+        "dateVente": "2024-03-03",
+        "numeroVente": "55",
+        "prixProduitsHT": 655.0,
+        "prixProduitsTTC": 786.0
+    }
+},
+{
+    "model": "boutique.vente",
+    "pk": 93,
+    "fields": {
+        "client": 6,
+        "dateVente": "2024-01-11",
+        "numeroVente": "787",
+        "prixProduitsHT": 465.0,
+        "prixProduitsTTC": 558.0
+    }
+},
+{
+    "model": "boutique.vente",
+    "pk": 94,
+    "fields": {
+        "client": 3,
+        "dateVente": "2021-03-03",
+        "numeroVente": "123",
+        "prixProduitsHT": 446.0,
+        "prixProduitsTTC": 535.1999999999999
+    }
+},
+{
+    "model": "boutique.vente",
+    "pk": 95,
+    "fields": {
+        "client": 5,
+        "dateVente": "2019-03-03",
+        "numeroVente": "456",
+        "prixProduitsHT": 3552.0,
+        "prixProduitsTTC": 4262.4
     }
 },
 {
@@ -874,86 +975,6 @@
 },
 {
     "model": "boutique.lignevente",
-    "pk": 182,
-    "fields": {
-        "vente": 87,
-        "quantite": 1,
-        "prixHT": 4.0,
-        "produit": 29
-    }
-},
-{
-    "model": "boutique.lignevente",
-    "pk": 187,
-    "fields": {
-        "vente": 88,
-        "quantite": 3,
-        "prixHT": 74.0,
-        "produit": 27
-    }
-},
-{
-    "model": "boutique.lignevente",
-    "pk": 188,
-    "fields": {
-        "vente": 88,
-        "quantite": 2,
-        "prixHT": 200.0,
-        "produit": 23
-    }
-},
-{
-    "model": "boutique.lignevente",
-    "pk": 195,
-    "fields": {
-        "vente": 82,
-        "quantite": 8,
-        "prixHT": 20.0,
-        "produit": 26
-    }
-},
-{
-    "model": "boutique.lignevente",
-    "pk": 196,
-    "fields": {
-        "vente": 82,
-        "quantite": 2,
-        "prixHT": 77.0,
-        "produit": 27
-    }
-},
-{
-    "model": "boutique.lignevente",
-    "pk": 201,
-    "fields": {
-        "vente": 90,
-        "quantite": 10,
-        "prixHT": 8.0,
-        "produit": 29
-    }
-},
-{
-    "model": "boutique.lignevente",
-    "pk": 202,
-    "fields": {
-        "vente": 90,
-        "quantite": 1,
-        "prixHT": 212.0,
-        "produit": 26
-    }
-},
-{
-    "model": "boutique.lignevente",
-    "pk": 204,
-    "fields": {
-        "vente": 85,
-        "quantite": 1,
-        "prixHT": 446.0,
-        "produit": 28
-    }
-},
-{
-    "model": "boutique.lignevente",
     "pk": 207,
     "fields": {
         "vente": 91,
@@ -974,7 +995,217 @@
 },
 {
     "model": "boutique.lignevente",
-    "pk": 209,
+    "pk": 229,
+    "fields": {
+        "vente": 88,
+        "quantite": 3,
+        "prixHT": 74.0,
+        "produit": 27
+    }
+},
+{
+    "model": "boutique.lignevente",
+    "pk": 230,
+    "fields": {
+        "vente": 88,
+        "quantite": 2,
+        "prixHT": 200.0,
+        "produit": 23
+    }
+},
+{
+    "model": "boutique.lignevente",
+    "pk": 231,
+    "fields": {
+        "vente": 88,
+        "quantite": 1,
+        "prixHT": 3.0,
+        "produit": 33
+    }
+},
+{
+    "model": "boutique.lignevente",
+    "pk": 232,
+    "fields": {
+        "vente": 88,
+        "quantite": 1,
+        "prixHT": 5.0,
+        "produit": 32
+    }
+},
+{
+    "model": "boutique.lignevente",
+    "pk": 233,
+    "fields": {
+        "vente": 88,
+        "quantite": 1,
+        "prixHT": 2.0,
+        "produit": 31
+    }
+},
+{
+    "model": "boutique.lignevente",
+    "pk": 234,
+    "fields": {
+        "vente": 88,
+        "quantite": 1,
+        "prixHT": 1.0,
+        "produit": 29
+    }
+},
+{
+    "model": "boutique.lignevente",
+    "pk": 241,
+    "fields": {
+        "vente": 92,
+        "quantite": 1,
+        "prixHT": 211.0,
+        "produit": 26
+    }
+},
+{
+    "model": "boutique.lignevente",
+    "pk": 242,
+    "fields": {
+        "vente": 92,
+        "quantite": 1,
+        "prixHT": 444.0,
+        "produit": 28
+    }
+},
+{
+    "model": "boutique.lignevente",
+    "pk": 249,
+    "fields": {
+        "vente": 82,
+        "quantite": 9,
+        "prixHT": 20.0,
+        "produit": 26
+    }
+},
+{
+    "model": "boutique.lignevente",
+    "pk": 250,
+    "fields": {
+        "vente": 82,
+        "quantite": 3,
+        "prixHT": 77.0,
+        "produit": 27
+    }
+},
+{
+    "model": "boutique.lignevente",
+    "pk": 251,
+    "fields": {
+        "vente": 82,
+        "quantite": 1,
+        "prixHT": 4.0,
+        "produit": 21
+    }
+},
+{
+    "model": "boutique.lignevente",
+    "pk": 252,
+    "fields": {
+        "vente": 82,
+        "quantite": 1,
+        "prixHT": 8747.0,
+        "produit": 23
+    }
+},
+{
+    "model": "boutique.lignevente",
+    "pk": 253,
+    "fields": {
+        "vente": 82,
+        "quantite": 1,
+        "prixHT": 444.0,
+        "produit": 28
+    }
+},
+{
+    "model": "boutique.lignevente",
+    "pk": 254,
+    "fields": {
+        "vente": 82,
+        "quantite": 1,
+        "prixHT": 1.0,
+        "produit": 29
+    }
+},
+{
+    "model": "boutique.lignevente",
+    "pk": 255,
+    "fields": {
+        "vente": 82,
+        "quantite": 1,
+        "prixHT": 10.0,
+        "produit": 30
+    }
+},
+{
+    "model": "boutique.lignevente",
+    "pk": 256,
+    "fields": {
+        "vente": 82,
+        "quantite": 1,
+        "prixHT": 2.0,
+        "produit": 31
+    }
+},
+{
+    "model": "boutique.lignevente",
+    "pk": 257,
+    "fields": {
+        "vente": 82,
+        "quantite": 1,
+        "prixHT": 5.0,
+        "produit": 32
+    }
+},
+{
+    "model": "boutique.lignevente",
+    "pk": 258,
+    "fields": {
+        "vente": 82,
+        "quantite": 1,
+        "prixHT": 3.0,
+        "produit": 33
+    }
+},
+{
+    "model": "boutique.lignevente",
+    "pk": 265,
+    "fields": {
+        "vente": 90,
+        "quantite": 10,
+        "prixHT": 8.0,
+        "produit": 29
+    }
+},
+{
+    "model": "boutique.lignevente",
+    "pk": 266,
+    "fields": {
+        "vente": 90,
+        "quantite": 1,
+        "prixHT": 212.0,
+        "produit": 26
+    }
+},
+{
+    "model": "boutique.lignevente",
+    "pk": 267,
+    "fields": {
+        "vente": 85,
+        "quantite": 1,
+        "prixHT": 446.0,
+        "produit": 28
+    }
+},
+{
+    "model": "boutique.lignevente",
+    "pk": 268,
     "fields": {
         "vente": 84,
         "quantite": 8,
@@ -984,12 +1215,262 @@
 },
 {
     "model": "boutique.lignevente",
-    "pk": 210,
+    "pk": 269,
     "fields": {
         "vente": 84,
         "quantite": 3,
         "prixHT": 77.0,
         "produit": 27
+    }
+},
+{
+    "model": "boutique.lignevente",
+    "pk": 272,
+    "fields": {
+        "vente": 93,
+        "quantite": 1,
+        "prixHT": 444.0,
+        "produit": 28
+    }
+},
+{
+    "model": "boutique.lignevente",
+    "pk": 273,
+    "fields": {
+        "vente": 93,
+        "quantite": 1,
+        "prixHT": 1.0,
+        "produit": 29
+    }
+},
+{
+    "model": "boutique.lignevente",
+    "pk": 274,
+    "fields": {
+        "vente": 93,
+        "quantite": 1,
+        "prixHT": 10.0,
+        "produit": 30
+    }
+},
+{
+    "model": "boutique.lignevente",
+    "pk": 275,
+    "fields": {
+        "vente": 93,
+        "quantite": 1,
+        "prixHT": 2.0,
+        "produit": 31
+    }
+},
+{
+    "model": "boutique.lignevente",
+    "pk": 276,
+    "fields": {
+        "vente": 93,
+        "quantite": 1,
+        "prixHT": 5.0,
+        "produit": 32
+    }
+},
+{
+    "model": "boutique.lignevente",
+    "pk": 277,
+    "fields": {
+        "vente": 93,
+        "quantite": 1,
+        "prixHT": 3.0,
+        "produit": 33
+    }
+},
+{
+    "model": "boutique.lignevente",
+    "pk": 279,
+    "fields": {
+        "vente": 86,
+        "quantite": 2,
+        "prixHT": 77.0,
+        "produit": 27
+    }
+},
+{
+    "model": "boutique.lignevente",
+    "pk": 280,
+    "fields": {
+        "vente": 86,
+        "quantite": 1,
+        "prixHT": 4.0,
+        "produit": 21
+    }
+},
+{
+    "model": "boutique.lignevente",
+    "pk": 281,
+    "fields": {
+        "vente": 86,
+        "quantite": 1,
+        "prixHT": 8747.0,
+        "produit": 23
+    }
+},
+{
+    "model": "boutique.lignevente",
+    "pk": 282,
+    "fields": {
+        "vente": 86,
+        "quantite": 1,
+        "prixHT": 444.0,
+        "produit": 28
+    }
+},
+{
+    "model": "boutique.lignevente",
+    "pk": 283,
+    "fields": {
+        "vente": 86,
+        "quantite": 1,
+        "prixHT": 1.0,
+        "produit": 29
+    }
+},
+{
+    "model": "boutique.lignevente",
+    "pk": 284,
+    "fields": {
+        "vente": 86,
+        "quantite": 1,
+        "prixHT": 10.0,
+        "produit": 30
+    }
+},
+{
+    "model": "boutique.lignevente",
+    "pk": 285,
+    "fields": {
+        "vente": 94,
+        "quantite": 1,
+        "prixHT": 444.0,
+        "produit": 28
+    }
+},
+{
+    "model": "boutique.lignevente",
+    "pk": 286,
+    "fields": {
+        "vente": 94,
+        "quantite": 1,
+        "prixHT": 2.0,
+        "produit": 31
+    }
+},
+{
+    "model": "boutique.lignevente",
+    "pk": 287,
+    "fields": {
+        "vente": 95,
+        "quantite": 8,
+        "prixHT": 444.0,
+        "produit": 28
+    }
+},
+{
+    "model": "boutique.lignevente",
+    "pk": 288,
+    "fields": {
+        "vente": 87,
+        "quantite": 2,
+        "prixHT": 4.0,
+        "produit": 29
+    }
+},
+{
+    "model": "boutique.lignevente",
+    "pk": 289,
+    "fields": {
+        "vente": 87,
+        "quantite": 7,
+        "prixHT": 4.0,
+        "produit": 21
+    }
+},
+{
+    "model": "boutique.lignevente",
+    "pk": 290,
+    "fields": {
+        "vente": 87,
+        "quantite": 1,
+        "prixHT": 212.0,
+        "produit": 26
+    }
+},
+{
+    "model": "boutique.lignevente",
+    "pk": 291,
+    "fields": {
+        "vente": 87,
+        "quantite": 1,
+        "prixHT": 8747.0,
+        "produit": 23
+    }
+},
+{
+    "model": "boutique.lignevente",
+    "pk": 292,
+    "fields": {
+        "vente": 87,
+        "quantite": 1,
+        "prixHT": 77.0,
+        "produit": 27
+    }
+},
+{
+    "model": "boutique.lignevente",
+    "pk": 293,
+    "fields": {
+        "vente": 87,
+        "quantite": 1,
+        "prixHT": 444.0,
+        "produit": 28
+    }
+},
+{
+    "model": "boutique.lignevente",
+    "pk": 294,
+    "fields": {
+        "vente": 87,
+        "quantite": 1,
+        "prixHT": 10.0,
+        "produit": 30
+    }
+},
+{
+    "model": "boutique.lignevente",
+    "pk": 295,
+    "fields": {
+        "vente": 87,
+        "quantite": 1,
+        "prixHT": 2.0,
+        "produit": 31
+    }
+},
+{
+    "model": "boutique.lignevente",
+    "pk": 296,
+    "fields": {
+        "vente": 87,
+        "quantite": 1,
+        "prixHT": 5.0,
+        "produit": 32
+    }
+},
+{
+    "model": "boutique.lignevente",
+    "pk": 297,
+    "fields": {
+        "vente": 87,
+        "quantite": 1,
+        "prixHT": 3.0,
+        "produit": 33
     }
 }
 ]
