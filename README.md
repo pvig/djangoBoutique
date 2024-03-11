@@ -1,19 +1,19 @@
-Django Rest Framework project
+
+# Django Rest Framework project
 
 a simple vuejs3 frontend to consume the Django Rest API
 
 
-dependencies used :
+## dependencies used :
 
- vuelidate 
- apexcharts 
- axios 
- pinia 
- vuetify 
+-  vuelidate  
+-  apexcharts  
+-  axios  
+-  pinia  
+-  vuetify  
+    
+  
+## Credential to use after fixtures loaded :  
 
-
-Credential to use after fictures loaded :
-
- admin:admin 
-
- user1:user123456 
+-  admin:admin 
+-  user1:user123456 
