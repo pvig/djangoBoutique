@@ -6,14 +6,14 @@ Shop-like boilerplate with a vuejs3 frontend which consume a Django Rest API
 
 ### dependencies used : 
 
-* Frontend
+#### Frontend 
 - vuelidate
 - apexcharts
 - axios
 - pinia
 - vuetify
 
-* Backend
+#### Backend 
 - django-environ
 - djangorestframework-simplejwt
 - corsheaders
