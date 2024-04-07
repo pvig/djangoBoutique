@@ -1,16 +1,19 @@
-# Django Rest Framework project
+# a Django Learning Project
   
-a simple vuejs3 frontend to consume the Django Rest API
+Shop-like boilerplate with a vuejs3 frontend which consume a Django Rest API
  
   ---
 
 ### dependencies used : 
 
+* Frontend
 - vuelidate
 - apexcharts
 - axios
 - pinia
 - vuetify
+
+* Backend
 - django-environ
 - djangorestframework-simplejwt
 - corsheaders
@@ -22,13 +25,7 @@ a simple vuejs3 frontend to consume the Django Rest API
 - admin:admin
 - user1:user123456
 ----
-### Install depencencies :
+### Install django depencencies :
 
 - virtualenv venv -p python3
-- pip install Django
-- pip install djangorestframework
-- pip install django-environ
-- pip install django-filter
-- pip install drf-yasg
-- pip install djangorestframework-simplejwt
-- pip install django-cors-headers
+- pip install -r backend/boutique-django/requirements/local.txt
