@@ -27,7 +27,7 @@ schema_view = get_schema_view(
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('auth/', include('auth.urls')),
-    path('api/',include('boutique.urls')),
+    path('api/',include('core_apps.boutique.urls')),
 
     # For yasg 
     re_path(r'^swagger(?P<format>\.json|\.yaml)$', schema_view.without_ui(cache_timeout=0), name='schema-json'),

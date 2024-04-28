@@ -1,6 +1,6 @@
 from django.urls import path
 from rest_framework.urlpatterns import format_suffix_patterns
-from boutique import views
+from core_apps.boutique import views
 from django.conf.urls import include
 
 urlpatterns = [

@@ -1,9 +1,9 @@
-from boutique.models import Vente
-from boutique.models import Produit
-from boutique.models import Client
-from boutique.serializers import VenteSerializer
-from boutique.serializers import ProduitSerializer
-from boutique.serializers import ClientSerializer
+from core_apps.boutique.models import Vente
+from core_apps.boutique.models import Produit
+from core_apps.boutique.models import Client
+from core_apps.boutique.serializers import VenteSerializer
+from core_apps.boutique.serializers import ProduitSerializer
+from core_apps.boutique.serializers import ClientSerializer
 from django.http import Http404
 
 from rest_framework.views import APIView
