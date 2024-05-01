@@ -1,0 +1,1046 @@
+[2024-05-01 08:46:14,973: INFO/SpawnProcess-1] Connected to redis://redis:6379/0
+[2024-05-01 08:46:15,017: INFO/SpawnProcess-1] mingle: searching for neighbors
+[2024-05-01 08:46:16,107: INFO/SpawnProcess-1] mingle: all alone
+[2024-05-01 08:46:16,163: INFO/SpawnProcess-1] celery@dea3334b01f4 ready.
+[2024-05-01 08:46:24,606: INFO/SpawnProcess-2] Connected to redis://redis:6379/0
+[2024-05-01 08:46:24,611: INFO/SpawnProcess-2] mingle: searching for neighbors
+[2024-05-01 08:46:29,346: INFO/SpawnProcess-3] Connected to redis://redis:6379/0
+[2024-05-01 08:46:29,351: INFO/SpawnProcess-3] mingle: searching for neighbors
+[2024-05-01 08:46:34,061: INFO/SpawnProcess-4] Connected to redis://redis:6379/0
+[2024-05-01 08:46:34,067: INFO/SpawnProcess-4] mingle: searching for neighbors
+[2024-05-01 08:46:38,465: INFO/SpawnProcess-5] Connected to redis://redis:6379/0
+[2024-05-01 08:46:38,472: INFO/SpawnProcess-5] mingle: searching for neighbors
+[2024-05-01 08:46:42,840: INFO/SpawnProcess-6] Connected to redis://redis:6379/0
+[2024-05-01 08:46:42,852: INFO/SpawnProcess-6] mingle: searching for neighbors
+[2024-05-01 08:46:47,481: INFO/SpawnProcess-7] Connected to redis://redis:6379/0
+[2024-05-01 08:46:47,486: INFO/SpawnProcess-7] mingle: searching for neighbors
+[2024-05-01 08:46:52,144: INFO/SpawnProcess-8] Connected to redis://redis:6379/0
+[2024-05-01 08:46:52,158: INFO/SpawnProcess-8] mingle: searching for neighbors
+[2024-05-01 08:46:56,742: INFO/SpawnProcess-9] Connected to redis://redis:6379/0
+[2024-05-01 08:46:56,748: INFO/SpawnProcess-9] mingle: searching for neighbors
+[2024-05-01 08:47:01,251: INFO/SpawnProcess-10] Connected to redis://redis:6379/0
+[2024-05-01 08:47:01,256: INFO/SpawnProcess-10] mingle: searching for neighbors
+[2024-05-01 08:47:05,653: INFO/SpawnProcess-11] Connected to redis://redis:6379/0
+[2024-05-01 08:47:05,659: INFO/SpawnProcess-11] mingle: searching for neighbors
+[2024-05-01 08:47:10,036: INFO/SpawnProcess-12] Connected to redis://redis:6379/0
+[2024-05-01 08:47:10,046: INFO/SpawnProcess-12] mingle: searching for neighbors
+[2024-05-01 08:47:14,402: INFO/SpawnProcess-13] Connected to redis://redis:6379/0
+[2024-05-01 08:47:14,408: INFO/SpawnProcess-13] mingle: searching for neighbors
+[2024-05-01 08:47:18,828: INFO/SpawnProcess-14] Connected to redis://redis:6379/0
+[2024-05-01 08:47:18,833: INFO/SpawnProcess-14] mingle: searching for neighbors
+[2024-05-01 08:47:23,347: INFO/SpawnProcess-15] Connected to redis://redis:6379/0
+[2024-05-01 08:47:23,353: INFO/SpawnProcess-15] mingle: searching for neighbors
+[2024-05-01 08:47:27,802: INFO/SpawnProcess-16] Connected to redis://redis:6379/0
+[2024-05-01 08:47:27,807: INFO/SpawnProcess-16] mingle: searching for neighbors
+[2024-05-01 08:47:32,433: INFO/SpawnProcess-17] Connected to redis://redis:6379/0
+[2024-05-01 08:47:32,442: INFO/SpawnProcess-17] mingle: searching for neighbors
+[2024-05-01 08:47:37,250: INFO/SpawnProcess-18] Connected to redis://redis:6379/0
+[2024-05-01 08:47:37,255: INFO/SpawnProcess-18] mingle: searching for neighbors
+[2024-05-01 08:47:41,920: INFO/SpawnProcess-19] Connected to redis://redis:6379/0
+[2024-05-01 08:47:41,926: INFO/SpawnProcess-19] mingle: searching for neighbors
+[2024-05-01 08:47:47,139: INFO/SpawnProcess-20] Connected to redis://redis:6379/0
+[2024-05-01 08:47:47,154: INFO/SpawnProcess-20] mingle: searching for neighbors
+[2024-05-01 08:47:52,943: INFO/SpawnProcess-21] Connected to redis://redis:6379/0
+[2024-05-01 08:47:52,951: INFO/SpawnProcess-21] mingle: searching for neighbors
+[2024-05-01 08:48:00,140: INFO/SpawnProcess-22] Connected to redis://redis:6379/0
+[2024-05-01 08:48:00,149: INFO/SpawnProcess-22] mingle: searching for neighbors
+[2024-05-01 08:48:05,931: INFO/SpawnProcess-23] Connected to redis://redis:6379/0
+[2024-05-01 08:48:05,942: INFO/SpawnProcess-23] mingle: searching for neighbors
+[2024-05-01 08:48:12,136: INFO/SpawnProcess-24] Connected to redis://redis:6379/0
+[2024-05-01 08:48:12,143: INFO/SpawnProcess-24] mingle: searching for neighbors
+[2024-05-01 08:48:16,875: INFO/SpawnProcess-25] Connected to redis://redis:6379/0
+[2024-05-01 08:48:16,880: INFO/SpawnProcess-25] mingle: searching for neighbors
+[2024-05-01 08:48:25,149: INFO/SpawnProcess-26] Connected to redis://redis:6379/0
+[2024-05-01 08:48:25,174: INFO/SpawnProcess-26] mingle: searching for neighbors
+[2024-05-01 08:48:30,906: INFO/SpawnProcess-27] Connected to redis://redis:6379/0
+[2024-05-01 08:48:30,915: INFO/SpawnProcess-27] mingle: searching for neighbors
+[2024-05-01 08:48:37,296: INFO/SpawnProcess-28] Connected to redis://redis:6379/0
+[2024-05-01 08:48:37,315: INFO/SpawnProcess-28] mingle: searching for neighbors
+[2024-05-01 08:48:45,019: INFO/SpawnProcess-29] Connected to redis://redis:6379/0
+[2024-05-01 08:48:45,030: INFO/SpawnProcess-29] mingle: searching for neighbors
+[2024-05-01 08:48:53,374: INFO/SpawnProcess-30] Connected to redis://redis:6379/0
+[2024-05-01 08:48:53,396: INFO/SpawnProcess-30] mingle: searching for neighbors
+[2024-05-01 08:49:01,247: INFO/SpawnProcess-31] Connected to redis://redis:6379/0
+[2024-05-01 08:49:01,261: INFO/SpawnProcess-31] mingle: searching for neighbors
+[2024-05-01 08:49:07,862: INFO/SpawnProcess-32] Connected to redis://redis:6379/0
+[2024-05-01 08:49:07,876: INFO/SpawnProcess-32] mingle: searching for neighbors
+[2024-05-01 08:49:14,386: INFO/SpawnProcess-33] Connected to redis://redis:6379/0
+[2024-05-01 08:49:14,395: INFO/SpawnProcess-33] mingle: searching for neighbors
+[2024-05-01 08:49:23,177: INFO/SpawnProcess-34] Connected to redis://redis:6379/0
+[2024-05-01 08:49:23,195: INFO/SpawnProcess-34] mingle: searching for neighbors
+[2024-05-01 08:49:29,914: INFO/SpawnProcess-35] Connected to redis://redis:6379/0
+[2024-05-01 08:49:29,926: INFO/SpawnProcess-35] mingle: searching for neighbors
+[2024-05-01 08:49:38,382: INFO/SpawnProcess-36] Connected to redis://redis:6379/0
+[2024-05-01 08:49:38,400: INFO/SpawnProcess-36] mingle: searching for neighbors
+[2024-05-01 08:49:46,564: INFO/SpawnProcess-37] Connected to redis://redis:6379/0
+[2024-05-01 08:49:46,579: INFO/SpawnProcess-37] mingle: searching for neighbors
+[2024-05-01 08:49:54,227: INFO/SpawnProcess-38] Connected to redis://redis:6379/0
+[2024-05-01 08:49:54,721: INFO/SpawnProcess-38] mingle: searching for neighbors
+[2024-05-01 08:50:01,459: INFO/SpawnProcess-39] Connected to redis://redis:6379/0
+[2024-05-01 08:50:01,467: INFO/SpawnProcess-39] mingle: searching for neighbors
+[2024-05-01 08:50:09,170: INFO/SpawnProcess-40] Connected to redis://redis:6379/0
+[2024-05-01 08:50:09,185: INFO/SpawnProcess-40] mingle: searching for neighbors
+[2024-05-01 08:50:16,298: INFO/SpawnProcess-41] Connected to redis://redis:6379/0
+[2024-05-01 08:50:16,371: INFO/SpawnProcess-41] mingle: searching for neighbors
+[2024-05-01 08:50:23,273: INFO/SpawnProcess-42] Connected to redis://redis:6379/0
+[2024-05-01 08:50:23,283: INFO/SpawnProcess-42] mingle: searching for neighbors
+[2024-05-01 08:50:29,838: INFO/SpawnProcess-43] Connected to redis://redis:6379/0
+[2024-05-01 08:50:29,882: INFO/SpawnProcess-43] mingle: searching for neighbors
+[2024-05-01 08:50:37,062: INFO/SpawnProcess-44] Connected to redis://redis:6379/0
+[2024-05-01 08:50:37,092: INFO/SpawnProcess-44] mingle: searching for neighbors
+[2024-05-01 08:50:42,290: INFO/SpawnProcess-45] Connected to redis://redis:6379/0
+[2024-05-01 08:50:42,298: INFO/SpawnProcess-45] mingle: searching for neighbors
+[2024-05-01 08:50:47,840: INFO/SpawnProcess-46] Connected to redis://redis:6379/0
+[2024-05-01 08:50:47,875: INFO/SpawnProcess-46] mingle: searching for neighbors
+[2024-05-01 08:50:53,014: INFO/SpawnProcess-47] Connected to redis://redis:6379/0
+[2024-05-01 08:50:53,302: INFO/SpawnProcess-47] mingle: searching for neighbors
+[2024-05-01 08:50:59,909: INFO/SpawnProcess-48] Connected to redis://redis:6379/0
+[2024-05-01 08:50:59,924: INFO/SpawnProcess-48] mingle: searching for neighbors
+[2024-05-01 08:51:05,553: INFO/SpawnProcess-49] Connected to redis://redis:6379/0
+[2024-05-01 08:51:05,563: INFO/SpawnProcess-49] mingle: searching for neighbors
+[2024-05-01 08:51:12,196: INFO/SpawnProcess-50] Connected to redis://redis:6379/0
+[2024-05-01 08:51:12,209: INFO/SpawnProcess-50] mingle: searching for neighbors
+[2024-05-01 08:51:18,142: INFO/SpawnProcess-51] Connected to redis://redis:6379/0
+[2024-05-01 08:51:18,152: INFO/SpawnProcess-51] mingle: searching for neighbors
+[2024-05-01 08:51:24,552: INFO/SpawnProcess-52] Connected to redis://redis:6379/0
+[2024-05-01 08:51:24,565: INFO/SpawnProcess-52] mingle: searching for neighbors
+[2024-05-01 08:51:30,962: INFO/SpawnProcess-53] Connected to redis://redis:6379/0
+[2024-05-01 08:51:30,978: INFO/SpawnProcess-53] mingle: searching for neighbors
+[2024-05-01 08:51:38,112: INFO/SpawnProcess-54] Connected to redis://redis:6379/0
+[2024-05-01 08:51:38,119: INFO/SpawnProcess-54] mingle: searching for neighbors
+[2024-05-01 08:51:44,189: INFO/SpawnProcess-55] Connected to redis://redis:6379/0
+[2024-05-01 08:51:44,199: INFO/SpawnProcess-55] mingle: searching for neighbors
+[2024-05-01 08:51:53,467: INFO/SpawnProcess-56] Connected to redis://redis:6379/0
+[2024-05-01 08:52:00,908: INFO/SpawnProcess-57] Connected to redis://redis:6379/0
+[2024-05-01 08:52:01,099: INFO/SpawnProcess-57] mingle: searching for neighbors
+[2024-05-01 08:52:07,167: INFO/SpawnProcess-58] Connected to redis://redis:6379/0
+[2024-05-01 08:52:07,184: INFO/SpawnProcess-58] mingle: searching for neighbors
+[2024-05-01 08:52:12,827: INFO/SpawnProcess-59] Connected to redis://redis:6379/0
+[2024-05-01 08:52:12,838: INFO/SpawnProcess-59] mingle: searching for neighbors
+[2024-05-01 08:52:19,462: INFO/SpawnProcess-60] Connected to redis://redis:6379/0
+[2024-05-01 08:52:19,473: INFO/SpawnProcess-60] mingle: searching for neighbors
+[2024-05-01 08:52:25,795: INFO/SpawnProcess-61] Connected to redis://redis:6379/0
+[2024-05-01 08:52:25,801: INFO/SpawnProcess-61] mingle: searching for neighbors
+[2024-05-01 08:52:31,286: INFO/SpawnProcess-62] Connected to redis://redis:6379/0
+[2024-05-01 08:52:31,294: INFO/SpawnProcess-62] mingle: searching for neighbors
+[2024-05-01 08:52:36,733: INFO/SpawnProcess-63] Connected to redis://redis:6379/0
+[2024-05-01 08:52:36,741: INFO/SpawnProcess-63] mingle: searching for neighbors
+[2024-05-01 08:52:42,268: INFO/SpawnProcess-64] Connected to redis://redis:6379/0
+[2024-05-01 08:52:42,280: INFO/SpawnProcess-64] mingle: searching for neighbors
+[2024-05-01 08:52:47,978: INFO/SpawnProcess-65] Connected to redis://redis:6379/0
+[2024-05-01 08:52:48,252: INFO/SpawnProcess-65] mingle: searching for neighbors
+[2024-05-01 08:52:53,236: INFO/SpawnProcess-66] Connected to redis://redis:6379/0
+[2024-05-01 08:52:53,244: INFO/SpawnProcess-66] mingle: searching for neighbors
+[2024-05-01 08:52:58,584: INFO/SpawnProcess-67] Connected to redis://redis:6379/0
+[2024-05-01 08:52:58,593: INFO/SpawnProcess-67] mingle: searching for neighbors
+[2024-05-01 08:53:04,782: INFO/SpawnProcess-68] Connected to redis://redis:6379/0
+[2024-05-01 08:53:04,793: INFO/SpawnProcess-68] mingle: searching for neighbors
+[2024-05-01 08:53:11,894: INFO/SpawnProcess-69] Connected to redis://redis:6379/0
+[2024-05-01 08:53:11,928: INFO/SpawnProcess-69] mingle: searching for neighbors
+[2024-05-01 08:53:20,178: INFO/SpawnProcess-70] Connected to redis://redis:6379/0
+[2024-05-01 08:53:20,210: INFO/SpawnProcess-70] mingle: searching for neighbors
+[2024-05-01 08:53:26,673: INFO/SpawnProcess-71] Connected to redis://redis:6379/0
+[2024-05-01 08:53:27,815: INFO/SpawnProcess-71] mingle: searching for neighbors
+[2024-05-01 08:53:34,388: INFO/SpawnProcess-72] Connected to redis://redis:6379/0
+[2024-05-01 08:53:34,399: INFO/SpawnProcess-72] mingle: searching for neighbors
+[2024-05-01 08:53:42,377: INFO/SpawnProcess-73] Connected to redis://redis:6379/0
+[2024-05-01 08:53:42,735: INFO/SpawnProcess-73] mingle: searching for neighbors
+[2024-05-01 08:53:49,207: INFO/SpawnProcess-74] Connected to redis://redis:6379/0
+[2024-05-01 08:53:49,217: INFO/SpawnProcess-74] mingle: searching for neighbors
+[2024-05-01 08:53:54,461: INFO/SpawnProcess-75] Connected to redis://redis:6379/0
+[2024-05-01 08:53:54,470: INFO/SpawnProcess-75] mingle: searching for neighbors
+[2024-05-01 08:54:02,701: INFO/SpawnProcess-76] Connected to redis://redis:6379/0
+[2024-05-01 08:54:02,708: INFO/SpawnProcess-76] mingle: searching for neighbors
+[2024-05-01 08:54:09,348: INFO/SpawnProcess-78] Connected to redis://redis:6379/0
+[2024-05-01 08:54:09,365: INFO/SpawnProcess-78] mingle: searching for neighbors
+[2024-05-01 08:54:14,193: INFO/SpawnProcess-79] Connected to redis://redis:6379/0
+[2024-05-01 08:54:14,208: INFO/SpawnProcess-79] mingle: searching for neighbors
+[2024-05-01 08:54:31,070: INFO/SpawnProcess-80] Connected to redis://redis:6379/0
+[2024-05-01 08:54:31,081: INFO/SpawnProcess-80] mingle: searching for neighbors
+[2024-05-01 08:54:36,031: INFO/SpawnProcess-81] Connected to redis://redis:6379/0
+[2024-05-01 08:54:36,046: INFO/SpawnProcess-81] mingle: searching for neighbors
+[2024-05-01 08:54:41,127: INFO/SpawnProcess-82] Connected to redis://redis:6379/0
+[2024-05-01 08:54:41,140: INFO/SpawnProcess-82] mingle: searching for neighbors
+[2024-05-01 08:54:48,112: INFO/SpawnProcess-83] Connected to redis://redis:6379/0
+[2024-05-01 08:54:48,133: INFO/SpawnProcess-83] mingle: searching for neighbors
+[2024-05-01 08:54:55,115: INFO/SpawnProcess-84] Connected to redis://redis:6379/0
+[2024-05-01 08:54:55,124: INFO/SpawnProcess-84] mingle: searching for neighbors
+[2024-05-01 08:55:00,822: INFO/SpawnProcess-85] Connected to redis://redis:6379/0
+[2024-05-01 08:55:00,829: INFO/SpawnProcess-85] mingle: searching for neighbors
+[2024-05-01 08:55:06,588: INFO/SpawnProcess-86] Connected to redis://redis:6379/0
+[2024-05-01 08:55:06,603: INFO/SpawnProcess-86] mingle: searching for neighbors
+[2024-05-01 08:55:12,739: INFO/SpawnProcess-87] Connected to redis://redis:6379/0
+[2024-05-01 08:55:12,746: INFO/SpawnProcess-87] mingle: searching for neighbors
+[2024-05-01 08:55:18,146: INFO/SpawnProcess-88] Connected to redis://redis:6379/0
+[2024-05-01 08:55:18,153: INFO/SpawnProcess-88] mingle: searching for neighbors
+[2024-05-01 08:55:23,231: INFO/SpawnProcess-89] Connected to redis://redis:6379/0
+[2024-05-01 08:55:23,240: INFO/SpawnProcess-89] mingle: searching for neighbors
+[2024-05-01 08:55:28,768: INFO/SpawnProcess-90] Connected to redis://redis:6379/0
+[2024-05-01 08:55:28,777: INFO/SpawnProcess-90] mingle: searching for neighbors
+[2024-05-01 08:55:35,070: INFO/SpawnProcess-91] Connected to redis://redis:6379/0
+[2024-05-01 08:55:35,085: INFO/SpawnProcess-91] mingle: searching for neighbors
+[2024-05-01 08:55:41,339: INFO/SpawnProcess-92] Connected to redis://redis:6379/0
+[2024-05-01 08:55:41,349: INFO/SpawnProcess-92] mingle: searching for neighbors
+[2024-05-01 08:55:48,106: INFO/SpawnProcess-93] Connected to redis://redis:6379/0
+[2024-05-01 08:55:48,141: INFO/SpawnProcess-93] mingle: searching for neighbors
+[2024-05-01 08:55:53,605: INFO/SpawnProcess-94] Connected to redis://redis:6379/0
+[2024-05-01 08:55:53,614: INFO/SpawnProcess-94] mingle: searching for neighbors
+[2024-05-01 08:55:58,729: INFO/SpawnProcess-95] Connected to redis://redis:6379/0
+[2024-05-01 08:55:58,736: INFO/SpawnProcess-95] mingle: searching for neighbors
+[2024-05-01 08:56:05,703: INFO/SpawnProcess-96] Connected to redis://redis:6379/0
+[2024-05-01 08:56:05,712: INFO/SpawnProcess-96] mingle: searching for neighbors
+[2024-05-01 08:56:11,326: INFO/SpawnProcess-97] Connected to redis://redis:6379/0
+[2024-05-01 08:56:11,333: INFO/SpawnProcess-97] mingle: searching for neighbors
+[2024-05-01 08:56:17,127: INFO/SpawnProcess-98] Connected to redis://redis:6379/0
+[2024-05-01 08:56:17,146: INFO/SpawnProcess-98] mingle: searching for neighbors
+[2024-05-01 08:56:24,478: INFO/SpawnProcess-99] Connected to redis://redis:6379/0
+[2024-05-01 08:56:24,494: INFO/SpawnProcess-99] mingle: searching for neighbors
+[2024-05-01 08:56:30,306: INFO/SpawnProcess-100] Connected to redis://redis:6379/0
+[2024-05-01 08:56:30,312: INFO/SpawnProcess-100] mingle: searching for neighbors
+[2024-05-01 08:56:35,812: INFO/SpawnProcess-101] Connected to redis://redis:6379/0
+[2024-05-01 08:56:35,821: INFO/SpawnProcess-101] mingle: searching for neighbors
+[2024-05-01 08:56:40,975: INFO/SpawnProcess-102] Connected to redis://redis:6379/0
+[2024-05-01 08:56:40,982: INFO/SpawnProcess-102] mingle: searching for neighbors
+[2024-05-01 08:56:46,272: INFO/SpawnProcess-103] Connected to redis://redis:6379/0
+[2024-05-01 08:56:46,280: INFO/SpawnProcess-103] mingle: searching for neighbors
+[2024-05-01 08:56:52,581: INFO/SpawnProcess-104] Connected to redis://redis:6379/0
+[2024-05-01 08:56:52,588: INFO/SpawnProcess-104] mingle: searching for neighbors
+[2024-05-01 08:56:57,805: INFO/SpawnProcess-105] Connected to redis://redis:6379/0
+[2024-05-01 08:56:57,810: INFO/SpawnProcess-105] mingle: searching for neighbors
+[2024-05-01 08:57:02,797: INFO/SpawnProcess-106] Connected to redis://redis:6379/0
+[2024-05-01 08:57:02,805: INFO/SpawnProcess-106] mingle: searching for neighbors
+[2024-05-01 08:57:08,322: INFO/SpawnProcess-107] Connected to redis://redis:6379/0
+[2024-05-01 08:57:08,335: INFO/SpawnProcess-107] mingle: searching for neighbors
+[2024-05-01 08:57:13,232: INFO/SpawnProcess-108] Connected to redis://redis:6379/0
+[2024-05-01 08:57:13,243: INFO/SpawnProcess-108] mingle: searching for neighbors
+[2024-05-01 08:57:18,361: INFO/SpawnProcess-109] Connected to redis://redis:6379/0
+[2024-05-01 08:57:18,371: INFO/SpawnProcess-109] mingle: searching for neighbors
+[2024-05-01 08:57:24,068: INFO/SpawnProcess-110] Connected to redis://redis:6379/0
+[2024-05-01 08:57:24,079: INFO/SpawnProcess-110] mingle: searching for neighbors
+[2024-05-01 08:57:30,536: INFO/SpawnProcess-111] Connected to redis://redis:6379/0
+[2024-05-01 08:57:30,541: INFO/SpawnProcess-111] mingle: searching for neighbors
+[2024-05-01 08:57:35,512: INFO/SpawnProcess-112] Connected to redis://redis:6379/0
+[2024-05-01 08:57:35,525: INFO/SpawnProcess-112] mingle: searching for neighbors
+[2024-05-01 08:57:40,313: INFO/SpawnProcess-113] Connected to redis://redis:6379/0
+[2024-05-01 08:57:40,322: INFO/SpawnProcess-113] mingle: searching for neighbors
+[2024-05-01 08:57:46,356: INFO/SpawnProcess-114] Connected to redis://redis:6379/0
+[2024-05-01 08:57:46,362: INFO/SpawnProcess-114] mingle: searching for neighbors
+[2024-05-01 08:57:51,435: INFO/SpawnProcess-115] Connected to redis://redis:6379/0
+[2024-05-01 08:57:51,440: INFO/SpawnProcess-115] mingle: searching for neighbors
+[2024-05-01 08:57:56,866: INFO/SpawnProcess-116] Connected to redis://redis:6379/0
+[2024-05-01 08:57:56,905: INFO/SpawnProcess-116] mingle: searching for neighbors
+[2024-05-01 08:58:01,447: INFO/SpawnProcess-117] Connected to redis://redis:6379/0
+[2024-05-01 08:58:01,452: INFO/SpawnProcess-117] mingle: searching for neighbors
+[2024-05-01 08:58:06,171: INFO/SpawnProcess-118] Connected to redis://redis:6379/0
+[2024-05-01 08:58:06,177: INFO/SpawnProcess-118] mingle: searching for neighbors
+[2024-05-01 08:58:11,929: INFO/SpawnProcess-119] Connected to redis://redis:6379/0
+[2024-05-01 08:58:11,942: INFO/SpawnProcess-119] mingle: searching for neighbors
+[2024-05-01 08:58:17,262: INFO/SpawnProcess-120] Connected to redis://redis:6379/0
+[2024-05-01 08:58:17,270: INFO/SpawnProcess-120] mingle: searching for neighbors
+[2024-05-01 08:58:23,739: INFO/SpawnProcess-121] Connected to redis://redis:6379/0
+[2024-05-01 08:58:23,754: INFO/SpawnProcess-121] mingle: searching for neighbors
+[2024-05-01 08:58:29,431: INFO/SpawnProcess-122] Connected to redis://redis:6379/0
+[2024-05-01 08:58:29,440: INFO/SpawnProcess-122] mingle: searching for neighbors
+[2024-05-01 08:58:34,760: INFO/SpawnProcess-123] Connected to redis://redis:6379/0
+[2024-05-01 08:58:34,769: INFO/SpawnProcess-123] mingle: searching for neighbors
+[2024-05-01 08:58:39,803: INFO/SpawnProcess-124] Connected to redis://redis:6379/0
+[2024-05-01 08:58:39,819: INFO/SpawnProcess-124] mingle: searching for neighbors
+[2024-05-01 08:58:44,976: INFO/SpawnProcess-125] Connected to redis://redis:6379/0
+[2024-05-01 08:58:44,982: INFO/SpawnProcess-125] mingle: searching for neighbors
+[2024-05-01 08:58:50,830: INFO/SpawnProcess-126] Connected to redis://redis:6379/0
+[2024-05-01 08:58:50,838: INFO/SpawnProcess-126] mingle: searching for neighbors
+[2024-05-01 08:58:57,114: INFO/SpawnProcess-127] Connected to redis://redis:6379/0
+[2024-05-01 08:58:57,123: INFO/SpawnProcess-127] mingle: searching for neighbors
+[2024-05-01 08:59:02,964: INFO/SpawnProcess-128] Connected to redis://redis:6379/0
+[2024-05-01 08:59:02,971: INFO/SpawnProcess-128] mingle: searching for neighbors
+[2024-05-01 08:59:08,317: INFO/SpawnProcess-129] Connected to redis://redis:6379/0
+[2024-05-01 08:59:08,327: INFO/SpawnProcess-129] mingle: searching for neighbors
+[2024-05-01 08:59:13,551: INFO/SpawnProcess-130] Connected to redis://redis:6379/0
+[2024-05-01 08:59:13,556: INFO/SpawnProcess-130] mingle: searching for neighbors
+[2024-05-01 08:59:18,871: INFO/SpawnProcess-131] Connected to redis://redis:6379/0
+[2024-05-01 08:59:18,885: INFO/SpawnProcess-131] mingle: searching for neighbors
+[2024-05-01 08:59:23,907: INFO/SpawnProcess-132] Connected to redis://redis:6379/0
+[2024-05-01 08:59:23,918: INFO/SpawnProcess-132] mingle: searching for neighbors
+[2024-05-01 08:59:29,529: INFO/SpawnProcess-133] Connected to redis://redis:6379/0
+[2024-05-01 08:59:29,546: INFO/SpawnProcess-133] mingle: searching for neighbors
+[2024-05-01 08:59:34,745: INFO/SpawnProcess-134] Connected to redis://redis:6379/0
+[2024-05-01 08:59:34,751: INFO/SpawnProcess-134] mingle: searching for neighbors
+[2024-05-01 08:59:40,007: INFO/SpawnProcess-135] Connected to redis://redis:6379/0
+[2024-05-01 08:59:40,017: INFO/SpawnProcess-135] mingle: searching for neighbors
+[2024-05-01 08:59:45,079: INFO/SpawnProcess-136] Connected to redis://redis:6379/0
+[2024-05-01 08:59:45,086: INFO/SpawnProcess-136] mingle: searching for neighbors
+[2024-05-01 08:59:51,219: INFO/SpawnProcess-137] Connected to redis://redis:6379/0
+[2024-05-01 08:59:51,226: INFO/SpawnProcess-137] mingle: searching for neighbors
+[2024-05-01 08:59:57,086: INFO/SpawnProcess-138] Connected to redis://redis:6379/0
+[2024-05-01 08:59:57,102: INFO/SpawnProcess-138] mingle: searching for neighbors
+[2024-05-01 09:00:03,477: INFO/SpawnProcess-139] Connected to redis://redis:6379/0
+[2024-05-01 09:00:03,485: INFO/SpawnProcess-139] mingle: searching for neighbors
+[2024-05-01 09:00:09,129: INFO/SpawnProcess-140] Connected to redis://redis:6379/0
+[2024-05-01 09:00:09,138: INFO/SpawnProcess-140] mingle: searching for neighbors
+[2024-05-01 09:00:14,611: INFO/SpawnProcess-141] Connected to redis://redis:6379/0
+[2024-05-01 09:00:14,621: INFO/SpawnProcess-141] mingle: searching for neighbors
+[2024-05-01 09:00:19,965: INFO/SpawnProcess-142] Connected to redis://redis:6379/0
+[2024-05-01 09:00:19,975: INFO/SpawnProcess-142] mingle: searching for neighbors
+[2024-05-01 09:00:25,427: INFO/SpawnProcess-143] Connected to redis://redis:6379/0
+[2024-05-01 09:00:25,436: INFO/SpawnProcess-143] mingle: searching for neighbors
+[2024-05-01 09:00:30,787: INFO/SpawnProcess-144] Connected to redis://redis:6379/0
+[2024-05-01 09:00:30,796: INFO/SpawnProcess-144] mingle: searching for neighbors
+[2024-05-01 09:00:36,537: INFO/SpawnProcess-145] Connected to redis://redis:6379/0
+[2024-05-01 09:00:36,547: INFO/SpawnProcess-145] mingle: searching for neighbors
+[2024-05-01 09:00:41,551: INFO/SpawnProcess-146] Connected to redis://redis:6379/0
+[2024-05-01 09:00:41,561: INFO/SpawnProcess-146] mingle: searching for neighbors
+[2024-05-01 09:00:47,329: INFO/SpawnProcess-147] Connected to redis://redis:6379/0
+[2024-05-01 09:00:47,338: INFO/SpawnProcess-147] mingle: searching for neighbors
+[2024-05-01 09:00:53,597: INFO/SpawnProcess-148] Connected to redis://redis:6379/0
+[2024-05-01 09:00:53,608: INFO/SpawnProcess-148] mingle: searching for neighbors
+[2024-05-01 09:00:59,887: INFO/SpawnProcess-149] Connected to redis://redis:6379/0
+[2024-05-01 09:00:59,897: INFO/SpawnProcess-149] mingle: searching for neighbors
+[2024-05-01 09:01:06,097: INFO/SpawnProcess-150] Connected to redis://redis:6379/0
+[2024-05-01 09:01:06,114: INFO/SpawnProcess-150] mingle: searching for neighbors
+[2024-05-01 09:01:11,860: INFO/SpawnProcess-151] Connected to redis://redis:6379/0
+[2024-05-01 09:01:11,867: INFO/SpawnProcess-151] mingle: searching for neighbors
+[2024-05-01 09:01:18,239: INFO/SpawnProcess-152] Connected to redis://redis:6379/0
+[2024-05-01 09:01:18,250: INFO/SpawnProcess-152] mingle: searching for neighbors
+[2024-05-01 09:01:23,900: INFO/SpawnProcess-153] Connected to redis://redis:6379/0
+[2024-05-01 09:01:23,908: INFO/SpawnProcess-153] mingle: searching for neighbors
+[2024-05-01 09:01:28,883: INFO/SpawnProcess-154] Connected to redis://redis:6379/0
+[2024-05-01 09:01:28,893: INFO/SpawnProcess-154] mingle: searching for neighbors
+[2024-05-01 09:01:34,849: INFO/SpawnProcess-155] Connected to redis://redis:6379/0
+[2024-05-01 09:01:34,856: INFO/SpawnProcess-155] mingle: searching for neighbors
+[2024-05-01 09:01:40,425: INFO/SpawnProcess-156] Connected to redis://redis:6379/0
+[2024-05-01 09:01:40,434: INFO/SpawnProcess-156] mingle: searching for neighbors
+[2024-05-01 09:01:46,423: INFO/SpawnProcess-157] Connected to redis://redis:6379/0
+[2024-05-01 09:01:46,435: INFO/SpawnProcess-157] mingle: searching for neighbors
+[2024-05-01 09:01:53,636: INFO/SpawnProcess-158] Connected to redis://redis:6379/0
+[2024-05-01 09:01:53,659: INFO/SpawnProcess-158] mingle: searching for neighbors
+[2024-05-01 09:01:59,160: INFO/SpawnProcess-159] Connected to redis://redis:6379/0
+[2024-05-01 09:01:59,173: INFO/SpawnProcess-159] mingle: searching for neighbors
+[2024-05-01 09:02:04,505: INFO/SpawnProcess-160] Connected to redis://redis:6379/0
+[2024-05-01 09:02:04,513: INFO/SpawnProcess-160] mingle: searching for neighbors
+[2024-05-01 09:02:09,995: INFO/SpawnProcess-161] Connected to redis://redis:6379/0
+[2024-05-01 09:02:10,007: INFO/SpawnProcess-161] mingle: searching for neighbors
+[2024-05-01 09:02:15,252: INFO/SpawnProcess-162] Connected to redis://redis:6379/0
+[2024-05-01 09:02:15,260: INFO/SpawnProcess-162] mingle: searching for neighbors
+[2024-05-01 09:02:20,273: INFO/SpawnProcess-163] Connected to redis://redis:6379/0
+[2024-05-01 09:02:20,279: INFO/SpawnProcess-163] mingle: searching for neighbors
+[2024-05-01 09:02:25,854: INFO/SpawnProcess-164] Connected to redis://redis:6379/0
+[2024-05-01 09:02:25,866: INFO/SpawnProcess-164] mingle: searching for neighbors
+[2024-05-01 09:02:32,447: INFO/SpawnProcess-165] Connected to redis://redis:6379/0
+[2024-05-01 09:02:32,455: INFO/SpawnProcess-165] mingle: searching for neighbors
+[2024-05-01 09:02:37,682: INFO/SpawnProcess-166] Connected to redis://redis:6379/0
+[2024-05-01 09:02:37,692: INFO/SpawnProcess-166] mingle: searching for neighbors
+[2024-05-01 09:02:43,570: INFO/SpawnProcess-167] Connected to redis://redis:6379/0
+[2024-05-01 09:02:43,579: INFO/SpawnProcess-167] mingle: searching for neighbors
+[2024-05-01 09:02:48,252: INFO/SpawnProcess-168] Connected to redis://redis:6379/0
+[2024-05-01 09:02:48,258: INFO/SpawnProcess-168] mingle: searching for neighbors
+[2024-05-01 09:02:52,837: INFO/SpawnProcess-169] Connected to redis://redis:6379/0
+[2024-05-01 09:02:52,843: INFO/SpawnProcess-169] mingle: searching for neighbors
+[2024-05-01 09:02:58,048: INFO/SpawnProcess-170] Connected to redis://redis:6379/0
+[2024-05-01 09:02:58,057: INFO/SpawnProcess-170] mingle: searching for neighbors
+[2024-05-01 09:03:03,334: INFO/SpawnProcess-171] Connected to redis://redis:6379/0
+[2024-05-01 09:03:03,342: INFO/SpawnProcess-171] mingle: searching for neighbors
+[2024-05-01 09:03:08,009: INFO/SpawnProcess-172] Connected to redis://redis:6379/0
+[2024-05-01 09:03:08,022: INFO/SpawnProcess-172] mingle: searching for neighbors
+[2024-05-01 09:03:12,882: INFO/SpawnProcess-173] Connected to redis://redis:6379/0
+[2024-05-01 09:03:12,889: INFO/SpawnProcess-173] mingle: searching for neighbors
+[2024-05-01 09:03:17,596: INFO/SpawnProcess-174] Connected to redis://redis:6379/0
+[2024-05-01 09:03:17,602: INFO/SpawnProcess-174] mingle: searching for neighbors
+[2024-05-01 09:03:22,212: INFO/SpawnProcess-175] Connected to redis://redis:6379/0
+[2024-05-01 09:03:22,218: INFO/SpawnProcess-175] mingle: searching for neighbors
+[2024-05-01 09:03:26,919: INFO/SpawnProcess-176] Connected to redis://redis:6379/0
+[2024-05-01 09:03:26,926: INFO/SpawnProcess-176] mingle: searching for neighbors
+[2024-05-01 09:03:31,695: INFO/SpawnProcess-177] Connected to redis://redis:6379/0
+[2024-05-01 09:03:31,701: INFO/SpawnProcess-177] mingle: searching for neighbors
+[2024-05-01 09:03:36,181: INFO/SpawnProcess-178] Connected to redis://redis:6379/0
+[2024-05-01 09:03:36,187: INFO/SpawnProcess-178] mingle: searching for neighbors
+[2024-05-01 09:03:40,559: INFO/SpawnProcess-179] Connected to redis://redis:6379/0
+[2024-05-01 09:03:40,567: INFO/SpawnProcess-179] mingle: searching for neighbors
+[2024-05-01 09:03:44,989: INFO/SpawnProcess-180] Connected to redis://redis:6379/0
+[2024-05-01 09:03:45,014: INFO/SpawnProcess-180] mingle: searching for neighbors
+[2024-05-01 09:03:49,371: INFO/SpawnProcess-181] Connected to redis://redis:6379/0
+[2024-05-01 09:03:49,381: INFO/SpawnProcess-181] mingle: searching for neighbors
+[2024-05-01 09:03:53,783: INFO/SpawnProcess-182] Connected to redis://redis:6379/0
+[2024-05-01 09:03:53,791: INFO/SpawnProcess-182] mingle: searching for neighbors
+[2024-05-01 09:03:58,349: INFO/SpawnProcess-183] Connected to redis://redis:6379/0
+[2024-05-01 09:03:58,357: INFO/SpawnProcess-183] mingle: searching for neighbors
+[2024-05-01 09:04:02,959: INFO/SpawnProcess-184] Connected to redis://redis:6379/0
+[2024-05-01 09:04:02,968: INFO/SpawnProcess-184] mingle: searching for neighbors
+[2024-05-01 09:04:07,821: INFO/SpawnProcess-185] Connected to redis://redis:6379/0
+[2024-05-01 09:04:07,829: INFO/SpawnProcess-185] mingle: searching for neighbors
+[2024-05-01 09:04:12,430: INFO/SpawnProcess-186] Connected to redis://redis:6379/0
+[2024-05-01 09:04:12,436: INFO/SpawnProcess-186] mingle: searching for neighbors
+[2024-05-01 09:04:16,974: INFO/SpawnProcess-187] Connected to redis://redis:6379/0
+[2024-05-01 09:04:16,986: INFO/SpawnProcess-187] mingle: searching for neighbors
+[2024-05-01 09:04:21,659: INFO/SpawnProcess-188] Connected to redis://redis:6379/0
+[2024-05-01 09:04:21,666: INFO/SpawnProcess-188] mingle: searching for neighbors
+[2024-05-01 09:04:26,274: INFO/SpawnProcess-189] Connected to redis://redis:6379/0
+[2024-05-01 09:04:26,279: INFO/SpawnProcess-189] mingle: searching for neighbors
+[2024-05-01 09:04:30,946: INFO/SpawnProcess-190] Connected to redis://redis:6379/0
+[2024-05-01 09:04:30,953: INFO/SpawnProcess-190] mingle: searching for neighbors
+[2024-05-01 09:04:35,656: INFO/SpawnProcess-191] Connected to redis://redis:6379/0
+[2024-05-01 09:04:35,670: INFO/SpawnProcess-191] mingle: searching for neighbors
+[2024-05-01 09:04:40,218: INFO/SpawnProcess-192] Connected to redis://redis:6379/0
+[2024-05-01 09:04:40,223: INFO/SpawnProcess-192] mingle: searching for neighbors
+[2024-05-01 09:04:44,806: INFO/SpawnProcess-193] Connected to redis://redis:6379/0
+[2024-05-01 09:04:44,817: INFO/SpawnProcess-193] mingle: searching for neighbors
+[2024-05-01 09:04:49,521: INFO/SpawnProcess-194] Connected to redis://redis:6379/0
+[2024-05-01 09:04:49,526: INFO/SpawnProcess-194] mingle: searching for neighbors
+[2024-05-01 09:04:54,205: INFO/SpawnProcess-195] Connected to redis://redis:6379/0
+[2024-05-01 09:04:54,214: INFO/SpawnProcess-195] mingle: searching for neighbors
+[2024-05-01 09:04:58,782: INFO/SpawnProcess-196] Connected to redis://redis:6379/0
+[2024-05-01 09:04:58,788: INFO/SpawnProcess-196] mingle: searching for neighbors
+[2024-05-01 09:05:03,529: INFO/SpawnProcess-197] Connected to redis://redis:6379/0
+[2024-05-01 09:05:03,537: INFO/SpawnProcess-197] mingle: searching for neighbors
+[2024-05-01 09:05:08,101: INFO/SpawnProcess-198] Connected to redis://redis:6379/0
+[2024-05-01 09:05:08,112: INFO/SpawnProcess-198] mingle: searching for neighbors
+[2024-05-01 09:05:12,835: INFO/SpawnProcess-199] Connected to redis://redis:6379/0
+[2024-05-01 09:05:12,842: INFO/SpawnProcess-199] mingle: searching for neighbors
+[2024-05-01 09:05:17,481: INFO/SpawnProcess-200] Connected to redis://redis:6379/0
+[2024-05-01 09:05:17,490: INFO/SpawnProcess-200] mingle: searching for neighbors
+[2024-05-01 09:05:22,385: INFO/SpawnProcess-201] Connected to redis://redis:6379/0
+[2024-05-01 09:05:22,398: INFO/SpawnProcess-201] mingle: searching for neighbors
+[2024-05-01 09:05:27,126: INFO/SpawnProcess-202] Connected to redis://redis:6379/0
+[2024-05-01 09:05:27,131: INFO/SpawnProcess-202] mingle: searching for neighbors
+[2024-05-01 09:05:31,739: INFO/SpawnProcess-203] Connected to redis://redis:6379/0
+[2024-05-01 09:05:31,745: INFO/SpawnProcess-203] mingle: searching for neighbors
+[2024-05-01 09:05:36,642: INFO/SpawnProcess-204] Connected to redis://redis:6379/0
+[2024-05-01 09:05:36,649: INFO/SpawnProcess-204] mingle: searching for neighbors
+[2024-05-01 09:05:41,606: INFO/SpawnProcess-205] Connected to redis://redis:6379/0
+[2024-05-01 09:05:41,621: INFO/SpawnProcess-205] mingle: searching for neighbors
+[2024-05-01 09:05:46,427: INFO/SpawnProcess-206] Connected to redis://redis:6379/0
+[2024-05-01 09:05:46,433: INFO/SpawnProcess-206] mingle: searching for neighbors
+[2024-05-01 09:05:51,119: INFO/SpawnProcess-207] Connected to redis://redis:6379/0
+[2024-05-01 09:05:51,131: INFO/SpawnProcess-207] mingle: searching for neighbors
+[2024-05-01 09:05:55,898: INFO/SpawnProcess-208] Connected to redis://redis:6379/0
+[2024-05-01 09:05:55,906: INFO/SpawnProcess-208] mingle: searching for neighbors
+[2024-05-01 09:06:00,591: INFO/SpawnProcess-209] Connected to redis://redis:6379/0
+[2024-05-01 09:06:00,600: INFO/SpawnProcess-209] mingle: searching for neighbors
+[2024-05-01 09:06:05,456: INFO/SpawnProcess-210] Connected to redis://redis:6379/0
+[2024-05-01 09:06:05,463: INFO/SpawnProcess-210] mingle: searching for neighbors
+[2024-05-01 09:06:10,386: INFO/SpawnProcess-211] Connected to redis://redis:6379/0
+[2024-05-01 09:06:10,397: INFO/SpawnProcess-211] mingle: searching for neighbors
+[2024-05-01 09:06:14,992: INFO/SpawnProcess-212] Connected to redis://redis:6379/0
+[2024-05-01 09:06:14,999: INFO/SpawnProcess-212] mingle: searching for neighbors
+[2024-05-01 09:06:20,150: INFO/SpawnProcess-213] Connected to redis://redis:6379/0
+[2024-05-01 09:06:20,156: INFO/SpawnProcess-213] mingle: searching for neighbors
+[2024-05-01 09:06:24,726: INFO/SpawnProcess-214] Connected to redis://redis:6379/0
+[2024-05-01 09:06:24,731: INFO/SpawnProcess-214] mingle: searching for neighbors
+[2024-05-01 09:06:29,451: INFO/SpawnProcess-215] Connected to redis://redis:6379/0
+[2024-05-01 09:06:29,458: INFO/SpawnProcess-215] mingle: searching for neighbors
+[2024-05-01 09:06:34,139: INFO/SpawnProcess-216] Connected to redis://redis:6379/0
+[2024-05-01 09:06:34,147: INFO/SpawnProcess-216] mingle: searching for neighbors
+[2024-05-01 09:06:38,740: INFO/SpawnProcess-217] Connected to redis://redis:6379/0
+[2024-05-01 09:06:38,750: INFO/SpawnProcess-217] mingle: searching for neighbors
+[2024-05-01 09:06:43,711: INFO/SpawnProcess-218] Connected to redis://redis:6379/0
+[2024-05-01 09:06:43,719: INFO/SpawnProcess-218] mingle: searching for neighbors
+[2024-05-01 09:06:48,418: INFO/SpawnProcess-219] Connected to redis://redis:6379/0
+[2024-05-01 09:06:48,423: INFO/SpawnProcess-219] mingle: searching for neighbors
+[2024-05-01 09:06:53,193: INFO/SpawnProcess-220] Connected to redis://redis:6379/0
+[2024-05-01 09:06:53,202: INFO/SpawnProcess-220] mingle: searching for neighbors
+[2024-05-01 09:06:57,867: INFO/SpawnProcess-221] Connected to redis://redis:6379/0
+[2024-05-01 09:06:57,875: INFO/SpawnProcess-221] mingle: searching for neighbors
+[2024-05-01 09:07:02,464: INFO/SpawnProcess-222] Connected to redis://redis:6379/0
+[2024-05-01 09:07:02,470: INFO/SpawnProcess-222] mingle: searching for neighbors
+[2024-05-01 09:07:06,944: INFO/SpawnProcess-223] Connected to redis://redis:6379/0
+[2024-05-01 09:07:06,951: INFO/SpawnProcess-223] mingle: searching for neighbors
+[2024-05-01 09:07:11,545: INFO/SpawnProcess-224] Connected to redis://redis:6379/0
+[2024-05-01 09:07:11,551: INFO/SpawnProcess-224] mingle: searching for neighbors
+[2024-05-01 09:07:16,185: INFO/SpawnProcess-225] Connected to redis://redis:6379/0
+[2024-05-01 09:07:16,190: INFO/SpawnProcess-225] mingle: searching for neighbors
+[2024-05-01 09:07:20,812: INFO/SpawnProcess-226] Connected to redis://redis:6379/0
+[2024-05-01 09:07:20,818: INFO/SpawnProcess-226] mingle: searching for neighbors
+[2024-05-01 09:07:25,383: INFO/SpawnProcess-227] Connected to redis://redis:6379/0
+[2024-05-01 09:07:25,390: INFO/SpawnProcess-227] mingle: searching for neighbors
+[2024-05-01 09:07:29,979: INFO/SpawnProcess-228] Connected to redis://redis:6379/0
+[2024-05-01 09:07:29,985: INFO/SpawnProcess-228] mingle: searching for neighbors
+[2024-05-01 09:07:34,588: INFO/SpawnProcess-229] Connected to redis://redis:6379/0
+[2024-05-01 09:07:34,594: INFO/SpawnProcess-229] mingle: searching for neighbors
+[2024-05-01 09:07:39,120: INFO/SpawnProcess-230] Connected to redis://redis:6379/0
+[2024-05-01 09:07:39,129: INFO/SpawnProcess-230] mingle: searching for neighbors
+[2024-05-01 09:07:43,685: INFO/SpawnProcess-231] Connected to redis://redis:6379/0
+[2024-05-01 09:07:43,690: INFO/SpawnProcess-231] mingle: searching for neighbors
+[2024-05-01 09:07:48,266: INFO/SpawnProcess-232] Connected to redis://redis:6379/0
+[2024-05-01 09:07:48,272: INFO/SpawnProcess-232] mingle: searching for neighbors
+[2024-05-01 09:07:52,808: INFO/SpawnProcess-233] Connected to redis://redis:6379/0
+[2024-05-01 09:07:52,815: INFO/SpawnProcess-233] mingle: searching for neighbors
+[2024-05-01 09:07:57,247: INFO/SpawnProcess-234] Connected to redis://redis:6379/0
+[2024-05-01 09:07:57,252: INFO/SpawnProcess-234] mingle: searching for neighbors
+[2024-05-01 09:08:01,678: INFO/SpawnProcess-235] Connected to redis://redis:6379/0
+[2024-05-01 09:08:01,683: INFO/SpawnProcess-235] mingle: searching for neighbors
+[2024-05-01 09:08:06,071: INFO/SpawnProcess-236] Connected to redis://redis:6379/0
+[2024-05-01 09:08:06,080: INFO/SpawnProcess-236] mingle: searching for neighbors
+[2024-05-01 09:08:10,593: INFO/SpawnProcess-237] Connected to redis://redis:6379/0
+[2024-05-01 09:08:10,601: INFO/SpawnProcess-237] mingle: searching for neighbors
+[2024-05-01 09:08:15,145: INFO/SpawnProcess-238] Connected to redis://redis:6379/0
+[2024-05-01 09:08:15,150: INFO/SpawnProcess-238] mingle: searching for neighbors
+[2024-05-01 09:08:19,710: INFO/SpawnProcess-239] Connected to redis://redis:6379/0
+[2024-05-01 09:08:19,716: INFO/SpawnProcess-239] mingle: searching for neighbors
+[2024-05-01 09:08:24,104: INFO/SpawnProcess-240] Connected to redis://redis:6379/0
+[2024-05-01 09:08:24,111: INFO/SpawnProcess-240] mingle: searching for neighbors
+[2024-05-01 09:08:28,530: INFO/SpawnProcess-241] Connected to redis://redis:6379/0
+[2024-05-01 09:08:28,538: INFO/SpawnProcess-241] mingle: searching for neighbors
+[2024-05-01 09:08:32,856: INFO/SpawnProcess-242] Connected to redis://redis:6379/0
+[2024-05-01 09:08:32,866: INFO/SpawnProcess-242] mingle: searching for neighbors
+[2024-05-01 09:08:37,241: INFO/SpawnProcess-243] Connected to redis://redis:6379/0
+[2024-05-01 09:08:37,251: INFO/SpawnProcess-243] mingle: searching for neighbors
+[2024-05-01 09:08:41,687: INFO/SpawnProcess-244] Connected to redis://redis:6379/0
+[2024-05-01 09:08:41,693: INFO/SpawnProcess-244] mingle: searching for neighbors
+[2024-05-01 09:08:46,128: INFO/SpawnProcess-245] Connected to redis://redis:6379/0
+[2024-05-01 09:08:46,135: INFO/SpawnProcess-245] mingle: searching for neighbors
+[2024-05-01 09:08:50,631: INFO/SpawnProcess-246] Connected to redis://redis:6379/0
+[2024-05-01 09:08:50,636: INFO/SpawnProcess-246] mingle: searching for neighbors
+[2024-05-01 09:08:55,097: INFO/SpawnProcess-247] Connected to redis://redis:6379/0
+[2024-05-01 09:08:55,105: INFO/SpawnProcess-247] mingle: searching for neighbors
+[2024-05-01 09:08:59,489: INFO/SpawnProcess-248] Connected to redis://redis:6379/0
+[2024-05-01 09:08:59,497: INFO/SpawnProcess-248] mingle: searching for neighbors
+[2024-05-01 09:09:03,868: INFO/SpawnProcess-249] Connected to redis://redis:6379/0
+[2024-05-01 09:09:03,875: INFO/SpawnProcess-249] mingle: searching for neighbors
+[2024-05-01 09:09:08,286: INFO/SpawnProcess-250] Connected to redis://redis:6379/0
+[2024-05-01 09:09:08,291: INFO/SpawnProcess-250] mingle: searching for neighbors
+[2024-05-01 09:09:12,762: INFO/SpawnProcess-251] Connected to redis://redis:6379/0
+[2024-05-01 09:09:12,768: INFO/SpawnProcess-251] mingle: searching for neighbors
+[2024-05-01 09:09:17,199: INFO/SpawnProcess-252] Connected to redis://redis:6379/0
+[2024-05-01 09:09:17,207: INFO/SpawnProcess-252] mingle: searching for neighbors
+[2024-05-01 09:09:21,682: INFO/SpawnProcess-253] Connected to redis://redis:6379/0
+[2024-05-01 09:09:21,691: INFO/SpawnProcess-253] mingle: searching for neighbors
+[2024-05-01 09:09:26,091: INFO/SpawnProcess-254] Connected to redis://redis:6379/0
+[2024-05-01 09:09:26,097: INFO/SpawnProcess-254] mingle: searching for neighbors
+[2024-05-01 09:09:30,563: INFO/SpawnProcess-255] Connected to redis://redis:6379/0
+[2024-05-01 09:09:30,572: INFO/SpawnProcess-255] mingle: searching for neighbors
+[2024-05-01 09:09:34,929: INFO/SpawnProcess-256] Connected to redis://redis:6379/0
+[2024-05-01 09:09:34,941: INFO/SpawnProcess-256] mingle: searching for neighbors
+[2024-05-01 09:09:39,324: INFO/SpawnProcess-257] Connected to redis://redis:6379/0
+[2024-05-01 09:09:39,330: INFO/SpawnProcess-257] mingle: searching for neighbors
+[2024-05-01 09:09:43,781: INFO/SpawnProcess-258] Connected to redis://redis:6379/0
+[2024-05-01 09:09:43,787: INFO/SpawnProcess-258] mingle: searching for neighbors
+[2024-05-01 09:09:48,343: INFO/SpawnProcess-259] Connected to redis://redis:6379/0
+[2024-05-01 09:09:48,348: INFO/SpawnProcess-259] mingle: searching for neighbors
+[2024-05-01 09:09:52,696: INFO/SpawnProcess-260] Connected to redis://redis:6379/0
+[2024-05-01 09:09:52,701: INFO/SpawnProcess-260] mingle: searching for neighbors
+[2024-05-01 09:09:57,186: INFO/SpawnProcess-261] Connected to redis://redis:6379/0
+[2024-05-01 09:09:57,192: INFO/SpawnProcess-261] mingle: searching for neighbors
+[2024-05-01 09:10:01,611: INFO/SpawnProcess-262] Connected to redis://redis:6379/0
+[2024-05-01 09:10:01,617: INFO/SpawnProcess-262] mingle: searching for neighbors
+[2024-05-01 09:10:06,052: INFO/SpawnProcess-263] Connected to redis://redis:6379/0
+[2024-05-01 09:10:06,058: INFO/SpawnProcess-263] mingle: searching for neighbors
+[2024-05-01 09:10:10,432: INFO/SpawnProcess-264] Connected to redis://redis:6379/0
+[2024-05-01 09:10:10,437: INFO/SpawnProcess-264] mingle: searching for neighbors
+[2024-05-01 09:10:14,884: INFO/SpawnProcess-265] Connected to redis://redis:6379/0
+[2024-05-01 09:10:14,888: INFO/SpawnProcess-265] mingle: searching for neighbors
+[2024-05-01 09:10:19,284: INFO/SpawnProcess-266] Connected to redis://redis:6379/0
+[2024-05-01 09:10:19,289: INFO/SpawnProcess-266] mingle: searching for neighbors
+[2024-05-01 09:10:23,736: INFO/SpawnProcess-267] Connected to redis://redis:6379/0
+[2024-05-01 09:10:23,742: INFO/SpawnProcess-267] mingle: searching for neighbors
+[2024-05-01 09:10:28,086: INFO/SpawnProcess-268] Connected to redis://redis:6379/0
+[2024-05-01 09:10:28,094: INFO/SpawnProcess-268] mingle: searching for neighbors
+[2024-05-01 09:10:32,477: INFO/SpawnProcess-269] Connected to redis://redis:6379/0
+[2024-05-01 09:10:32,483: INFO/SpawnProcess-269] mingle: searching for neighbors
+[2024-05-01 09:10:36,835: INFO/SpawnProcess-270] Connected to redis://redis:6379/0
+[2024-05-01 09:10:36,841: INFO/SpawnProcess-270] mingle: searching for neighbors
+[2024-05-01 09:10:41,275: INFO/SpawnProcess-271] Connected to redis://redis:6379/0
+[2024-05-01 09:10:41,283: INFO/SpawnProcess-271] mingle: searching for neighbors
+[2024-05-01 09:10:45,690: INFO/SpawnProcess-272] Connected to redis://redis:6379/0
+[2024-05-01 09:10:45,699: INFO/SpawnProcess-272] mingle: searching for neighbors
+[2024-05-01 09:10:50,114: INFO/SpawnProcess-273] Connected to redis://redis:6379/0
+[2024-05-01 09:10:50,119: INFO/SpawnProcess-273] mingle: searching for neighbors
+[2024-05-01 09:10:54,474: INFO/SpawnProcess-274] Connected to redis://redis:6379/0
+[2024-05-01 09:10:54,479: INFO/SpawnProcess-274] mingle: searching for neighbors
+[2024-05-01 09:10:58,885: INFO/SpawnProcess-275] Connected to redis://redis:6379/0
+[2024-05-01 09:10:58,891: INFO/SpawnProcess-275] mingle: searching for neighbors
+[2024-05-01 09:11:03,258: INFO/SpawnProcess-276] Connected to redis://redis:6379/0
+[2024-05-01 09:11:03,263: INFO/SpawnProcess-276] mingle: searching for neighbors
+[2024-05-01 09:11:07,723: INFO/SpawnProcess-277] Connected to redis://redis:6379/0
+[2024-05-01 09:11:07,732: INFO/SpawnProcess-277] mingle: searching for neighbors
+[2024-05-01 09:11:12,110: INFO/SpawnProcess-278] Connected to redis://redis:6379/0
+[2024-05-01 09:11:12,115: INFO/SpawnProcess-278] mingle: searching for neighbors
+[2024-05-01 09:11:16,546: INFO/SpawnProcess-279] Connected to redis://redis:6379/0
+[2024-05-01 09:11:16,551: INFO/SpawnProcess-279] mingle: searching for neighbors
+[2024-05-01 09:11:21,057: INFO/SpawnProcess-280] Connected to redis://redis:6379/0
+[2024-05-01 09:11:21,065: INFO/SpawnProcess-280] mingle: searching for neighbors
+[2024-05-01 09:11:25,454: INFO/SpawnProcess-281] Connected to redis://redis:6379/0
+[2024-05-01 09:11:25,460: INFO/SpawnProcess-281] mingle: searching for neighbors
+[2024-05-01 09:11:29,924: INFO/SpawnProcess-282] Connected to redis://redis:6379/0
+[2024-05-01 09:11:29,929: INFO/SpawnProcess-282] mingle: searching for neighbors
+[2024-05-01 09:11:34,260: INFO/SpawnProcess-283] Connected to redis://redis:6379/0
+[2024-05-01 09:11:34,269: INFO/SpawnProcess-283] mingle: searching for neighbors
+[2024-05-01 09:11:38,532: INFO/SpawnProcess-284] Connected to redis://redis:6379/0
+[2024-05-01 09:11:38,540: INFO/SpawnProcess-284] mingle: searching for neighbors
+[2024-05-01 09:11:42,945: INFO/SpawnProcess-285] Connected to redis://redis:6379/0
+[2024-05-01 09:11:42,951: INFO/SpawnProcess-285] mingle: searching for neighbors
+[2024-05-01 09:11:47,365: INFO/SpawnProcess-286] Connected to redis://redis:6379/0
+[2024-05-01 09:11:47,374: INFO/SpawnProcess-286] mingle: searching for neighbors
+[2024-05-01 09:11:51,890: INFO/SpawnProcess-287] Connected to redis://redis:6379/0
+[2024-05-01 09:11:51,896: INFO/SpawnProcess-287] mingle: searching for neighbors
+[2024-05-01 09:11:56,278: INFO/SpawnProcess-288] Connected to redis://redis:6379/0
+[2024-05-01 09:11:56,284: INFO/SpawnProcess-288] mingle: searching for neighbors
+[2024-05-01 09:12:00,651: INFO/SpawnProcess-289] Connected to redis://redis:6379/0
+[2024-05-01 09:12:00,658: INFO/SpawnProcess-289] mingle: searching for neighbors
+[2024-05-01 09:12:05,175: INFO/SpawnProcess-290] Connected to redis://redis:6379/0
+[2024-05-01 09:12:05,182: INFO/SpawnProcess-290] mingle: searching for neighbors
+[2024-05-01 09:12:09,587: INFO/SpawnProcess-291] Connected to redis://redis:6379/0
+[2024-05-01 09:12:09,593: INFO/SpawnProcess-291] mingle: searching for neighbors
+[2024-05-01 09:12:14,085: INFO/SpawnProcess-292] Connected to redis://redis:6379/0
+[2024-05-01 09:12:14,090: INFO/SpawnProcess-292] mingle: searching for neighbors
+[2024-05-01 09:12:18,563: INFO/SpawnProcess-293] Connected to redis://redis:6379/0
+[2024-05-01 09:12:18,571: INFO/SpawnProcess-293] mingle: searching for neighbors
+[2024-05-01 09:12:22,976: INFO/SpawnProcess-294] Connected to redis://redis:6379/0
+[2024-05-01 09:12:22,985: INFO/SpawnProcess-294] mingle: searching for neighbors
+[2024-05-01 09:12:27,288: INFO/SpawnProcess-295] Connected to redis://redis:6379/0
+[2024-05-01 09:12:27,296: INFO/SpawnProcess-295] mingle: searching for neighbors
+[2024-05-01 09:12:31,673: INFO/SpawnProcess-296] Connected to redis://redis:6379/0
+[2024-05-01 09:12:31,678: INFO/SpawnProcess-296] mingle: searching for neighbors
+[2024-05-01 09:12:36,151: INFO/SpawnProcess-297] Connected to redis://redis:6379/0
+[2024-05-01 09:12:36,161: INFO/SpawnProcess-297] mingle: searching for neighbors
+[2024-05-01 09:12:40,596: INFO/SpawnProcess-298] Connected to redis://redis:6379/0
+[2024-05-01 09:12:40,603: INFO/SpawnProcess-298] mingle: searching for neighbors
+[2024-05-01 09:12:45,024: INFO/SpawnProcess-299] Connected to redis://redis:6379/0
+[2024-05-01 09:12:45,029: INFO/SpawnProcess-299] mingle: searching for neighbors
+[2024-05-01 09:12:49,504: INFO/SpawnProcess-300] Connected to redis://redis:6379/0
+[2024-05-01 09:12:49,508: INFO/SpawnProcess-300] mingle: searching for neighbors
+[2024-05-01 09:12:53,957: INFO/SpawnProcess-301] Connected to redis://redis:6379/0
+[2024-05-01 09:12:53,962: INFO/SpawnProcess-301] mingle: searching for neighbors
+[2024-05-01 09:12:58,375: INFO/SpawnProcess-302] Connected to redis://redis:6379/0
+[2024-05-01 09:12:58,381: INFO/SpawnProcess-302] mingle: searching for neighbors
+[2024-05-01 09:13:02,759: INFO/SpawnProcess-303] Connected to redis://redis:6379/0
+[2024-05-01 09:13:02,766: INFO/SpawnProcess-303] mingle: searching for neighbors
+[2024-05-01 09:13:07,191: INFO/SpawnProcess-304] Connected to redis://redis:6379/0
+[2024-05-01 09:13:07,197: INFO/SpawnProcess-304] mingle: searching for neighbors
+[2024-05-01 09:13:11,631: INFO/SpawnProcess-305] Connected to redis://redis:6379/0
+[2024-05-01 09:13:11,636: INFO/SpawnProcess-305] mingle: searching for neighbors
+[2024-05-01 09:13:15,979: INFO/SpawnProcess-306] Connected to redis://redis:6379/0
+[2024-05-01 09:13:15,988: INFO/SpawnProcess-306] mingle: searching for neighbors
+[2024-05-01 09:13:20,464: INFO/SpawnProcess-307] Connected to redis://redis:6379/0
+[2024-05-01 09:13:20,472: INFO/SpawnProcess-307] mingle: searching for neighbors
+[2024-05-01 09:13:24,841: INFO/SpawnProcess-308] Connected to redis://redis:6379/0
+[2024-05-01 09:13:24,847: INFO/SpawnProcess-308] mingle: searching for neighbors
+[2024-05-01 09:13:29,214: INFO/SpawnProcess-309] Connected to redis://redis:6379/0
+[2024-05-01 09:13:29,220: INFO/SpawnProcess-309] mingle: searching for neighbors
+[2024-05-01 09:13:33,576: INFO/SpawnProcess-310] Connected to redis://redis:6379/0
+[2024-05-01 09:13:33,581: INFO/SpawnProcess-310] mingle: searching for neighbors
+[2024-05-01 09:13:37,941: INFO/SpawnProcess-311] Connected to redis://redis:6379/0
+[2024-05-01 09:13:37,946: INFO/SpawnProcess-311] mingle: searching for neighbors
+[2024-05-01 09:13:42,398: INFO/SpawnProcess-312] Connected to redis://redis:6379/0
+[2024-05-01 09:13:42,408: INFO/SpawnProcess-312] mingle: searching for neighbors
+[2024-05-01 09:13:46,889: INFO/SpawnProcess-313] Connected to redis://redis:6379/0
+[2024-05-01 09:13:46,896: INFO/SpawnProcess-313] mingle: searching for neighbors
+[2024-05-01 09:13:51,294: INFO/SpawnProcess-314] Connected to redis://redis:6379/0
+[2024-05-01 09:13:51,301: INFO/SpawnProcess-314] mingle: searching for neighbors
+[2024-05-01 09:13:55,763: INFO/SpawnProcess-315] Connected to redis://redis:6379/0
+[2024-05-01 09:13:55,768: INFO/SpawnProcess-315] mingle: searching for neighbors
+[2024-05-01 09:14:00,165: INFO/SpawnProcess-316] Connected to redis://redis:6379/0
+[2024-05-01 09:14:00,173: INFO/SpawnProcess-316] mingle: searching for neighbors
+[2024-05-01 09:14:04,513: INFO/SpawnProcess-317] Connected to redis://redis:6379/0
+[2024-05-01 09:14:04,518: INFO/SpawnProcess-317] mingle: searching for neighbors
+[2024-05-01 09:14:08,852: INFO/SpawnProcess-318] Connected to redis://redis:6379/0
+[2024-05-01 09:14:08,859: INFO/SpawnProcess-318] mingle: searching for neighbors
+[2024-05-01 09:14:13,187: INFO/SpawnProcess-319] Connected to redis://redis:6379/0
+[2024-05-01 09:14:13,192: INFO/SpawnProcess-319] mingle: searching for neighbors
+[2024-05-01 09:14:17,556: INFO/SpawnProcess-320] Connected to redis://redis:6379/0
+[2024-05-01 09:14:17,562: INFO/SpawnProcess-320] mingle: searching for neighbors
+[2024-05-01 09:14:21,941: INFO/SpawnProcess-321] Connected to redis://redis:6379/0
+[2024-05-01 09:14:21,950: INFO/SpawnProcess-321] mingle: searching for neighbors
+[2024-05-01 09:14:26,406: INFO/SpawnProcess-322] Connected to redis://redis:6379/0
+[2024-05-01 09:14:26,413: INFO/SpawnProcess-322] mingle: searching for neighbors
+[2024-05-01 09:14:30,864: INFO/SpawnProcess-323] Connected to redis://redis:6379/0
+[2024-05-01 09:14:30,870: INFO/SpawnProcess-323] mingle: searching for neighbors
+[2024-05-01 09:14:35,213: INFO/SpawnProcess-324] Connected to redis://redis:6379/0
+[2024-05-01 09:14:35,220: INFO/SpawnProcess-324] mingle: searching for neighbors
+[2024-05-01 09:14:39,570: INFO/SpawnProcess-325] Connected to redis://redis:6379/0
+[2024-05-01 09:14:39,576: INFO/SpawnProcess-325] mingle: searching for neighbors
+[2024-05-01 09:14:44,012: INFO/SpawnProcess-326] Connected to redis://redis:6379/0
+[2024-05-01 09:14:44,018: INFO/SpawnProcess-326] mingle: searching for neighbors
+[2024-05-01 09:14:48,398: INFO/SpawnProcess-327] Connected to redis://redis:6379/0
+[2024-05-01 09:14:48,403: INFO/SpawnProcess-327] mingle: searching for neighbors
+[2024-05-01 09:14:52,927: INFO/SpawnProcess-328] Connected to redis://redis:6379/0
+[2024-05-01 09:14:52,936: INFO/SpawnProcess-328] mingle: searching for neighbors
+[2024-05-01 09:14:57,412: INFO/SpawnProcess-329] Connected to redis://redis:6379/0
+[2024-05-01 09:14:57,418: INFO/SpawnProcess-329] mingle: searching for neighbors
+[2024-05-01 09:15:01,789: INFO/SpawnProcess-330] Connected to redis://redis:6379/0
+[2024-05-01 09:15:01,797: INFO/SpawnProcess-330] mingle: searching for neighbors
+[2024-05-01 09:15:06,188: INFO/SpawnProcess-331] Connected to redis://redis:6379/0
+[2024-05-01 09:15:06,195: INFO/SpawnProcess-331] mingle: searching for neighbors
+[2024-05-01 09:15:10,535: INFO/SpawnProcess-332] Connected to redis://redis:6379/0
+[2024-05-01 09:15:10,543: INFO/SpawnProcess-332] mingle: searching for neighbors
+[2024-05-01 09:15:14,928: INFO/SpawnProcess-333] Connected to redis://redis:6379/0
+[2024-05-01 09:15:14,934: INFO/SpawnProcess-333] mingle: searching for neighbors
+[2024-05-01 09:15:19,292: INFO/SpawnProcess-334] Connected to redis://redis:6379/0
+[2024-05-01 09:15:19,297: INFO/SpawnProcess-334] mingle: searching for neighbors
+[2024-05-01 09:15:23,688: INFO/SpawnProcess-335] Connected to redis://redis:6379/0
+[2024-05-01 09:15:23,696: INFO/SpawnProcess-335] mingle: searching for neighbors
+[2024-05-01 09:15:28,129: INFO/SpawnProcess-336] Connected to redis://redis:6379/0
+[2024-05-01 09:15:28,135: INFO/SpawnProcess-336] mingle: searching for neighbors
+[2024-05-01 09:15:32,550: INFO/SpawnProcess-337] Connected to redis://redis:6379/0
+[2024-05-01 09:15:32,559: INFO/SpawnProcess-337] mingle: searching for neighbors
+[2024-05-01 09:15:36,926: INFO/SpawnProcess-338] Connected to redis://redis:6379/0
+[2024-05-01 09:15:36,935: INFO/SpawnProcess-338] mingle: searching for neighbors
+[2024-05-01 09:15:41,324: INFO/SpawnProcess-339] Connected to redis://redis:6379/0
+[2024-05-01 09:15:41,329: INFO/SpawnProcess-339] mingle: searching for neighbors
+[2024-05-01 09:15:45,682: INFO/SpawnProcess-340] Connected to redis://redis:6379/0
+[2024-05-01 09:15:45,687: INFO/SpawnProcess-340] mingle: searching for neighbors
+[2024-05-01 09:15:50,143: INFO/SpawnProcess-341] Connected to redis://redis:6379/0
+[2024-05-01 09:15:50,151: INFO/SpawnProcess-341] mingle: searching for neighbors
+[2024-05-01 09:15:54,610: INFO/SpawnProcess-342] Connected to redis://redis:6379/0
+[2024-05-01 09:15:54,618: INFO/SpawnProcess-342] mingle: searching for neighbors
+[2024-05-01 09:15:58,981: INFO/SpawnProcess-343] Connected to redis://redis:6379/0
+[2024-05-01 09:15:58,987: INFO/SpawnProcess-343] mingle: searching for neighbors
+[2024-05-01 09:16:03,390: INFO/SpawnProcess-344] Connected to redis://redis:6379/0
+[2024-05-01 09:16:03,396: INFO/SpawnProcess-344] mingle: searching for neighbors
+[2024-05-01 09:16:07,823: INFO/SpawnProcess-345] Connected to redis://redis:6379/0
+[2024-05-01 09:16:07,828: INFO/SpawnProcess-345] mingle: searching for neighbors
+[2024-05-01 09:16:12,215: INFO/SpawnProcess-346] Connected to redis://redis:6379/0
+[2024-05-01 09:16:12,221: INFO/SpawnProcess-346] mingle: searching for neighbors
+[2024-05-01 09:16:16,535: INFO/SpawnProcess-347] Connected to redis://redis:6379/0
+[2024-05-01 09:16:16,541: INFO/SpawnProcess-347] mingle: searching for neighbors
+[2024-05-01 09:16:20,950: INFO/SpawnProcess-348] Connected to redis://redis:6379/0
+[2024-05-01 09:16:20,955: INFO/SpawnProcess-348] mingle: searching for neighbors
+[2024-05-01 09:16:25,306: INFO/SpawnProcess-349] Connected to redis://redis:6379/0
+[2024-05-01 09:16:25,312: INFO/SpawnProcess-349] mingle: searching for neighbors
+[2024-05-01 09:16:29,723: INFO/SpawnProcess-350] Connected to redis://redis:6379/0
+[2024-05-01 09:16:29,730: INFO/SpawnProcess-350] mingle: searching for neighbors
+[2024-05-01 09:16:34,184: INFO/SpawnProcess-351] Connected to redis://redis:6379/0
+[2024-05-01 09:16:34,190: INFO/SpawnProcess-351] mingle: searching for neighbors
+[2024-05-01 09:16:38,566: INFO/SpawnProcess-352] Connected to redis://redis:6379/0
+[2024-05-01 09:16:38,573: INFO/SpawnProcess-352] mingle: searching for neighbors
+[2024-05-01 09:16:42,974: INFO/SpawnProcess-353] Connected to redis://redis:6379/0
+[2024-05-01 09:16:42,979: INFO/SpawnProcess-353] mingle: searching for neighbors
+[2024-05-01 09:16:47,416: INFO/SpawnProcess-354] Connected to redis://redis:6379/0
+[2024-05-01 09:16:47,423: INFO/SpawnProcess-354] mingle: searching for neighbors
+[2024-05-01 09:16:51,827: INFO/SpawnProcess-355] Connected to redis://redis:6379/0
+[2024-05-01 09:16:51,843: INFO/SpawnProcess-355] mingle: searching for neighbors
+[2024-05-01 09:16:56,334: INFO/SpawnProcess-356] Connected to redis://redis:6379/0
+[2024-05-01 09:16:56,342: INFO/SpawnProcess-356] mingle: searching for neighbors
+[2024-05-01 09:17:00,710: INFO/SpawnProcess-357] Connected to redis://redis:6379/0
+[2024-05-01 09:17:00,715: INFO/SpawnProcess-357] mingle: searching for neighbors
+[2024-05-01 09:17:05,148: INFO/SpawnProcess-358] Connected to redis://redis:6379/0
+[2024-05-01 09:17:05,157: INFO/SpawnProcess-358] mingle: searching for neighbors
+[2024-05-01 09:17:09,622: INFO/SpawnProcess-359] Connected to redis://redis:6379/0
+[2024-05-01 09:17:09,631: INFO/SpawnProcess-359] mingle: searching for neighbors
+[2024-05-01 09:17:14,052: INFO/SpawnProcess-360] Connected to redis://redis:6379/0
+[2024-05-01 09:17:14,063: INFO/SpawnProcess-360] mingle: searching for neighbors
+[2024-05-01 09:17:18,536: INFO/SpawnProcess-361] Connected to redis://redis:6379/0
+[2024-05-01 09:17:18,541: INFO/SpawnProcess-361] mingle: searching for neighbors
+[2024-05-01 09:17:22,922: INFO/SpawnProcess-362] Connected to redis://redis:6379/0
+[2024-05-01 09:17:22,927: INFO/SpawnProcess-362] mingle: searching for neighbors
+[2024-05-01 09:17:27,342: INFO/SpawnProcess-363] Connected to redis://redis:6379/0
+[2024-05-01 09:17:27,350: INFO/SpawnProcess-363] mingle: searching for neighbors
+[2024-05-01 09:17:31,654: INFO/SpawnProcess-364] Connected to redis://redis:6379/0
+[2024-05-01 09:17:31,662: INFO/SpawnProcess-364] mingle: searching for neighbors
+[2024-05-01 09:17:36,049: INFO/SpawnProcess-365] Connected to redis://redis:6379/0
+[2024-05-01 09:17:36,054: INFO/SpawnProcess-365] mingle: searching for neighbors
+[2024-05-01 09:17:40,361: INFO/SpawnProcess-366] Connected to redis://redis:6379/0
+[2024-05-01 09:17:40,368: INFO/SpawnProcess-366] mingle: searching for neighbors
+[2024-05-01 09:17:44,779: INFO/SpawnProcess-367] Connected to redis://redis:6379/0
+[2024-05-01 09:17:44,784: INFO/SpawnProcess-367] mingle: searching for neighbors
+[2024-05-01 09:17:49,282: INFO/SpawnProcess-368] Connected to redis://redis:6379/0
+[2024-05-01 09:17:49,293: INFO/SpawnProcess-368] mingle: searching for neighbors
+[2024-05-01 09:17:53,687: INFO/SpawnProcess-369] Connected to redis://redis:6379/0
+[2024-05-01 09:17:53,693: INFO/SpawnProcess-369] mingle: searching for neighbors
+[2024-05-01 09:17:58,092: INFO/SpawnProcess-370] Connected to redis://redis:6379/0
+[2024-05-01 09:17:58,098: INFO/SpawnProcess-370] mingle: searching for neighbors
+[2024-05-01 09:18:02,527: INFO/SpawnProcess-371] Connected to redis://redis:6379/0
+[2024-05-01 09:18:02,534: INFO/SpawnProcess-371] mingle: searching for neighbors
+[2024-05-01 09:18:07,003: INFO/SpawnProcess-372] Connected to redis://redis:6379/0
+[2024-05-01 09:18:07,009: INFO/SpawnProcess-372] mingle: searching for neighbors
+[2024-05-01 09:18:11,402: INFO/SpawnProcess-373] Connected to redis://redis:6379/0
+[2024-05-01 09:18:11,412: INFO/SpawnProcess-373] mingle: searching for neighbors
+[2024-05-01 09:18:15,828: INFO/SpawnProcess-374] Connected to redis://redis:6379/0
+[2024-05-01 09:18:15,833: INFO/SpawnProcess-374] mingle: searching for neighbors
+[2024-05-01 09:18:20,325: INFO/SpawnProcess-375] Connected to redis://redis:6379/0
+[2024-05-01 09:18:20,334: INFO/SpawnProcess-375] mingle: searching for neighbors
+[2024-05-01 09:18:24,844: INFO/SpawnProcess-376] Connected to redis://redis:6379/0
+[2024-05-01 09:18:24,849: INFO/SpawnProcess-376] mingle: searching for neighbors
+[2024-05-01 09:18:29,291: INFO/SpawnProcess-377] Connected to redis://redis:6379/0
+[2024-05-01 09:18:29,299: INFO/SpawnProcess-377] mingle: searching for neighbors
+[2024-05-01 09:18:33,745: INFO/SpawnProcess-378] Connected to redis://redis:6379/0
+[2024-05-01 09:18:33,750: INFO/SpawnProcess-378] mingle: searching for neighbors
+[2024-05-01 09:18:38,002: INFO/SpawnProcess-379] Connected to redis://redis:6379/0
+[2024-05-01 09:18:38,008: INFO/SpawnProcess-379] mingle: searching for neighbors
+[2024-05-01 09:18:42,389: INFO/SpawnProcess-380] Connected to redis://redis:6379/0
+[2024-05-01 09:18:42,395: INFO/SpawnProcess-380] mingle: searching for neighbors
+[2024-05-01 09:18:46,822: INFO/SpawnProcess-381] Connected to redis://redis:6379/0
+[2024-05-01 09:18:46,827: INFO/SpawnProcess-381] mingle: searching for neighbors
+[2024-05-01 09:18:51,218: INFO/SpawnProcess-382] Connected to redis://redis:6379/0
+[2024-05-01 09:18:51,223: INFO/SpawnProcess-382] mingle: searching for neighbors
+[2024-05-01 09:18:55,607: INFO/SpawnProcess-383] Connected to redis://redis:6379/0
+[2024-05-01 09:18:55,613: INFO/SpawnProcess-383] mingle: searching for neighbors
+[2024-05-01 09:19:00,077: INFO/SpawnProcess-384] Connected to redis://redis:6379/0
+[2024-05-01 09:19:00,086: INFO/SpawnProcess-384] mingle: searching for neighbors
+[2024-05-01 09:19:04,583: INFO/SpawnProcess-385] Connected to redis://redis:6379/0
+[2024-05-01 09:19:04,588: INFO/SpawnProcess-385] mingle: searching for neighbors
+[2024-05-01 09:19:08,865: INFO/SpawnProcess-386] Connected to redis://redis:6379/0
+[2024-05-01 09:19:08,876: INFO/SpawnProcess-386] mingle: searching for neighbors
+[2024-05-01 09:19:13,202: INFO/SpawnProcess-387] Connected to redis://redis:6379/0
+[2024-05-01 09:19:13,210: INFO/SpawnProcess-387] mingle: searching for neighbors
+[2024-05-01 09:19:17,631: INFO/SpawnProcess-388] Connected to redis://redis:6379/0
+[2024-05-01 09:19:17,639: INFO/SpawnProcess-388] mingle: searching for neighbors
+[2024-05-01 09:19:22,056: INFO/SpawnProcess-389] Connected to redis://redis:6379/0
+[2024-05-01 09:19:22,062: INFO/SpawnProcess-389] mingle: searching for neighbors
+[2024-05-01 09:19:26,438: INFO/SpawnProcess-390] Connected to redis://redis:6379/0
+[2024-05-01 09:19:26,444: INFO/SpawnProcess-390] mingle: searching for neighbors
+[2024-05-01 09:19:31,153: INFO/SpawnProcess-391] Connected to redis://redis:6379/0
+[2024-05-01 09:19:31,158: INFO/SpawnProcess-391] mingle: searching for neighbors
+[2024-05-01 09:19:37,826: INFO/SpawnProcess-392] Connected to redis://redis:6379/0
+[2024-05-01 09:19:37,902: INFO/SpawnProcess-392] mingle: searching for neighbors
+[2024-05-01 09:19:43,837: INFO/SpawnProcess-393] Connected to redis://redis:6379/0
+[2024-05-01 09:19:43,844: INFO/SpawnProcess-393] mingle: searching for neighbors
+[2024-05-01 09:19:48,678: INFO/SpawnProcess-394] Connected to redis://redis:6379/0
+[2024-05-01 09:19:48,685: INFO/SpawnProcess-394] mingle: searching for neighbors
+[2024-05-01 09:20:22,199: INFO/SpawnProcess-1] Connected to redis://redis:6379/0
+[2024-05-01 09:20:22,248: INFO/SpawnProcess-1] mingle: searching for neighbors
+[2024-05-01 09:20:23,343: INFO/SpawnProcess-1] mingle: all alone
+[2024-05-01 09:20:23,473: INFO/SpawnProcess-1] celery@b8328cb57375 ready.
+[2024-05-01 09:20:24,649: INFO/SpawnProcess-1] Events of group {task} enabled by remote.
+[2024-05-01 09:20:31,352: INFO/SpawnProcess-2] Connected to redis://redis:6379/0
+[2024-05-01 09:20:31,359: INFO/SpawnProcess-2] mingle: searching for neighbors
+[2024-05-01 09:20:36,145: INFO/SpawnProcess-3] Connected to redis://redis:6379/0
+[2024-05-01 09:20:36,152: INFO/SpawnProcess-3] mingle: searching for neighbors
+[2024-05-01 09:20:41,052: INFO/SpawnProcess-4] Connected to redis://redis:6379/0
+[2024-05-01 09:20:41,060: INFO/SpawnProcess-4] mingle: searching for neighbors
+[2024-05-01 09:20:45,530: INFO/SpawnProcess-5] Connected to redis://redis:6379/0
+[2024-05-01 09:20:45,541: INFO/SpawnProcess-5] mingle: searching for neighbors
+[2024-05-01 09:20:50,133: INFO/SpawnProcess-6] Connected to redis://redis:6379/0
+[2024-05-01 09:20:50,139: INFO/SpawnProcess-6] mingle: searching for neighbors
+[2024-05-01 09:20:54,733: INFO/SpawnProcess-7] Connected to redis://redis:6379/0
+[2024-05-01 09:20:54,766: INFO/SpawnProcess-7] mingle: searching for neighbors
+[2024-05-01 09:21:00,081: INFO/SpawnProcess-8] Connected to redis://redis:6379/0
+[2024-05-01 09:21:00,087: INFO/SpawnProcess-8] mingle: searching for neighbors
+[2024-05-01 09:21:04,992: INFO/SpawnProcess-9] Connected to redis://redis:6379/0
+[2024-05-01 09:21:04,999: INFO/SpawnProcess-9] mingle: searching for neighbors
+[2024-05-01 09:21:09,609: INFO/SpawnProcess-10] Connected to redis://redis:6379/0
+[2024-05-01 09:21:09,633: INFO/SpawnProcess-10] mingle: searching for neighbors
+[2024-05-01 09:21:14,236: INFO/SpawnProcess-11] Connected to redis://redis:6379/0
+[2024-05-01 09:21:14,242: INFO/SpawnProcess-11] mingle: searching for neighbors
+[2024-05-01 09:21:18,726: INFO/SpawnProcess-12] Connected to redis://redis:6379/0
+[2024-05-01 09:21:18,732: INFO/SpawnProcess-12] mingle: searching for neighbors
+[2024-05-01 09:21:23,157: INFO/SpawnProcess-13] Connected to redis://redis:6379/0
+[2024-05-01 09:21:23,162: INFO/SpawnProcess-13] mingle: searching for neighbors
+[2024-05-01 09:21:27,648: INFO/SpawnProcess-14] Connected to redis://redis:6379/0
+[2024-05-01 09:21:27,656: INFO/SpawnProcess-14] mingle: searching for neighbors
+[2024-05-01 09:21:32,050: INFO/SpawnProcess-15] Connected to redis://redis:6379/0
+[2024-05-01 09:21:32,055: INFO/SpawnProcess-15] mingle: searching for neighbors
+[2024-05-01 09:21:36,386: INFO/SpawnProcess-16] Connected to redis://redis:6379/0
+[2024-05-01 09:21:36,394: INFO/SpawnProcess-16] mingle: searching for neighbors
+[2024-05-01 09:21:40,830: INFO/SpawnProcess-17] Connected to redis://redis:6379/0
+[2024-05-01 09:21:40,835: INFO/SpawnProcess-17] mingle: searching for neighbors
+[2024-05-01 09:21:45,307: INFO/SpawnProcess-18] Connected to redis://redis:6379/0
+[2024-05-01 09:21:45,313: INFO/SpawnProcess-18] mingle: searching for neighbors
+[2024-05-01 09:21:50,102: INFO/SpawnProcess-19] Connected to redis://redis:6379/0
+[2024-05-01 09:21:50,110: INFO/SpawnProcess-19] mingle: searching for neighbors
+[2024-05-01 09:21:54,588: INFO/SpawnProcess-20] Connected to redis://redis:6379/0
+[2024-05-01 09:21:54,594: INFO/SpawnProcess-20] mingle: searching for neighbors
+[2024-05-01 09:21:59,537: INFO/SpawnProcess-21] Connected to redis://redis:6379/0
+[2024-05-01 09:21:59,551: INFO/SpawnProcess-21] mingle: searching for neighbors
+[2024-05-01 09:22:04,411: INFO/SpawnProcess-22] Connected to redis://redis:6379/0
+[2024-05-01 09:22:04,417: INFO/SpawnProcess-22] mingle: searching for neighbors
+[2024-05-01 09:22:09,112: INFO/SpawnProcess-23] Connected to redis://redis:6379/0
+[2024-05-01 09:22:09,118: INFO/SpawnProcess-23] mingle: searching for neighbors
+[2024-05-01 09:22:13,839: INFO/SpawnProcess-24] Connected to redis://redis:6379/0
+[2024-05-01 09:22:13,844: INFO/SpawnProcess-24] mingle: searching for neighbors
+[2024-05-01 09:22:18,488: INFO/SpawnProcess-25] Connected to redis://redis:6379/0
+[2024-05-01 09:22:18,493: INFO/SpawnProcess-25] mingle: searching for neighbors
+[2024-05-01 09:22:23,109: INFO/SpawnProcess-26] Connected to redis://redis:6379/0
+[2024-05-01 09:22:23,117: INFO/SpawnProcess-26] mingle: searching for neighbors
+[2024-05-01 09:22:27,901: INFO/SpawnProcess-27] Connected to redis://redis:6379/0
+[2024-05-01 09:22:27,910: INFO/SpawnProcess-27] mingle: searching for neighbors
+[2024-05-01 09:22:32,636: INFO/SpawnProcess-28] Connected to redis://redis:6379/0
+[2024-05-01 09:22:32,640: INFO/SpawnProcess-28] mingle: searching for neighbors
+[2024-05-01 09:22:37,150: INFO/SpawnProcess-29] Connected to redis://redis:6379/0
+[2024-05-01 09:22:37,159: INFO/SpawnProcess-29] mingle: searching for neighbors
+[2024-05-01 09:22:41,898: INFO/SpawnProcess-30] Connected to redis://redis:6379/0
+[2024-05-01 09:22:41,906: INFO/SpawnProcess-30] mingle: searching for neighbors
+[2024-05-01 09:22:46,419: INFO/SpawnProcess-31] Connected to redis://redis:6379/0
+[2024-05-01 09:22:46,425: INFO/SpawnProcess-31] mingle: searching for neighbors
+[2024-05-01 09:22:51,028: INFO/SpawnProcess-32] Connected to redis://redis:6379/0
+[2024-05-01 09:22:51,038: INFO/SpawnProcess-32] mingle: searching for neighbors
+[2024-05-01 09:22:55,524: INFO/SpawnProcess-33] Connected to redis://redis:6379/0
+[2024-05-01 09:22:55,529: INFO/SpawnProcess-33] mingle: searching for neighbors
+[2024-05-01 09:23:00,060: INFO/SpawnProcess-34] Connected to redis://redis:6379/0
+[2024-05-01 09:23:00,065: INFO/SpawnProcess-34] mingle: searching for neighbors
+[2024-05-01 09:23:04,829: INFO/SpawnProcess-35] Connected to redis://redis:6379/0
+[2024-05-01 09:23:04,837: INFO/SpawnProcess-35] mingle: searching for neighbors
+[2024-05-01 09:23:09,354: INFO/SpawnProcess-36] Connected to redis://redis:6379/0
+[2024-05-01 09:23:09,360: INFO/SpawnProcess-36] mingle: searching for neighbors
+[2024-05-01 09:23:13,901: INFO/SpawnProcess-37] Connected to redis://redis:6379/0
+[2024-05-01 09:23:13,910: INFO/SpawnProcess-37] mingle: searching for neighbors
+[2024-05-01 09:23:18,837: INFO/SpawnProcess-38] Connected to redis://redis:6379/0
+[2024-05-01 09:23:18,847: INFO/SpawnProcess-38] mingle: searching for neighbors
+[2024-05-01 09:23:23,316: INFO/SpawnProcess-39] Connected to redis://redis:6379/0
+[2024-05-01 09:23:23,322: INFO/SpawnProcess-39] mingle: searching for neighbors
+[2024-05-01 09:23:28,152: INFO/SpawnProcess-40] Connected to redis://redis:6379/0
+[2024-05-01 09:23:28,157: INFO/SpawnProcess-40] mingle: searching for neighbors
+[2024-05-01 09:23:33,038: INFO/SpawnProcess-41] Connected to redis://redis:6379/0
+[2024-05-01 09:23:33,045: INFO/SpawnProcess-41] mingle: searching for neighbors
+[2024-05-01 09:23:37,820: INFO/SpawnProcess-42] Connected to redis://redis:6379/0
+[2024-05-01 09:23:37,826: INFO/SpawnProcess-42] mingle: searching for neighbors
+[2024-05-01 09:23:42,303: INFO/SpawnProcess-43] Connected to redis://redis:6379/0
+[2024-05-01 09:23:42,311: INFO/SpawnProcess-43] mingle: searching for neighbors
+[2024-05-01 09:23:47,000: INFO/SpawnProcess-44] Connected to redis://redis:6379/0
+[2024-05-01 09:23:47,026: INFO/SpawnProcess-44] mingle: searching for neighbors
+[2024-05-01 09:23:51,569: INFO/SpawnProcess-45] Connected to redis://redis:6379/0
+[2024-05-01 09:23:51,583: INFO/SpawnProcess-45] mingle: searching for neighbors
+[2024-05-01 09:23:56,201: INFO/SpawnProcess-46] Connected to redis://redis:6379/0
+[2024-05-01 09:23:56,207: INFO/SpawnProcess-46] mingle: searching for neighbors
+[2024-05-01 09:24:00,923: INFO/SpawnProcess-47] Connected to redis://redis:6379/0
+[2024-05-01 09:24:00,933: INFO/SpawnProcess-47] mingle: searching for neighbors
+[2024-05-01 09:24:05,672: INFO/SpawnProcess-48] Connected to redis://redis:6379/0
+[2024-05-01 09:24:05,683: INFO/SpawnProcess-48] mingle: searching for neighbors
+[2024-05-01 09:24:10,057: INFO/SpawnProcess-49] Connected to redis://redis:6379/0
+[2024-05-01 09:24:10,063: INFO/SpawnProcess-49] mingle: searching for neighbors
+[2024-05-01 09:24:14,529: INFO/SpawnProcess-50] Connected to redis://redis:6379/0
+[2024-05-01 09:24:14,538: INFO/SpawnProcess-50] mingle: searching for neighbors
+[2024-05-01 09:24:19,294: INFO/SpawnProcess-51] Connected to redis://redis:6379/0
+[2024-05-01 09:24:19,304: INFO/SpawnProcess-51] mingle: searching for neighbors
+[2024-05-01 09:24:23,879: INFO/SpawnProcess-52] Connected to redis://redis:6379/0
+[2024-05-01 09:24:23,886: INFO/SpawnProcess-52] mingle: searching for neighbors
+[2024-05-01 09:24:28,407: INFO/SpawnProcess-53] Connected to redis://redis:6379/0
+[2024-05-01 09:24:28,413: INFO/SpawnProcess-53] mingle: searching for neighbors
+[2024-05-01 09:24:32,942: INFO/SpawnProcess-54] Connected to redis://redis:6379/0
+[2024-05-01 09:24:32,948: INFO/SpawnProcess-54] mingle: searching for neighbors
+[2024-05-01 09:24:37,458: INFO/SpawnProcess-55] Connected to redis://redis:6379/0
+[2024-05-01 09:24:37,463: INFO/SpawnProcess-55] mingle: searching for neighbors
+[2024-05-01 09:24:41,905: INFO/SpawnProcess-56] Connected to redis://redis:6379/0
+[2024-05-01 09:24:41,910: INFO/SpawnProcess-56] mingle: searching for neighbors
+[2024-05-01 09:24:46,415: INFO/SpawnProcess-57] Connected to redis://redis:6379/0
+[2024-05-01 09:24:46,421: INFO/SpawnProcess-57] mingle: searching for neighbors
+[2024-05-01 09:24:50,887: INFO/SpawnProcess-58] Connected to redis://redis:6379/0
+[2024-05-01 09:24:50,892: INFO/SpawnProcess-58] mingle: searching for neighbors
+[2024-05-01 09:24:55,540: INFO/SpawnProcess-59] Connected to redis://redis:6379/0
+[2024-05-01 09:24:55,545: INFO/SpawnProcess-59] mingle: searching for neighbors
+[2024-05-01 09:25:00,296: INFO/SpawnProcess-60] Connected to redis://redis:6379/0
+[2024-05-01 09:25:00,303: INFO/SpawnProcess-60] mingle: searching for neighbors
+[2024-05-01 09:25:05,225: INFO/SpawnProcess-61] Connected to redis://redis:6379/0
+[2024-05-01 09:25:05,231: INFO/SpawnProcess-61] mingle: searching for neighbors
+[2024-05-01 09:25:10,241: INFO/SpawnProcess-62] Connected to redis://redis:6379/0
+[2024-05-01 09:25:10,248: INFO/SpawnProcess-62] mingle: searching for neighbors
+[2024-05-01 09:25:15,236: INFO/SpawnProcess-63] Connected to redis://redis:6379/0
+[2024-05-01 09:25:15,248: INFO/SpawnProcess-63] mingle: searching for neighbors
+[2024-05-01 09:25:24,210: INFO/SpawnProcess-65] Connected to redis://redis:6379/0
+[2024-05-01 09:25:24,223: INFO/SpawnProcess-65] mingle: searching for neighbors
+[2024-05-01 09:25:28,964: INFO/SpawnProcess-67] Connected to redis://redis:6379/0
+[2024-05-01 09:25:28,972: INFO/SpawnProcess-67] mingle: searching for neighbors
+[2024-05-01 09:25:33,536: INFO/SpawnProcess-68] Connected to redis://redis:6379/0
+[2024-05-01 09:25:33,546: INFO/SpawnProcess-68] mingle: searching for neighbors
+[2024-05-01 09:25:38,555: INFO/SpawnProcess-69] Connected to redis://redis:6379/0
+[2024-05-01 09:25:38,561: INFO/SpawnProcess-69] mingle: searching for neighbors
+[2024-05-01 09:25:43,406: INFO/SpawnProcess-70] Connected to redis://redis:6379/0
+[2024-05-01 09:25:43,415: INFO/SpawnProcess-70] mingle: searching for neighbors
+[2024-05-01 09:25:48,336: INFO/SpawnProcess-71] Connected to redis://redis:6379/0
+[2024-05-01 09:25:48,342: INFO/SpawnProcess-71] mingle: searching for neighbors
+[2024-05-01 09:25:52,927: INFO/SpawnProcess-72] Connected to redis://redis:6379/0
+[2024-05-01 09:25:52,933: INFO/SpawnProcess-72] mingle: searching for neighbors
+[2024-05-01 09:25:57,439: INFO/SpawnProcess-73] Connected to redis://redis:6379/0
+[2024-05-01 09:25:57,444: INFO/SpawnProcess-73] mingle: searching for neighbors
+[2024-05-01 09:26:02,044: INFO/SpawnProcess-74] Connected to redis://redis:6379/0
+[2024-05-01 09:26:02,055: INFO/SpawnProcess-74] mingle: searching for neighbors
+[2024-05-01 09:26:06,583: INFO/SpawnProcess-75] Connected to redis://redis:6379/0
+[2024-05-01 09:26:06,588: INFO/SpawnProcess-75] mingle: searching for neighbors
+[2024-05-01 09:26:11,138: INFO/SpawnProcess-76] Connected to redis://redis:6379/0
+[2024-05-01 09:26:11,150: INFO/SpawnProcess-76] mingle: searching for neighbors
+[2024-05-01 09:26:15,712: INFO/SpawnProcess-77] Connected to redis://redis:6379/0
+[2024-05-01 09:26:15,718: INFO/SpawnProcess-77] mingle: searching for neighbors
+[2024-05-01 09:26:20,521: INFO/SpawnProcess-78] Connected to redis://redis:6379/0
+[2024-05-01 09:26:20,529: INFO/SpawnProcess-78] mingle: searching for neighbors
+[2024-05-01 09:26:25,061: INFO/SpawnProcess-79] Connected to redis://redis:6379/0
+[2024-05-01 09:26:25,067: INFO/SpawnProcess-79] mingle: searching for neighbors
+[2024-05-01 09:26:29,908: INFO/SpawnProcess-80] Connected to redis://redis:6379/0
+[2024-05-01 09:26:29,914: INFO/SpawnProcess-80] mingle: searching for neighbors
+[2024-05-01 09:26:34,954: INFO/SpawnProcess-81] Connected to redis://redis:6379/0
+[2024-05-01 09:26:34,960: INFO/SpawnProcess-81] mingle: searching for neighbors
+[2024-05-01 09:26:39,842: INFO/SpawnProcess-82] Connected to redis://redis:6379/0
+[2024-05-01 09:26:39,849: INFO/SpawnProcess-82] mingle: searching for neighbors
+[2024-05-01 09:26:44,410: INFO/SpawnProcess-83] Connected to redis://redis:6379/0
+[2024-05-01 09:26:44,417: INFO/SpawnProcess-83] mingle: searching for neighbors
+[2024-05-01 09:26:49,609: INFO/SpawnProcess-84] Connected to redis://redis:6379/0
+[2024-05-01 09:26:49,619: INFO/SpawnProcess-84] mingle: searching for neighbors
+[2024-05-01 09:26:54,397: INFO/SpawnProcess-85] Connected to redis://redis:6379/0
+[2024-05-01 09:26:54,404: INFO/SpawnProcess-85] mingle: searching for neighbors
+[2024-05-01 09:26:59,090: INFO/SpawnProcess-86] Connected to redis://redis:6379/0
+[2024-05-01 09:26:59,096: INFO/SpawnProcess-86] mingle: searching for neighbors
+[2024-05-01 09:27:03,546: INFO/SpawnProcess-87] Connected to redis://redis:6379/0
+[2024-05-01 09:27:03,556: INFO/SpawnProcess-87] mingle: searching for neighbors
+[2024-05-01 09:27:08,027: INFO/SpawnProcess-88] Connected to redis://redis:6379/0
+[2024-05-01 09:27:08,035: INFO/SpawnProcess-88] mingle: searching for neighbors
+[2024-05-01 09:27:12,467: INFO/SpawnProcess-89] Connected to redis://redis:6379/0
+[2024-05-01 09:27:12,475: INFO/SpawnProcess-89] mingle: searching for neighbors
+[2024-05-01 09:27:16,901: INFO/SpawnProcess-90] Connected to redis://redis:6379/0
+[2024-05-01 09:27:16,906: INFO/SpawnProcess-90] mingle: searching for neighbors
+[2024-05-01 09:27:21,442: INFO/SpawnProcess-91] Connected to redis://redis:6379/0
+[2024-05-01 09:27:21,448: INFO/SpawnProcess-91] mingle: searching for neighbors
+[2024-05-01 09:27:26,272: INFO/SpawnProcess-92] Connected to redis://redis:6379/0
+[2024-05-01 09:27:26,283: INFO/SpawnProcess-92] mingle: searching for neighbors
+[2024-05-01 09:27:31,458: INFO/SpawnProcess-93] Connected to redis://redis:6379/0
+[2024-05-01 09:27:31,467: INFO/SpawnProcess-93] mingle: searching for neighbors
+[2024-05-01 09:27:36,197: INFO/SpawnProcess-94] Connected to redis://redis:6379/0
+[2024-05-01 09:27:36,205: INFO/SpawnProcess-94] mingle: searching for neighbors
+[2024-05-01 09:27:41,472: INFO/SpawnProcess-95] Connected to redis://redis:6379/0
+[2024-05-01 09:27:41,478: INFO/SpawnProcess-95] mingle: searching for neighbors
+[2024-05-01 09:27:46,465: INFO/SpawnProcess-96] Connected to redis://redis:6379/0
+[2024-05-01 09:27:46,485: INFO/SpawnProcess-96] mingle: searching for neighbors
+[2024-05-01 09:27:51,119: INFO/SpawnProcess-97] Connected to redis://redis:6379/0
+[2024-05-01 09:27:51,127: INFO/SpawnProcess-97] mingle: searching for neighbors
+[2024-05-01 09:27:55,655: INFO/SpawnProcess-98] Connected to redis://redis:6379/0
+[2024-05-01 09:27:55,661: INFO/SpawnProcess-98] mingle: searching for neighbors
+[2024-05-01 09:28:00,339: INFO/SpawnProcess-99] Connected to redis://redis:6379/0
+[2024-05-01 09:28:00,352: INFO/SpawnProcess-99] mingle: searching for neighbors
+[2024-05-01 09:28:04,894: INFO/SpawnProcess-100] Connected to redis://redis:6379/0
+[2024-05-01 09:28:04,902: INFO/SpawnProcess-100] mingle: searching for neighbors
+[2024-05-01 09:28:09,620: INFO/SpawnProcess-101] Connected to redis://redis:6379/0
+[2024-05-01 09:28:09,627: INFO/SpawnProcess-101] mingle: searching for neighbors
+[2024-05-01 09:28:15,576: INFO/SpawnProcess-102] Connected to redis://redis:6379/0
+[2024-05-01 09:28:15,584: INFO/SpawnProcess-102] mingle: searching for neighbors
+[2024-05-01 09:28:21,302: INFO/SpawnProcess-103] Connected to redis://redis:6379/0
+[2024-05-01 09:28:21,315: INFO/SpawnProcess-103] mingle: searching for neighbors
+[2024-05-01 09:28:25,803: INFO/SpawnProcess-104] Connected to redis://redis:6379/0
+[2024-05-01 09:28:25,812: INFO/SpawnProcess-104] mingle: searching for neighbors
+[2024-05-01 09:28:30,937: INFO/SpawnProcess-105] Connected to redis://redis:6379/0
+[2024-05-01 09:28:30,944: INFO/SpawnProcess-105] mingle: searching for neighbors
+[2024-05-01 09:28:35,647: INFO/SpawnProcess-106] Connected to redis://redis:6379/0
+[2024-05-01 09:28:35,652: INFO/SpawnProcess-106] mingle: searching for neighbors
+[2024-05-01 09:28:40,530: INFO/SpawnProcess-107] Connected to redis://redis:6379/0
+[2024-05-01 09:28:40,537: INFO/SpawnProcess-107] mingle: searching for neighbors
+[2024-05-01 09:28:45,476: INFO/SpawnProcess-108] Connected to redis://redis:6379/0
+[2024-05-01 09:28:45,483: INFO/SpawnProcess-108] mingle: searching for neighbors
+[2024-05-01 09:28:50,822: INFO/SpawnProcess-109] Connected to redis://redis:6379/0
+[2024-05-01 09:28:50,831: INFO/SpawnProcess-109] mingle: searching for neighbors
+[2024-05-01 09:28:55,564: INFO/SpawnProcess-110] Connected to redis://redis:6379/0
+[2024-05-01 09:28:55,570: INFO/SpawnProcess-110] mingle: searching for neighbors
+[2024-05-01 09:29:00,347: INFO/SpawnProcess-111] Connected to redis://redis:6379/0
+[2024-05-01 09:29:00,354: INFO/SpawnProcess-111] mingle: searching for neighbors
+[2024-05-01 09:29:05,049: INFO/SpawnProcess-112] Connected to redis://redis:6379/0
+[2024-05-01 09:29:05,055: INFO/SpawnProcess-112] mingle: searching for neighbors
+[2024-05-01 09:29:10,176: INFO/SpawnProcess-113] Connected to redis://redis:6379/0
+[2024-05-01 09:29:10,185: INFO/SpawnProcess-113] mingle: searching for neighbors
+[2024-05-01 09:29:15,099: INFO/SpawnProcess-114] Connected to redis://redis:6379/0
+[2024-05-01 09:29:15,104: INFO/SpawnProcess-114] mingle: searching for neighbors
+[2024-05-01 09:29:20,018: INFO/SpawnProcess-115] Connected to redis://redis:6379/0
+[2024-05-01 09:29:20,024: INFO/SpawnProcess-115] mingle: searching for neighbors
+[2024-05-01 09:29:24,712: INFO/SpawnProcess-116] Connected to redis://redis:6379/0
+[2024-05-01 09:29:24,723: INFO/SpawnProcess-116] mingle: searching for neighbors
+[2024-05-01 09:29:29,483: INFO/SpawnProcess-117] Connected to redis://redis:6379/0
+[2024-05-01 09:29:29,489: INFO/SpawnProcess-117] mingle: searching for neighbors
+[2024-05-01 09:29:33,998: INFO/SpawnProcess-118] Connected to redis://redis:6379/0
+[2024-05-01 09:29:34,013: INFO/SpawnProcess-118] mingle: searching for neighbors
+[2024-05-01 09:29:38,555: INFO/SpawnProcess-119] Connected to redis://redis:6379/0
+[2024-05-01 09:29:38,560: INFO/SpawnProcess-119] mingle: searching for neighbors
+[2024-05-01 09:29:43,066: INFO/SpawnProcess-120] Connected to redis://redis:6379/0
+[2024-05-01 09:29:43,073: INFO/SpawnProcess-120] mingle: searching for neighbors
+[2024-05-01 09:29:47,530: INFO/SpawnProcess-121] Connected to redis://redis:6379/0
+[2024-05-01 09:29:47,536: INFO/SpawnProcess-121] mingle: searching for neighbors
+[2024-05-01 09:29:52,299: INFO/SpawnProcess-122] Connected to redis://redis:6379/0
+[2024-05-01 09:29:52,307: INFO/SpawnProcess-122] mingle: searching for neighbors
+[2024-05-01 09:29:56,740: INFO/SpawnProcess-123] Connected to redis://redis:6379/0
+[2024-05-01 09:29:56,746: INFO/SpawnProcess-123] mingle: searching for neighbors
+[2024-05-01 09:30:01,243: INFO/SpawnProcess-124] Connected to redis://redis:6379/0
+[2024-05-01 09:30:01,249: INFO/SpawnProcess-124] mingle: searching for neighbors
+[2024-05-01 09:30:05,762: INFO/SpawnProcess-125] Connected to redis://redis:6379/0
+[2024-05-01 09:30:05,769: INFO/SpawnProcess-125] mingle: searching for neighbors
+[2024-05-01 09:30:10,468: INFO/SpawnProcess-126] Connected to redis://redis:6379/0
+[2024-05-01 09:30:10,475: INFO/SpawnProcess-126] mingle: searching for neighbors
+[2024-05-01 09:30:15,846: INFO/SpawnProcess-127] Connected to redis://redis:6379/0
+[2024-05-01 09:30:15,857: INFO/SpawnProcess-127] mingle: searching for neighbors
+[2024-05-01 09:30:22,490: INFO/SpawnProcess-128] Connected to redis://redis:6379/0
+[2024-05-01 09:30:22,503: INFO/SpawnProcess-128] mingle: searching for neighbors
+[2024-05-01 09:30:27,873: INFO/SpawnProcess-129] Connected to redis://redis:6379/0
+[2024-05-01 09:30:27,881: INFO/SpawnProcess-129] mingle: searching for neighbors
+[2024-05-01 09:30:32,501: INFO/SpawnProcess-130] Connected to redis://redis:6379/0
+[2024-05-01 09:30:32,512: INFO/SpawnProcess-130] mingle: searching for neighbors
