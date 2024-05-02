@@ -11,10 +11,10 @@ export const useAuthStore = defineStore('auth', {
     }),
     actions: {
         async login(credentials) {
-            const user = await this.remoteLogin(credentials);
+            const response = await this.remoteLogin(credentials);
 
-            if (user && user.access) {
-                this.setSession(user);
+            if (response.user && response.access_token) {
+                this.setSession(response);
                 // homepage
                 router.push('/');
             }
@@ -25,8 +25,8 @@ export const useAuthStore = defineStore('auth', {
             if (localUser) {
                 localUser = JSON.parse(localUser);
                 if (localUser.access) {
-                    const user = await this.remoteRefresh({ refresh: localUser.refresh });
-                    if(user && user.access) {
+                    const user = await this.remoteRefresh({ refresh: localUser.refreshToken });
+                    if (user && user.access) {
                         this.setSession(user);
                         return true;
                     }
@@ -35,16 +35,11 @@ export const useAuthStore = defineStore('auth', {
             }
             return false;
         },
-        setSession(user) {
-            this.user = user;
-            localStorage.setItem('user', JSON.stringify(user));
-            this.setBearer(user.access);
-        },
-        setBearer(bearer) {
-            // bearer token on every header :
-            axios.defaults.headers.common = {
-                'Authorization': `Bearer ${bearer}`
-            };
+        setSession(response) {
+            this.user = response.user;
+            localStorage.setItem('user', JSON.stringify(this.user));
+            localStorage.setItem("accessToken", response.access_token);
+            localStorage.setItem("refreshToken", response.refresh_token);
         },
         logout() {
             return axios
@@ -56,12 +51,13 @@ export const useAuthStore = defineStore('auth', {
         },
         clearSession() {
             this.user = null;
-            this.setBearer();
             localStorage.removeItem('user');
+            localStorage.removeItem('accessToken');
+            localStorage.removeItem('refreshToken');
         },
         remoteLogin(credentials) {
             return axios
-                .post(url + 'auth/login/', credentials)
+                .post(url + 'api/v1/auth/login/', credentials)
                 .then((response) => {
                     return Object.assign(credentials, response.data);
                 })
@@ -73,7 +69,7 @@ export const useAuthStore = defineStore('auth', {
         },
         remoteRefresh(refresh) {
             return axios
-                .post(url + 'auth/login/refresh/', refresh)
+                .post(url + 'api/v1/auth/login/refresh/', refresh)
                 .then((response) => {
                     return Object.assign(refresh, response.data);
                 })
@@ -85,8 +81,11 @@ export const useAuthStore = defineStore('auth', {
         },
         signUp(credentials) {
             return axios
-                .post(url + 'auth/register/', credentials)
-                .then(response => response.data)
+                .post(url + 'api/v1/auth/registration/', credentials)
+                .then((response) => {
+                    console.log("response", response);
+                    useSnackBarStore().setSnackBarState({ text: response.data.detail });
+                })
                 .catch((error) => { console.log("auth/register error", error); });
         },
         isLogged() {
@@ -94,15 +93,6 @@ export const useAuthStore = defineStore('auth', {
                 return false;
             } else {
                 return true;
-            }
-        },
-        authHeader() {
-            let user = JSON.parse(localStorage.getItem('user'));
-
-            if (user && user.accessToken) {
-                return { Authorization: 'Bearer ' + user.accessToken };
-            } else {
-                return {};
             }
         }
     }

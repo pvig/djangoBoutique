@@ -18,6 +18,10 @@
                     :rules="rules.username">
                   </v-text-field>
 
+                  <v-text-field id="email" label="Email" prepend-icon="mdi-email" v-model="form.email"
+                    :rules="rules.email">
+                  </v-text-field>
+
                   <v-text-field id="password" label="Mot de passe" prepend-icon="mdi-lock" type="password"
                     v-model="form.password" :rules="rules.password"></v-text-field>
 
@@ -65,6 +69,7 @@ export default {
       message: "Connection",
       form: {
         username: null,
+        email: null,
         password: null,
       },
       rules: {},
@@ -89,6 +94,7 @@ export default {
     async login(form) {
       const credentials = {
         username: form.username,
+        email: form.email,
         password: form.password
       };
       useAuthStore().login(credentials).then(() => {

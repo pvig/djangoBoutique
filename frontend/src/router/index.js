@@ -31,6 +31,19 @@ router.beforeEach((to) => {
   }
 })
 
+axios.interceptors.request.use(
+  function (config) {
+    const accessToken = localStorage.getItem("accessToken");
+    if (accessToken) {
+      config.headers["Authorization"] = `Bearer ${accessToken}`
+    }
+    return config;
+  },
+  function (error) {
+    return Promise.reject(error);
+  }
+);
+
 axios.interceptors.response.use(response => {
   return response;
 }, async error => {
@@ -43,8 +56,8 @@ axios.interceptors.response.use(response => {
       } else {
         // not really an error, resolve to homepage with a step to soft refresh
         var currentPage = router.path || "/";
-        router.push({ path: '/login'}).then(() => {
-          router.push({ path: currentPage})
+        router.push({ path: '/login' }).then(() => {
+          router.push({ path: currentPage })
         })
       }
     });

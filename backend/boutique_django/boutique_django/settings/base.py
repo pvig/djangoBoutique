@@ -205,6 +205,7 @@ REST_AUTH = {
     "JWT_AUTH_COOKIE": "boutique-access-token",
     "JWT_AUTH_REFRESH_COOKIE": "boutique-refresh-token",
     "REGISTER_SERIALIZER": "core_apps.users.serializers.CustomRegisterSerializer",
+    "JWT_AUTH_HTTPONLY": False
 }
 
 AUTHENTICATION_BACKENDS = [

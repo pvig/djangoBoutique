@@ -39,16 +39,22 @@
       </v-col>
       <v-col></v-col>
     </v-row>
+
+    <SnackBar />
   </v-container>
 </template>
 <script>
 import { useAuthStore } from '../stores/auth.store.js';
 import useVuelidate from '@vuelidate/core'
 import { required, email, minLength, sameAs} from '@vuelidate/validators'
+import SnackBar from '../components/SnackBar.vue'
 
 export default {
   setup() {
     return { v$: useVuelidate() }
+  },
+  components: {
+    SnackBar
   },
   validations() {
     return {
@@ -88,27 +94,13 @@ export default {
         const credentials = {
           username: this.username,
           email: this.email,
-          password: this.password,
+          password1: this.password,
           password2: this.password_repeat,
           first_name: this.nom,
           last_name: this.prenom,
         };
-        useAuthStore().signUp(credentials).then((signupDone) => {
-
-          const credentials = {
-            username: this.username,
-            email: this.email,
-            password: this.password,
-            password2: this.password_repeat,
-            first_name: this.nom,
-            last_name: this.prenom,
-          };
-
-          useAuthStore().login(credentials).then(() => {
-            this.loading = false;
-            this.msg = signupDone.msg;
-          });
-
+        useAuthStore().signUp(credentials).then(() => {
+          this.loading = false;
         });
       } catch (error) {
         this.msg = error.response.data.msg;
