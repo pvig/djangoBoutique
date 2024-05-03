@@ -27,4 +27,4 @@ jobs:
         pip install -r .github/workflows/requirements.txt
     - name: Run Tests
       run: |
-        python backend/boutique-django/manage.py test boutique.tests
+        python backend/boutique_django/manage.py test core_apps.boutique.tests
