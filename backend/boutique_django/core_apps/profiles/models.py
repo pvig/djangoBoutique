@@ -39,12 +39,12 @@ class Profile(TimeStampedModel):
         max_length=20,
     )
     country = CountryField(
-        verbose_name=_("country"), default="KE", blank=False, null=False
+        verbose_name=_("country"), default="FR", blank=False, null=False
     )
     city = models.CharField(
         verbose_name=_("city"),
         max_length=180,
-        default="Nairobi",
+        default="Dol de Bretagne",
         blank=False,
         null=False,
     )

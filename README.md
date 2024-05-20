@@ -4,28 +4,15 @@ Shop-like boilerplate with a vuejs3 frontend which consume a Django Rest API
  
   ---
 
-### dependencies used : 
+Backend hosted in Docker machines, which involves some containers :
+- Django
+- Nginx
+- Postgres
+- Redis
+- Celery
+- Flower
+- MailHog
+- Elasticsearch
 
-#### Frontend 
-- vuelidate
-- apexcharts
-- axios
-- pinia
-- vuetify
+FrontEnd is served with yarn  
 
-#### Backend 
-- django-environ
-- djangorestframework-simplejwt
-- corsheaders
-- drf_yasg
-
-### Credential to use after fixtures loaded :
-
-
-- admin:admin
-- user1:user123456
-----
-### Install django depencencies :
-
-- virtualenv venv -p python3
-- pip install -r backend/boutique-django/requirements/local.txt
