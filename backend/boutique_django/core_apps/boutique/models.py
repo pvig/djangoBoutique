@@ -21,9 +21,13 @@ class Vente(models.Model):
     numeroVente = models.CharField(max_length=100,blank=False,null=False)
     prixProduitsHT = models.FloatField()
     prixProduitsTTC = models.FloatField()
-
+    def client_nom(self):
+        return self.client.nom
+    
 class LigneVente(models.Model):
     vente = models.ForeignKey(Vente, on_delete=models.CASCADE, related_name="lignesVente")
     quantite = models.PositiveIntegerField()
     prixHT = models.FloatField()
     produit = models.ForeignKey(Produit, on_delete=models.CASCADE)
+    def produit_nom(self):
+        return self.produit.nom
