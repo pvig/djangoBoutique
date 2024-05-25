@@ -8,4 +8,4 @@ django-cors-headers
 celery
 pytest
 django_countries
-phonenumber_field
+django-phonenumber-field
