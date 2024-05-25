@@ -28,13 +28,21 @@ jobs:
         pip install -r .github/workflows/requirements.txt
 
     - name: Install Celery
-      run: pip install celery
+      run: |
+        pip uninstall -y celery
+        pip install celery==5.2.7
 
     - name: Install pipdeptree
       run: pip install pipdeptree
 
     - name: Check dependency tree
       run: pipdeptree
+
+    - name: Show installed packages
+      run: pip list
+
+    - name: Show Celery location
+      run: python -c "import celery; print(celery.__file__)"
 
     - name: Run Tests
       run: |
