@@ -9,3 +9,17 @@ celery
 pytest
 django_countries
 django-phonenumber-field
+phonenumbers
+drf-yasg
+Pillow
+argon2-cffi
+pytz
+django-taggit
+redis
+flower
+django-celery-email
+django-allauth
+djangorestframework-simplejwt
+dj-rest-auth
+django-elasticsearch-dsl
+django-elasticsearch-dsl-drf
