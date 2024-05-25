@@ -9,11 +9,13 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
+    env:
+      DATABASE_URL: sqlite:///db.sqlite3
 
     steps:
-    - uses: actions/checkout@v2
+    - uses: actions/checkout@v3
     - name: Set up Python
-      uses: actions/setup-python@v2
+      uses: actions/setup-python@v3
       with:
         python-version: 3.7
 
@@ -25,22 +27,6 @@ jobs:
         pip install -r .github/workflows/requirements.txt
         pip install celery==5.2.7
         pip install importlib-metadata==4.0.0
-
-    - name: Check dependency tree
-      run: |
-        source venv/bin/activate
-        pip install pipdeptree
-        pipdeptree
-
-    - name: Show installed packages
-      run: |
-        source venv/bin/activate
-        pip list
-
-    - name: Show importlib-metadata version
-      run: |
-        source venv/bin/activate
-        python -c "import importlib_metadata; print(importlib_metadata.version('importlib-metadata'))"
 
     - name: Run tests
       run: |
