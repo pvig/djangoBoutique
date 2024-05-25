@@ -45,4 +45,4 @@ jobs:
     - name: Run tests
       run: |
         source venv/bin/activate
-        pytest
+        python backend/boutique-django/manage.py test boutique.tests
