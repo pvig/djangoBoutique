@@ -20,6 +20,11 @@ jobs:
       DATABASE_URL: sqlite:///db.sqlite3
       CELERY_BROKER: redis://localhost:6379/0
       SIGNING_KEY: mZOWfyGQBtHCWujDB_rjavi8Dl_-T4o4lobN5rhlj-3zmJrM9Co
+      DJANGO_ADMIN_URL: /admin/
+      DOMAIN: localhost:8080
+      EMAIL_PORT: 1025
+      CELERY_FLOWER_USER: admin 
+      CELERY_FLOWER_PASSWORD: Pass123456
 
     steps:
     - uses: actions/checkout@v3
