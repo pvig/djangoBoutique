@@ -22,15 +22,14 @@ jobs:
       with:
         python-version: ${{ matrix.python-version }}
 
-    - name: Install Dependencies
+    - name: Install dependencies
       run: |
+        python -m venv venv
+        source venv/bin/activate
         python -m pip install --upgrade pip
         pip install -r .github/workflows/requirements.txt
-
-    - name: Install Celery
-      run: |
-        pip uninstall -y celery
         pip install celery==5.2.7
+        pip install importlib-metadata==4.0.0
 
     - name: Install pipdeptree
       run: pip install pipdeptree
