@@ -5,7 +5,8 @@ django-filter
 drf-yasg
 djangorestframework-simplejwt
 django-cors-headers
-celery
+celery==5.2.7
+importlib-metadata==4.0.0
 pytest
 django_countries
 django-phonenumber-field
