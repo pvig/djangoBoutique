@@ -8,19 +8,14 @@ on:
 
 jobs:
   build:
-
     runs-on: ubuntu-latest
-    strategy:
-      max-parallel: 4
-      matrix:
-        python-version: [3.7]
 
     steps:
-    - uses: actions/checkout@v3
-    - name: Set up Python ${{ matrix.python-version }}
-      uses: actions/setup-python@v3
+    - uses: actions/checkout@v2
+    - name: Set up Python
+      uses: actions/setup-python@v2
       with:
-        python-version: ${{ matrix.python-version }}
+        python-version: 3.7
 
     - name: Install dependencies
       run: |
@@ -31,18 +26,23 @@ jobs:
         pip install celery==5.2.7
         pip install importlib-metadata==4.0.0
 
-    - name: Install pipdeptree
-      run: pip install pipdeptree
-
     - name: Check dependency tree
-      run: pipdeptree
+      run: |
+        source venv/bin/activate
+        pip install pipdeptree
+        pipdeptree
 
     - name: Show installed packages
-      run: pip list
-
-    - name: Show Celery location
-      run: python -c "import celery; print(celery.__file__)"
-
-    - name: Run Tests
       run: |
-        python backend/boutique_django/manage.py test core_apps.boutique.tests
+        source venv/bin/activate
+        pip list
+
+    - name: Show importlib-metadata version
+      run: |
+        source venv/bin/activate
+        python -c "import importlib_metadata; print(importlib_metadata.version('importlib-metadata'))"
+
+    - name: Run tests
+      run: |
+        source venv/bin/activate
+        pytest
