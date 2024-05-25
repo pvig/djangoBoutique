@@ -6,8 +6,9 @@ ADMINS = [("patvig", "patricevigouroux@yahoo.fr")]
 # TODO add domain names of the production server
 CSRF_TRUSTED_ORIGINS = ["http://localhost"]
 
-SECRET_KEY = env("DJANGO_SECRET_KEY", 
-                 default="oXPWQPA3C3sdBCuBeXUKq3LBp9YDJ33-306p9EAKf1ja1xkWnKY")
+SECRET_KEY = env(
+    "DJANGO_SECRET_KEY", default="oXPWQPA3C3sdBCuBeXUKq3LBp9YDJ33-306p9EAKf1ja1xkWnKY"
+)
 
 ALLOWED_HOSTS = env.list("DJANGO_ALLOWED_HOSTS", default=["localhost"])
 

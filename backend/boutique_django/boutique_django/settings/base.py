@@ -93,7 +93,7 @@ TEMPLATES = [
     },
 ]
 
-WSGI_APPLICATION = 'boutique_django.wsgi.application'
+WSGI_APPLICATION = "boutique_django.wsgi.application"
 
 # Database
 # https://docs.djangoproject.com/en/4.1/ref/settings/#databases
@@ -205,7 +205,7 @@ REST_AUTH = {
     "JWT_AUTH_COOKIE": "boutique-access-token",
     "JWT_AUTH_REFRESH_COOKIE": "boutique-refresh-token",
     "REGISTER_SERIALIZER": "core_apps.users.serializers.CustomRegisterSerializer",
-    "JWT_AUTH_HTTPONLY": False
+    "JWT_AUTH_HTTPONLY": False,
 }
 
 AUTHENTICATION_BACKENDS = [

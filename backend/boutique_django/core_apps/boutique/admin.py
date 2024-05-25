@@ -8,17 +8,21 @@ from .models import LigneVente
 
 admin.site.empty_value_display = "(Pas de valeur)"
 
+
 class LigneVenteForm(forms.ModelForm):
     class Meta:
         model = LigneVente
-        fields = ['produit', 'quantite', 'prixHT']
+        fields = ["produit", "quantite", "prixHT"]
 
     def __init__(self, *args, **kwargs):
         super(LigneVenteForm, self).__init__(*args, **kwargs)
-        self.fields['produit'].widget = forms.Select(choices=self.fields['produit'].choices)
+        self.fields["produit"].widget = forms.Select(
+            choices=self.fields["produit"].choices
+        )
         if self.instance and self.instance.pk:
-            self.fields['produit'].disabled = True
-            
+            self.fields["produit"].disabled = True
+
+
 class lignesVenteInline(admin.TabularInline):
     model = LigneVente
     form = LigneVenteForm
@@ -32,31 +36,55 @@ class lignesVenteInline(admin.TabularInline):
             form.disabled = False
         return formset
 
+
 @admin.register(Client)
 class ClientAdmin(admin.ModelAdmin):
-    list_display=('__str__', 'email',)
-    exclude = ['password']
+    list_display = (
+        "__str__",
+        "email",
+    )
+    exclude = ["password"]
+
 
 @admin.register(Produit)
 class ProduitAdmin(admin.ModelAdmin):
-    list_display=('nom', 'prixHT', 'poids', 'reference',)
+    list_display = (
+        "nom",
+        "prixHT",
+        "poids",
+        "reference",
+    )
+
 
 class VenteForm(forms.ModelForm):
     class Meta:
         model = Vente
-        fields=['client', 'dateVente', 'prixProduitsHT', 'prixProduitsTTC', ]
+        fields = [
+            "client",
+            "dateVente",
+            "prixProduitsHT",
+            "prixProduitsTTC",
+        ]
 
     def __init__(self, *args, **kwargs):
         super(VenteForm, self).__init__(*args, **kwargs)
-        self.fields['client'].widget = forms.Select(choices=self.fields['client'].choices)
+        self.fields["client"].widget = forms.Select(
+            choices=self.fields["client"].choices
+        )
         if self.instance and self.instance.pk:
-            self.fields['client'].disabled = True
+            self.fields["client"].disabled = True
 
-            
+
 @admin.register(Vente)
 class VenteAdmin(admin.ModelAdmin):
     form = VenteForm
-    list_display = ('client', 'dateVente', 'prixProduitsHT', 'prixProduitsTTC', 'nb_produits')
+    list_display = (
+        "client",
+        "dateVente",
+        "prixProduitsHT",
+        "prixProduitsTTC",
+        "nb_produits",
+    )
     inlines = [lignesVenteInline]
 
     def nb_produits(self, obj):
