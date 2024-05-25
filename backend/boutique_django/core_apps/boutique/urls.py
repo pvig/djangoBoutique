@@ -1,7 +1,8 @@
+from django.conf.urls import include
 from django.urls import path
 from rest_framework.urlpatterns import format_suffix_patterns
+
 from core_apps.boutique import views
-from django.conf.urls import include
 
 urlpatterns = [
     path("vente/", views.VenteList.as_view()),

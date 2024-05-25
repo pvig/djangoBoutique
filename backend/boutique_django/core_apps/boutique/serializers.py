@@ -1,8 +1,6 @@
-from core_apps.boutique.models import LigneVente
-from core_apps.boutique.models import Vente
-from core_apps.boutique.models import Produit
-from core_apps.boutique.models import Client
 from rest_framework import serializers
+
+from core_apps.boutique.models import Client, LigneVente, Produit, Vente
 
 
 class ClientSerializer(serializers.ModelSerializer):

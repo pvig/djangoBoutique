@@ -1,17 +1,17 @@
-from core_apps.boutique.models import Vente
-from core_apps.boutique.models import Produit
-from core_apps.boutique.models import Client
-from core_apps.boutique.serializers import VenteSerializer
-from core_apps.boutique.serializers import ProduitSerializer
-from core_apps.boutique.serializers import ClientSerializer
 from django.http import Http404
-
-from rest_framework.views import APIView
-from rest_framework.response import Response
-from rest_framework import status
 
 # For yasg
 from drf_yasg.utils import swagger_auto_schema
+from rest_framework import status
+from rest_framework.response import Response
+from rest_framework.views import APIView
+
+from core_apps.boutique.models import Client, Produit, Vente
+from core_apps.boutique.serializers import (
+    ClientSerializer,
+    ProduitSerializer,
+    VenteSerializer,
+)
 
 
 class VenteList(APIView):

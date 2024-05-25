@@ -1,10 +1,7 @@
-from django.contrib import admin
 from django import forms
+from django.contrib import admin
 
-from .models import Client
-from .models import Produit
-from .models import Vente
-from .models import LigneVente
+from .models import Client, LigneVente, Produit, Vente
 
 admin.site.empty_value_display = "(Pas de valeur)"
 
