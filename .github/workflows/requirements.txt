@@ -23,6 +23,8 @@ dj-rest-auth
 django-elasticsearch-dsl
 django-elasticsearch-dsl-drf
 
+requests
+
 psycopg2-binary
 
 flake8
