@@ -25,6 +25,7 @@ jobs:
       EMAIL_PORT: 1025
       CELERY_FLOWER_USER: admin 
       CELERY_FLOWER_PASSWORD: Pass123456
+      DJANGO_SETTINGS_MODULE: boutique_django.settings.local
 
     steps:
     - uses: actions/checkout@v3
