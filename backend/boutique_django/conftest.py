@@ -5,8 +5,16 @@ from django.contrib.sessions.middleware import SessionMiddleware
 from django.contrib.auth.middleware import AuthenticationMiddleware
 
 from core_apps.users.tests.factories import UserFactory
+from core_apps.boutique.tests.factories import ClientFactory
 
 register(UserFactory)
+register(ClientFactory)
+
+
+@pytest.fixture
+def normal_client(db, client_factory):
+    new_client = client_factory.create()
+    return new_client
 
 
 @pytest.fixture

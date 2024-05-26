@@ -1,15 +1,16 @@
 from django.db import models
-
-# Create your models here.
-
+from .managers import ClientManager
+from django.core.validators import validate_email
 
 class Client(models.Model):
     username = models.CharField(max_length=100, blank=False, null=False)
     password = models.CharField(max_length=100, blank=False, null=False)
-    email = models.CharField(max_length=100, blank=False, null=False)
+    email = models.EmailField(validators=[validate_email])
     nom = models.CharField(max_length=100, blank=True, null=True)
     prenom = models.CharField(max_length=100, blank=True, null=True)
-
+    
+    objects = ClientManager()
+                
     def __str__(self):
         return f"{self.nom.capitalize()} {self.prenom.capitalize()}"
 
