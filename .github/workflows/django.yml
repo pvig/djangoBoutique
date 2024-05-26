@@ -39,6 +39,7 @@ jobs:
         source venv/bin/activate
         python -m pip install --upgrade pip
         pip install -r .github/workflows/requirements.txt
+        pip install importlib-metadata
 
     - name: Run tests
       run: |
