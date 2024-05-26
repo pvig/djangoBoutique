@@ -43,4 +43,5 @@ jobs:
     - name: Run tests
       run: |
         source venv/bin/activate
-        python backend/boutique_django/manage.py test core_apps
+        python backend/boutique_django/manage.py test core_apps.boutique.tests
+        python backend/boutique_django/manage.py test core_apps.users.tests

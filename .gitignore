@@ -2,3 +2,5 @@ backend/.DS_Store
 backend/boutique-django/.DS_Store
 backend/boutique-django/templates/.DS_Store
 .DS_Store
+.vscode/*
+.idea/*
