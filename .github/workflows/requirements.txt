@@ -17,7 +17,7 @@ celery==5.2.4
 importlib-metadata==4.0.0
 flower
 django-celery-email
-django-allauth
+django-allauth==0.52.0
 djangorestframework-simplejwt
 dj-rest-auth
 django-elasticsearch-dsl

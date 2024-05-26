@@ -1,7 +1,6 @@
 from django.test import TestCase
 
-from .models import Client
-
+from core_apps.boutique.models import Client
 
 class AccountTests(TestCase):
     def setUp(self):
