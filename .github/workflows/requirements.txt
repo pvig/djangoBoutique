@@ -13,7 +13,7 @@ argon2-cffi
 pytz
 django-taggit
 redis
-celery==5.3.4
+celery==5.2.4
 importlib-metadata==4.0.0
 flower
 django-celery-email
